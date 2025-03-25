@@ -1,0 +1,1 @@
+$(document).ready(function(b){var a=b(".js-back-to-top");b(window).scroll(function(){300<b(this).scrollTop()?a.addClass("back-to-top-is-visible"):a.removeClass("back-to-top-is-visible back-to-top-fade-out");1200<b(this).scrollTop()&&a.addClass("back-to-top-fade-out")});a.on("click",function(a){a.preventDefault();b("body,html").animate({scrollTop:0},700)})});
