@@ -22,7 +22,9 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('/av-translation', 'avtranslation')->name('avtranslation');
     Route::get('/doc-translation', 'doctranslation')->name('doctranslation');
     Route::get('/subtitling', 'subtitling')->name('subtitling');
-    Route::get('/prf-copyedit', 'prfcopyedit')->name('prfcopyedit');    
+    Route::get('/prf-copyedit', 'prfcopyedit')->name('prfcopyedit');
+    Route::get('/prftrans-ai', 'prftransaicontent')->name('prftransaicontent');
+    Route::get('/ind-specservices', 'indspecservices')->name('indspecservices');
     Route::get('/how-it-works', 'howItWorks')->name('howItWorks');
     Route::get('/pricing', 'pricing')->name('pricing');
     Route::get('/contact-us', 'contact')->name('contact');

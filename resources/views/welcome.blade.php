@@ -222,10 +222,10 @@
                                 <label class="radio-inline"><input type="radio" name="who_name" value="3" /> Translator</label>
                             </div>
 
-                            <div class="col-md-6">
-                                <label>Service Type: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline"><input type="radio" class="service-type-cls" name="service_type" value="1" required> Translate</label>
-                                <label class="radio-inline"><input type="radio" class="service-type-cls" name="service_type" value="2" required> Transcribe</label>
+                            <div class="col-md-6 form-check form-check-inline">
+                                <label class="w-100">Service Type: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate</span></label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe</span></label>
                             </div>
                         </div>
 
@@ -277,11 +277,11 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
                         </div>
 
                         <div class="row mt-3">
-                            <div class="col-md-6">
-                                <label>Estimated Delivery: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline"><input type="radio" class="delivery-type-cls" name="delivery_type" value="1" required> Standard</label>
-                                <label class="radio-inline"><input type="radio" class="delivery-type-cls" name="delivery_type" value="2" required> Priority</label>
-                                <label class="radio-inline"><input type="radio" class="delivery-type-cls" name="delivery_type" value="3" required> Urgent</label>
+                            <div class="col-md-6 form-check form-check-inline">
+                                <label class="w-100">Estimated Delivery: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required> Standard</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required> Priority</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required> Urgent</label>
                             </div>
 
                             <div class="col-md-6">

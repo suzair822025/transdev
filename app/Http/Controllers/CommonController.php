@@ -41,8 +41,15 @@ class CommonController extends Controller
     public function prfcopyedit()
     {
         return view('prfcopyedit');
+    }
+    public function prftransaicontent()
+    {
+        return view('prftransaicontent');
+    }
+    public function indspecservices()
+    {
+        return view('indspecservices');
     }    
-
     public function howItWorks()
     {
         return view('howItWorks');

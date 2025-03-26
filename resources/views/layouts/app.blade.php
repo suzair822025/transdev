@@ -36,8 +36,8 @@
                                 <li><a href="doc-translation"><i class="fa fa-arrow-right"></i>Document Translation</a></li>
                                 <li><a href="subtitling"><i class="fa fa-arrow-right"></i>Subtitling</a></li>
                                 <li><a href="prf-copyedit"><i class="fa fa-arrow-right"></i>Proofreading & copy-editing</a></li>
-                                <li><a href="proofreading-translation.php"><i class="fa fa-arrow-right"></i>Proofreading and translation of AI content</a></li>
-                                <li><a href="industry-specific-services.php"><i class="fa fa-arrow-right"></i>Industry-specific services</a></li>
+                                <li><a href="prftrans-ai"><i class="fa fa-arrow-right"></i>Proofreading and translation of AI content</a></li>
+                                <li><a href="ind-specservices"><i class="fa fa-arrow-right"></i>Industry-specific services</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
