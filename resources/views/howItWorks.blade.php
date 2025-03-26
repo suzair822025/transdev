@@ -2,66 +2,187 @@
 
 @section('content')
 
-<!--========== PARALLAX ==========-->
-<div class="parallax-window" data-parallax="scroll" data-image-src="{{asset("/assets/img/1920x1080/01.jpg")}}">
-    <div class="parallax-content container innerpage">
-        <h1 class="carousel-title">How It Works</h1>
-        <p class="white-text">We make it easy, quick, and affordable to get quality Translation and Transcription services.</p>
-    </div>
-</div>
-<!--========== PARALLAX ==========-->
-
-<!--========== PAGE LAYOUT ==========-->
-
-<!-- Promo Section -->
-<div class="promo-section1 overflow-h">
-    <div class="container my-5">
-        <div class="col-md-8 col-lg-offset-2">
-            <ul class="nav nav-tabs custom-tabs">
-                <li class="active col-md-6 mx-4 my-2"><a data-toggle="tab" href="#Howitworks"><span>How It Works?</span></a></li>
-                <li class="col-md-6 my-2"><a data-toggle="tab" href="#Qualitystandards"><span>Quality Standards</span></a></li>
-            </ul>
-        </div>
-        <div class="clearfix"></div>
-        <div class="tab-content text-left px-4">
-            <div id="Howitworks" class="tab-pane fade in active">
-                <h2><br>How it works?</h2>
-                <p><strong>Mode Of Functioning</strong></p>
-                <p><h3 class="h3-small"><strong>1- You Place the Order on Our Accessible Podium </strong></h3>
-                    Upload your content to Leebon, select the right languages and service Package. That’s it – there are no hidden fees so the amount you see is what you pay. To make it even easier, we accept credit cards, PayPal and bank transfer.
-                </p>
-                <p><h3 class="h3-small"><strong>2- Your Order Will Be Handled by an Experienced Translator</strong></h3>
-                    We will assign the most relevant translator to your project, guaranteeing that we will meet your project deadline and quality requirements. All of Leebon' translators undergo a rigorous selection process and their work is continuously monitored to ensure that it meets the highest quality standards.
-                </p>
-                <p><h3 class="h3-small"><strong>3- We Conduct a Quality Control Check</strong></h3>
-                    Our project managers oversee your project from start to finish, making sure everything runs smoothly. Our platform also lets you communicate and clarify any points and answer questions. For extra peace of mind, you can ask one of our experienced proofreaders to check over the translator’s work. Once completed, you can rate the project, allowing us to gather feedback and improve the quality of our translator base
-                </p>
-                <p><h3 class="h3-small"><strong>4- You Receive Your Translation within TAT </strong></h3>when you launch your translation/transcription on the platform, you’ll receive an estimated delivery time. You can even specify a deadline when placing your order. For urgent projects, you can select the rush express option, which means that your project will be assigned with the highest priority.
-                </p>
-            </div> <!--   ##Howitworks   -->
-
-            <div id="Qualitystandards" class="tab-pane fade in">
-                <h2><br>How we perpetuate our quality standards</h2>
-                <p><h3 class="h3-small"><strong>Strict Translator Selection Process</strong></h3>Only one out of four applicants are selected to be part of Leebon’s network. For the Enterprise level, we make a deeper qualification check by looking at the applicant’s academic background, professional experience and writing samples. They are then tested by our senior language managers in order to further validate their expertise.
-                </p>
-
-                <p><h3 class="h3-small"><strong>Ongoing Quality Control</strong></h3>Our quality control doesn’t just stop at the selection process. Our professional project managers supervise all of our projects to make sure that everything runs smoothly and that the submitted work matches your quality requirements.
-                </p>
-
-                <p><h3 class="h3-small"><strong>Worker Evaluation</strong></h3>Clients rate every project that they receive, allowing us to gain valuable feedback and improve the quality of our network of workers.
-                </p>
-
-                <p><h3 class="h3-small"><strong>Extra Proofreading</strong></h3>To ensure consistency and accuracy of complex orders or multiple documents, we offer a supplementary proofreading service. Our internal managers verify that the submitted text is error-free and uses the required vocabulary and tone across all documents.
-
-                <p><h3 class="h3-small"><strong>Expertise Validation</strong></h3>Our client’s satisfaction is at the heart of everything that we do here, which is why more than 10,000 clients trust Leebon with their transcription/translation projects.
-                We Put Your Satisfaction First </p>
-
-                <p><h3 class="h3-small"><strong>We Put Your Satisfaction First</strong></h3>Our client’s satisfaction is at the heart of everything that we do here, which is why more than 10,000 clients trust Leebon with their translation projects.</p>
+<!-- Star Services Details Area
+============================================= -->
+<div class="services-details-area default-padding">
+    <div class="cotnainer">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="site-heading text-center">
+                    <h4 class="sub-title">How It Works</h4>
+                    <h2 class="title">Translation and Transcription Services</h2>
+                </div>
             </div>
-        </div>    
+        </div>
+    </div>
+    <div class="container">
+        <div class="services-details-items">
+            <div class="row">
+                <div class="col-xl-12 services-single-content">
+                    <div class="thumb mb-50">
+                        <img src="assets/img/banner/how-it-works.webp" alt="">
+                    </div>
+                    <p>
+                        At Translationwindows, we offer a streamlined process for both translation and transcription services to ensure efficiency and high-quality results. Here’s a detailed overview of how our services work:
+                    </p>
+                    <div class="process-style-one-items mt-50">
+                        <div class="choose-us-one-thumb">
+                            <div class="content">
+                                <div class="left-info">
+                                    <h2 class="title">Submit Your Files</h2>
+                                </div>
+                                <div class="process-style-one">
+                                    <div class="process-style-one-item">
+                                        <span>01</span>
+                                        <h4>Submit<br> Your Files</h4>
+                                        <p>
+                                            <ul class="list-unstyled ul-list-innerpage">
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Upload or Email:</em></strong> Begin by submitting your audio, video, or document files through our secure online platform or by email. Provide clear instructions regarding the translation or transcription needs, including languages and any specific formatting preferences.
+                                                </li>
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Provide Context:</em></strong> For transcription services, include any relevant details about the content (e.g., speakers' names, specific terminology). For translation services, specify any industry-specific terms or special considerations.
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <div class="process-style-one-item">
+                                        <span>02</span>
+                                        <h4>Review<br>and Quotation</h4>
+                                        <p>
+                                            <ul class="list-unstyled ul-list-innerpage">
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Initial Assessment:</em></strong> Our team reviews your files to evaluate the length, complexity, and any special requirements for both translation and transcription tasks.
+                                                </li>
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Quotation:</em></strong> We provide a detailed quote that includes the cost and estimated turnaround time. This quote covers all aspects of the service, including any additional formatting or editing needs.
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <div class="process-style-one-item">
+                                        <span>03</span>
+                                        <h4>Translation</h4>
+                                        <p>
+                                            <ul class="list-unstyled ul-list-innerpage">
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Assignment:</em></strong> Your document is assigned to a professional translator who is a native speaker of the target language and an expert in the relevant field.
+                                                </li>
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Translation:</em></strong> The translator works meticulously to ensure that the translation is accurate, preserving the original meaning, tone, and context.
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <div class="process-style-one-item">
+                                        <span>04</span>
+                                        <h4>Transcription</h4>
+                                        <p>
+                                            <ul class="list-unstyled ul-list-innerpage">
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Transcription:</em></strong> Our team transcribes audio or video content, ensuring that every word is accurately captured and formatted according to your specifications.
+                                                </li>
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Time Codes and Speaker Identification:</em></strong> For video or complex audio, we include time codes and speaker identification as requested.
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <div class="process-style-one-item">
+                                        <span>05</span>
+                                        <h4>Formatting</h4>
+                                        <p>
+                                            <ul class="list-unstyled ul-list-innerpage">
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Translation:</em></strong> After translating, we ensure that the document’s formatting—such as headers, footers, tables, and images—matches the original layout.
+                                                </li>
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Transcription:</em></strong> We format the transcript according to your preferences, including time codes and speaker labels if required.
+                                                </li>
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Quality Assurance:</em></strong> Both translations and transcriptions undergo thorough quality checks, including proofreading and editing, to ensure accuracy and consistency.
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <div class="process-style-one-item">
+                                        <span>06</span>
+                                        <h4>Review<br>and Feedback</h4>
+                                        <p>
+                                            <ul class="list-unstyled ul-list-innerpage">
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Initial Delivery:</em></strong> You receive the translated document or transcribed file for review. This allows you to verify that the content meets your expectations.
+                                                </li>
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Feedback:</em></strong> If you need any changes or adjustments, provide feedback within one week of receiving the document or transcript. We will incorporate these changes promptly at no additional cost.
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <div class="process-style-one-item">
+                                        <span>07</span>
+                                        <h4>Final<br>Delivery</h4>
+                                        <p>
+                                            <ul class="list-unstyled ul-list-innerpage">
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Revised Document or Transcript:</em></strong> After addressing your feedback, we deliver the finalized document or transcript in your preferred format (e.g., Word, PDF, or text file). You will receive the completed file via our secure platform or email.
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <div class="process-style-one-item">
+                                        <span>08</span>
+                                        <h4>Ongoing<br>Support</h4>
+                                        <p>
+                                            <ul class="list-unstyled ul-list-innerpage">
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>One-Week Checking Period:</em></strong> You have one week from the delivery date to review the final document or transcript and request any further revisions or updates. We offer revisions within this period to ensure complete satisfaction.
+                                                </li>
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Separate ID for Revisiting Customers:</em></strong> Each project is assigned a unique ID, making it easy to track and manage revisiting customers’ files. This ID helps streamline any follow-up requests or additional work needed.
+                                                </li>                                 
+                                            </ul>
+                                        </p>
+                                    </div>
+                                    <div class="process-style-one-item">
+                                        <span>09</span>
+                                        <h4>Continued<br> Assistance</h4>
+                                        <p>
+                                            <ul class="list-unstyled ul-list-innerpage">
+                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
+                                                    </svg></b><strong><em>Ongoing Support:</em></strong> Our support team remains available for any additional translation or transcription needs, as well as any further inquiries or updates. We are committed to providing responsive and helpful assistance to ensure your continued satisfaction.
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<!-- End Promo Section -->
-<!--========== END PAGE LAYOUT ==========-->
+
+
+<!-- End Service Details -->
 
 @endsection

@@ -41,12 +41,12 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="how-it-works.php" class="">How It works</a>
+                            <a href="how-it-works" class="">How It works</a>
                         </li>
                         <li>
-                            <a href="career.php" class="">Career</a>
+                            <a href="career" class="">Career</a>
                         </li>
-                        <li><a href="contact-us.php">contact</a></li>
+                        <li><a href="contact-us">contact</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
