@@ -27,7 +27,7 @@
                                 </div>
                                 <div id="signup-form" class="col-lg-5 my-lg-5 mb-30" style="text-align:right;">
                                     <div class="mt-20">&nbsp;</div>
-                                    <img src="{{ asset('/assets/img/illustration/7.webp') }}" alt="Translation windows empowering success in technology since 2014
+                                    <img src="{{ asset('/assets/img/hro_img.avif') }}" alt="Translation windows empowering success in technology since 2014
 " width="300">
                                     <p class="ajax-response"></p> 
                                 </div> <!-- ##signup-form -->
