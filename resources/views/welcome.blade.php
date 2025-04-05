@@ -21,7 +21,7 @@
                                 <div class="col-xl-7 col-lg-7">
                                     <div class="content">
                                         <h2 class="slider-title1"><span class="sm-sl-title">Expert linguisic</span><br></bnr><strong>Services Tailored</strong> To Your Needs.</h2>
-                                        <span>We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
+                                        <span class="mt-n4">We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
                                         <div class="shape-circle d-none"></div>
                                     </div>
                                 </div>
