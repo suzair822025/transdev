@@ -604,19 +604,30 @@
     });
 
     // Sticky Header Js
+
+    var Width = $(document).width();
+    var scroll = $(window).scrollTop();
+    var Is_homepage = (window.location.pathname === "/" || window.location.pathname === "/index.php");
+    var check_sticky = $(".navbar-sticky").hasClass("sticked");
+    var Is_scrolled = $("body").scrollTop() > 0 || $("html").scrollTop() > 0;
+    var Scrolled_top = $(window).scrollTop() === 0;
+    if (Is_homepage) {
+        if (Width > 1023) {
+            $(".navbar-sticky").removeClass("sticked");
+            $(".navbar-sticky").addClass("no-background");
+        }
+    } else {
+        $(".navbar-sticky").addClass("sticked");
+        $(".navbar-sticky").removeClass("no-background");
+    }
     $(window).on('scroll', function() {
-        var Width = $(document).width();
-        var scroll = $(window).scrollTop();
-        var Is_homepage = (window.location.pathname != "/" || window.location.pathname != "/index.php");
-        var check_sticky = $(".navbar-sticky").hasClass("sticked");
-        if ($("body").scrollTop() > 0 || $("html").scrollTop() > 0 || Is_homepage) {
+        if (Is_homepage || Is_scrolled) {
             if (Width > 1023) {
                 $(".navbar-sticky").addClass("sticked");
                 $(".navbar-sticky").removeClass("no-background");
             }
-        } else {
-            $(".navbar-sticky").removeClass("sticked");
-        }
+            
+        } else { }
         
     });
 

@@ -1207,7 +1207,12 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
                     <div class="row text-center">
                         <div class="col">
                             <div class="separator">
-                                <a href="javascript:;" class="usflag" onclick="setLanguage('english')"></a><a class="spflag" onclick="setLanguage('español')" href="javascript:;">&nbsp;</a>
+                                <a href="javascript:;" class="usflag" onclick="setLanguage('english')">
+                                    <img src="{{ asset('/assets/img/flag_us.avif') }}" alt="Translation windows empowering success in technology since 2014">
+                                </a>
+                                <a class="spflag" onclick="setLanguage('español')" href="javascript:;">
+                                    <img src="{{ asset('/assets/img/flag_sp.avif') }}" alt="Translation windows empowering success in technology since 2014">
+                                </a>
                             </div>
                         </div>
                     </div>
