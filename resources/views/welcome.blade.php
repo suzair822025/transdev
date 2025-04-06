@@ -25,7 +25,7 @@
                                         <div class="shape-circle d-none"></div>
                                     </div>
                                 </div>
-                                <div id="signup-form" class="col-lg-5 mt-1" style="text-align:right;">
+                                <div id="signup-form" class="col-lg-5 mt-4" style="text-align:right;">
                                     <div class="mt-20">&nbsp;</div>
                                     <img src="{{ asset('/assets/img/hro_img.avif') }}" alt="Translation windows empowering success in technology since 2014
 " width="300">
