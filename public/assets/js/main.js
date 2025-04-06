@@ -149,11 +149,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	var myModal = new bootstrap.Modal(document.getElementById('langModal'));
 	myModal.show();
 });
-function setLanguage(lang) {
-	alert("Language selected: " + lang);
-	//localStorage.setItem("selectedLanguage", lang); // Store language preference
+function setLanguage(lang, url) {
+	//alert("Language selected: " + lang);
+	localStorage.setItem("selectedLanguage", lang); // Store language preference
+	localStorage.setItem("visitedUrl", url); // Store clicked url
 	var languageModal = bootstrap.Modal.getInstance(document.getElementById('langModal'));
 	languageModal.hide();
+	window.location.href = url;
 }
 
 window.dataLayer = window.dataLayer || [];

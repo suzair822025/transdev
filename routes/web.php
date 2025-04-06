@@ -36,6 +36,7 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('/get-quote', 'getQuote')->name('get-quote');
     Route::get('/translation-landing', 'translationLanding')->name('translation-landing');
     Route::get('/pricestable', 'pricestable')->name('pricestable');
+    Route::get('/es/welcome', 'welcome')->name('welcome');
 });
 
 Route::controller(QuoteController::class)->group(function () {
