@@ -1203,15 +1203,15 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
     <div class="modal fade" id="langModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content rounded-5 overflow-hidden">
-                <div class="modal-body p-0">
+                <div class="modal-body">
                     <div class="row text-center">
                         <div class="col">
                             <div class="separator">
                                 <a href="javascript:;" class="usflag" onclick="setLanguage('english')">
-                                    <img src="{{ asset('/assets/img/flag_us.avif') }}" alt="Translation windows empowering success in technology since 2014">
+                                    <img src="{{ asset('/assets/img/flag_us.avif') }}" alt="Translation windows empowering success in technology since 2014">English
                                 </a>
                                 <a class="spflag" onclick="setLanguage('español')" href="javascript:;">
-                                    <img src="{{ asset('/assets/img/flag_sp.avif') }}" alt="Translation windows empowering success in technology since 2014">
+                                    <img src="{{ asset('/assets/img/flag_sp.avif') }}" alt="Translation windows empowering success in technology since 2014">Española
                                 </a>
                             </div>
                         </div>
