@@ -607,7 +607,7 @@
     $(window).on('scroll', function() {
         var Width = $(document).width();
         var scroll = $(window).scrollTop();
-        var Is_homepage = (window.location.pathname === "/" || window.location.pathname === "/index.php");
+        var Is_homepage = (window.location.pathname != "/" || window.location.pathname != "/index.php");
         var check_sticky = $(".navbar-sticky").hasClass("sticked");
         if ($("body").scrollTop() > 0 || $("html").scrollTop() > 0 || Is_homepage) {
             if (Width > 1023) {
