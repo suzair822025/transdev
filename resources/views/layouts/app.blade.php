@@ -56,14 +56,7 @@
                         <ul>
                             <li class="contact">
                                 <div class="call">
-                                    <div class="icon">
-                                        <i class="fas fa-comments-alt-dollar"></i>
-                                    </div>
-                                    <div class="info">
-                                        <p class="mb-0"><a href="mailto:sales@translationwindows.com" class="p-0"><span class="text-lowercase">sales@translationwindows.com</span></a></p>
-                                        <h5><a class="text-capitalize el-content uk-button uk-button-default uk-button-small" href="#">Live Chat</a></h5>
-                                        <p>(281) 205-3932</p>
-                                    </div>
+                                    <a class="btn btn-md circle btn-gradient animation mt-20" href="#">Get A Quote</a>
                                 </div>
                             </li>
                         </ul>
