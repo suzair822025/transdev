@@ -25,7 +25,7 @@
                                         <div class="shape-circle d-none"></div>
                                     </div>
                                 </div>
-                                <div id="signup-form" class="col-lg-5 mt-1" style="text-align:right;">
+                                <div id="signup-form" class="col-lg-5 mt-5" style="text-align:right;">
                                     <div class="mt-20">&nbsp;</div>
                                     <img src="{{ asset('/assets/img/hro_img.avif') }}" alt="Translation windows empowering success in technology since 2014
 " width="300">
@@ -1207,12 +1207,7 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
                     <div class="row text-center">
                         <div class="col">
                             <div class="separator">
-                                <a href="javascript:;" class="usflag" onclick="setLanguage('english', '/')">
-                                    <img src="{{ asset('/assets/img/flag_us.avif') }}" alt="Translation windows empowering success in technology since 2014">English
-                                </a>
-                                <a class="spflag" onclick="setLanguage('español', '/es')" href="javascript:;">
-                                    <img src="{{ asset('/assets/img/flag_sp.avif') }}" alt="Translation windows empowering success in technology since 2014">Española
-                                </a>
+                                <a href="javascript:;" class="usflag" onclick="setLanguage('english')"></a><a class="spflag" onclick="setLanguage('español')" href="javascript:;">&nbsp;</a>
                             </div>
                         </div>
                     </div>
