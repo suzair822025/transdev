@@ -13,17 +13,17 @@
             <div class="row align-text-top">
                 <div class="col-xl-5 col-lg-5">
                     <div class="content mt-5">
-                        <h2 class="slider-title1"><span class="sm-sl-title">Expert linguisic</span><br></bnr><strong>Services Tailored</strong> To Your Needs.</h2>
-                        <span class="mt-n4">We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
+                        <h2 class="slider-title1"><span class="sm-sl-title">Experto lingüístico</span><br></bnr><strong>Servicios adaptados</strong> a sus necesidades.</h2>
+                        <span class="mt-n4">Ofrecemos servicios de traducción certificados y comerciales que son confiables, asequibles y fáciles de solicitar, garantizando precisión y una entrega rápida.</span>
                         <ul class="my-2">
-                            <li><i class="fa fa-check-circle"></i> Supercharged by AI for Lightning-Fast Translations.</li>
-                            <li><i class="fa fa-check-circle"></i> Expert Business & Legal Translations You Can Trust.</li>
-                            <li><i class="fa fa-check-circle"></i> Worldwide Apostille & Notarisation, Handled for You.</li>
-                            <li><i class="fa fa-check-circle"></i> Clear, accurate translations that won’t break the <br>bank—starting at only $2.</li>
-                            <li><i class="fa fa-check-circle"></i> Clear, reliable transcriptions that don’t cost a <br>fortune—just $1 per minute.</li>
+                            <li><i class="fa fa-check-circle"></i> Sobrealimentada por AI para traducciones rápidas.</li>
+                            <li><i class="fa fa-check-circle"></i> Traducciones comerciales y legales expertas en las que puede confiar.</li>
+                            <li><i class="fa fa-check-circle"></i> Apostilla y notarización internacional, gestionadas por usted.</li>
+                            <li><i class="fa fa-check-circle"></i> Traducciones claras y precisas que no te <br>arruinarán, desde solo $2.</li>
+                            <li><i class="fa fa-check-circle"></i> Transcripciones claras y confiables que <br>no cuestan una fortuna: solo $1 por minuto.</li>
                         </ul>
                         <div class="my-5"></div>
-                        <button type="button" class="btn btn-primary" onclick="smoothScroll(event, 'getquoteForm')">Order Now <i class="fa fa-arrow-to-right hero-ordr-btn"></i></button>
+                        <button type="button" class="btn btn-primary" onclick="smoothScroll(event, 'getquoteForm')">Ordene ahora <i class="fa fa-arrow-to-right hero-ordr-btn"></i></button>
                     </div>
                 </div>
                 <div class="col-lg-7 mt-5" style="text-align:right;">
@@ -41,7 +41,7 @@
     <div class="services-content bg-gray-secondary default-padding d-md-block">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center">
-                <h4 class="sub-title mb-5">Simple Procedure for Online Orders</h4>
+                <h4 class="sub-title mb-5">Procedimiento sencillo para pedidos en línea</h4>
             </div>
             <div class="about-style-one-items">
                 <div class="row my-5">
@@ -66,17 +66,17 @@
                             </div>
 
                             <div class="col-md-6 form-check form-check-inline">
-                                <label class="w-100">Service Type: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate</span></label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe</span></label>
+                                <label class="w-100">Tipo de servicio: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Traducir</span></label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribir</span></label>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-6">
-                                <label>Translate From: <span style="color:red;">*</span></label>
+                                <label>Traducir desde: <span style="color:red;">*</span></label>
                                 <select name="translate_from" class="form-control" required>
-                                    <option value="" selected>Select Language</option>
+                                    <option value="" selected>Seleccionar idioma</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
                                     @empty
@@ -85,9 +85,9 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label>Translate To: <span style="color:red;">*</span></label>
+                                <label>Traducir a: <span style="color:red;">*</span></label>
                                 <select name="translate_to" class="form-control" required>
-                                <option value="" selected>Select Language</option>
+                                <option value="" selected>Seleccionar idioma</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
                                     @empty
@@ -98,18 +98,18 @@
 
                         <div class="row mt-3">
                             <div class="col-md-6">
-                                <label>Number of Pages: <span style="color:red;">*</span></label>
-                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages" required>
-                                <span>1 page = 250 words max</span>
-                                <span data-toggle="tooltip" data-placement="top" title="Enter the number of pages you need to translate. One page is approximately 250 words."><i class="fa fa-info-circle"></i></span>
+                                <label>Número de páginas: <span style="color:red;">*</span></label>
+                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Ingrese el número de páginas" required>
+                                <span>1 página = 250 palabras Max</span>
+                                <span data-toggle="tooltip" data-placement="top" title="Ingrese el número de páginas que necesita para traducir.Una página es de aproximadamente 250 palabras."><i class="fa fa-info-circle"></i></span>
 
                             </div>
 
                             <div class="col-md-6">
-                                <label>Upload File: <span style="color:red;">*</span></label>
+                                <label>Archivo de carga: <span style="color:red;">*</span></label>
                                 <input type="file" name="file_name" class="file-upload-cls form-control"  required>
                                 <div id="uploadStatus" class="mt-3"></div>
-                                <span>File Upload info </span><span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span>
+                                <span>Información de carga de archivos </span><span data-toggle="tooltip" data-placement="top" title="Nuestra herramienta de conteo de palabras verifica los tipos de archivos compatibles y estima el número de palabras o páginas.Una página es de aproximadamente 250 palabras.Revise el recuento de palabras antes de realizar su pedido.Si nuestros gerentes de proyecto encuentran grandes diferencias en el recuento, pueden comunicarse con usted para actualizar su cotización.Tipos de archivos compatibles: DOCX, DOC, XLSX, PPTX, TXT, XLIFF, CSV, XML, HTML, PDF, JSON, BMP, PNM, PNG, JFIF, JPEG, TIFF, TIFF."><i class="fa fa-info-circle"></i></span>
 
                                 <input type="hidden" name="file_id" class="record-file-id" value="0" />
                             </div>
@@ -117,34 +117,34 @@
 
                         <div class="row mt-3">
                             <div class="col-md-6 form-check form-check-inline">
-                                <label class="w-100">Estimated Delivery: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required> Standard</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required> Priority</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required> Urgent</label>
+                                <label class="w-100">Entrega estimada: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required> Estándar</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required> Prioridad</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required> Urgente</label>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Name: <span style="color:red;">*</span></label>
-                                <input type="text" class="form-control" name="customer_name" placeholder="Enter your name" required>
+                                <label>Nombre: <span style="color:red;">*</span></label>
+                                <input type="text" class="form-control" name="customer_name" placeholder="Ingrese su nombre" required>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-6">
-                                <label>Email: <span style="color:red;">*</span></label>
-                                <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                                <label>Correo electrónico: <span style="color:red;">*</span></label>
+                                <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico" required>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Phone: <span style="color:red;">*</span></label>
+                                <label>Teléfono: <span style="color:red;">*</span></label>
                                 <input type="tel" class="form-control" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-12">
-                                <label>Comments:</label>
-                                <textarea class="form-control" name="comments" rows="3" placeholder="Enter your comments"></textarea>
+                                <label>Comentario:</label>
+                                <textarea class="form-control" name="comments" rows="3" placeholder="Ingrese sus comentarios"></textarea>
                             </div>
                         </div>
 
@@ -157,16 +157,16 @@
                 </div>
                 <div class="col-md-4">
                 <div class="order-summary">
-                        <h4>Order Summary</h4>
-                        <p><strong>Service Type:</strong> <span class="service-type-container"></span></p>
-                        <p><strong>Number of Pages:</strong> <span class="pages-count">$0.00</span></p>
-                        <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
-                        <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>
-                        <p><strong>Total Amount:</strong> <span class="total-amount">$0.00</span></p>       
-                        <button type="button" class="btn-form-submit btn btn-primary">Place Order</button>
+                        <h4>Resumen de pedido</h4>
+                        <p><strong>Tipo de servicio:</strong> <span class="service-type-container"></span></p>
+                        <p><strong>Número de páginas:</strong> <span class="pages-count">$0.00</span></p>
+                        <p><strong>Enlace de descarga:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Descargar archivo</a></p>
+                        <p><strong>Entrega estimada:</strong> <span class="delivery-time">$0.00</span></p>
+                        <p><strong>Cantidad total:</strong> <span class="total-amount">$0.00</span></p>       
+                        <button type="button" class="btn-form-submit btn btn-primary">Orden</button>
                         <!-- <div id="paypal-button-container" data-id="0"></div> -->
                         <div id="card-button-container"  data-id="0"></div>
-                        <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.
+                        <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Gracias</h3>¡Su pedido ha sido realizado con éxito!Gracias por elegirnos.Nuestro agente de traducción se comunicará con usted en breve.
                         
                     </div>
                     </div>
@@ -185,8 +185,8 @@
             <div class="row">
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                     <div class="site-heading text-center">
-                        <h4 class="sub-title">Our Services</h4>
-                        <h2 class="title">Empower your business with our services.</h2>
+                        <h4 class="sub-title">Nuestros servicios</h4>
+                        <h2 class="title">Empodera tu negocio con nuestros servicios.</h2>
                     </div>
                 </div>
             </div>
@@ -198,9 +198,9 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-1.webp') }}" alt="">
-                            <h4><a href="av-translation.php">Translation</a></h4>
+                            <h4><a href="av-translation.php">Traducción</a></h4>
                             <p>
-                            We, at Translationwindows, we completely understand that effective communication across languages goes beyond just translation.
+                            Nosotros, en TradationWindows, entendemos completamente que la comunicación efectiva entre los idiomas va más allá de la traducción.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="av-translation.php"><i class="fas fa-long-arrow-right"></i></a>
@@ -214,9 +214,9 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-2.webp') }}" alt="">
-                            <h4><a href="av-transcription.php">Transcription</a></h4>
+                            <h4><a href="av-transcription.php">Transcripción</a></h4>
                             <p>
-                            Translationwindows excels in providing comprehensive transcription services across a multitude of languages, combining unparalleled accuracy.
+                            TranslationWindows sobresale en proporcionar servicios integrales de transcripción en una multitud de idiomas, combinando una precisión incomparable.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="av-transcription.php"><i class="fas fa-long-arrow-right"></i></a>
@@ -230,9 +230,9 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-3.webp') }}" alt="">
-                            <h4><a href="subtitling.php">Subtitling</a></h4>
+                            <h4><a href="subtitling.php">Subtitulación</a></h4>
                             <p>
-                                At Translationwindows, we offer expert subtitling services for a wide range of audio and video content in every language.
+                                En TradationWindows, ofrecemos servicios de subtitulación expertos para una amplia gama de contenido de audio y video en cada idioma.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="subtitling.php"><i class="fas fa-long-arrow-right"></i></a>
@@ -248,9 +248,9 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-4.webp') }}" alt="">
-                            <h4><a href="proofreading-copy-editing.php">Proofreading & Copy-Editing</a></h4>
+                            <h4><a href="proofreading-copy-editing.php">Profirer y copiar edición</a></h4>
                             <p>
-                                To ensure your text is clear, accurate, and of a professional calibre, Translationwindows.com provides professional proofreading and copy-editing services.
+                                Para asegurarse de que su texto sea claro, preciso y de un calibre profesional, TranslationWindows.com proporciona servicios profesionales de revisión y edición de copias.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="proofreading-copy-editing.php"><i class="fas fa-long-arrow-right"></i></a>
@@ -264,9 +264,9 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-5.webp') }}" alt="">
-                            <h4><a href="proofreading-translation.php">Proofreading & Translation Of AI Content</a></h4>
+                            <h4><a href="proofreading-translation.php">Revisión y traducción del contenido de IA</a></h4>
                             <p>
-                                Our speciality at Translationwindows.com is editing and translating AI-generated content to make sure it is precise, well-written, and appropriate for the target culture.
+                                Nuestra especialidad en TranslationWindows.com es editar y traducir contenido generado por IA para asegurarse de que sea preciso, bien escrito y apropiado para la cultura objetivo.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="proofreading-translation.php"><i class="fas fa-long-arrow-right"></i></a>
@@ -280,9 +280,9 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-6.webp') }}" alt="">
-                            <h4><a href="industry-specific-services.php">Industry-Specific Services</a></h4>
+                            <h4><a href="industry-specific-services.php">Servicios específicos de la industria</a></h4>
                             <p>
-                                Personalised translation and design services made to fit the particular requirements of your sector.
+                                Servicios de traducción y diseño personalizados realizados para adaptarse a los requisitos particulares de su sector.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="industry-specific-services.php"><i class="fas fa-long-arrow-right"></i></a>
@@ -306,8 +306,8 @@
         <div class="col-md-8 col-lg-6 offset-lg-1">
         <!-- Title -->
         <div class="mb-5">
-            <h2 class="text-white mb-1">Start talking to us today</h2>
-            <p class="lead text-light">Contact for more information at <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(254) 271-4094">(254) 271-4094</a></p>
+            <h2 class="text-white mb-1">Empieza a hablar con nosotras hoy</h2>
+            <p class="lead text-light">Contacto para más información en <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(254) 271-4094">(254) 271-4094</a></p>
         </div>
         <!-- End Title -->
         <!-- Button -->
@@ -315,7 +315,7 @@
             <span class="media align-items-center">
             <span class="fa fa-regular fa-headset fa-3x mr-3"></span>
             <span class="d-block">
-                <span class="d-block">Start Chat Now</span>
+                <span class="d-block">Empiece a chatear ahora</span>
             </span>
             </span>
         </a>
@@ -325,7 +325,7 @@
             <span class="media align-items-center">
             <span class="far fa-phone fa-3x mr-3"></span>
             <span class="d-block">
-                <span class="d-block">Call Now</span>
+                <span class="d-block">Llamar ahora</span>
             </span>
             </span>
         </a>
@@ -342,30 +342,30 @@
         <div class="container">
             <div class="row align-center my-5">
                 <div class="d-flex flex-column align-items-center justify-content-center">
-                    <h4 class="sub-title">Translation Services</h4>
-                    <h5>We provide comprehensive services in translation, and legalization for individuals and businesses.</h5>
+                    <h4 class="sub-title">Servicios de traducción</h4>
+                    <h5>Brindamos servicios integrales en traducción y legalización para individuos y empresas..</h5>
                 </div>
             </div>
             <div class="row mb-5">
                 <div class="col-lg-5"><img src="{{ asset('/assets/img/ct.webp') }}" alt=""></div>
-                <div class="col-lg-7 px-5"><h2 class="title">Certified Translations </h2>
-                    <p class="card-text lead">Get certified, notarised, sworn, and legalised translations—trusted and accepted worldwide!</p>
+                <div class="col-lg-7 px-5"><h2 class="title">Traducciones certificadas </h2>
+                    <p class="card-text lead">Obtenga traducciones certificadas, notaradas, juradas y legalizadas, controladas y aceptadas en todo el mundo!</p>
                     <ul class="list-style-one">
-                        <li>Documents Translated and Certified with Precision.</li>   
-                        <li>Secure Digital PDF delivery with the option for worldwide shipping.</li>
-                        <li>Expert Apostille and Notarisation Services, Trusted Worldwide.</li>
+                        <li>Documentos traducidos y certificados con precisión.</li>   
+                        <li>Entrega de PDF digital seguro con la opción de envío mundial.</li>
+                        <li>Servicios de apostilla y notarización de expertos, confianza en todo el mundo.</li>
 
                     </ul>
                 </div>
             </div>
             <div class="row my-3">
                 <div class="col-lg-5"><img src="{{ asset('/assets/img/pt.webp') }}" alt=""></div>
-                <div class="col-lg-7 px-5"><h2 class="title">Professional Translations </h2>
-                    <p class="card-text lead">Fast and reliable standard translations tailored for individuals and businesses!</p>
+                <div class="col-lg-7 px-5"><h2 class="title">Traducciones profesionales </h2>
+                    <p class="card-text lead">Traducciones estándar rápidas y confiables diseñadas para individuos y empresas!</p>
                     <ul class="list-style-one">
-                        <li>Expert Translators with Specialized Subject Matter Knowledge.</li>
-                        <li>Expert Assistance for Business, Technical, and Legal Documents.</li>
-                        <li>Accelerate your translations with AI—faster, smarter, and more cost-effective!</li>
+                        <li>Traductores expertos con conocimiento de materia especializada.</li>
+                        <li>Asistencia de expertos para documentos comerciales, técnicos y legales.</li>
+                        <li>Acelere sus traducciones con IA: más sencillo, más inteligente y más rentable!</li>
                     </ul>
                 </div>
             </div>
@@ -380,31 +380,31 @@
             <div class="row align-center">
                 <div class="col-lg-6">
                     <div class="about-style-three-info">
-                        <h4 class="sub-title">About Us</h4>
+                        <h4 class="sub-title">Sobre nosotras</h4>
                         <h1 class="title">Providing solutions for translation services</h1>
-                        <p>Our business specializes in providing thorough translation solutions that are suited to your unique requirements. Our highly skilled linguists and cutting-edge technology guarantee accurate translations that are culturally appropriate for a variety of businesses. Whether you need localization, multilingual support, or document translation, we can help you close communication gaps and reach a worldwide audience with our dependable and effective services.</p>
+                        <p>Nuestro negocio se especializa en proporcionar soluciones de traducción exhaustivas que sean adecuadas para sus requisitos únicos.Nuestros lingüistas altamente calificados y tecnología de vanguardia garantizan traducciones precisas que son culturalmente apropiadas para una variedad de empresas.Ya sea que necesite localización, soporte multilingüe o traducción de documentos, podemos ayudarlo a cerrar las brechas de comunicación y llegar a una audiencia mundial con nuestros servicios confiables y efectivos..</p>
                         <div class="info-grid mt-50">
                             <div class="left-info">
                                 <div class="fun-fact-card-two">
-                                    <h4 class="sub-title">Our Expertise</h4>
+                                    <h4 class="sub-title">Nuestra experiencia</h4>
                                     <div class="counter-title">
                                         <div class="counter">
                                             <div class="timer" data-to="10" data-speed="2000">10</div>
                                             <div class="operator">+</div>
                                         </div>
                                     </div>
-                                    <span class="medium">Years of experience</span>
+                                    <span class="medium">Años de experiencia</span>
                                 </div>
                             </div>
                             <div class="right-info bg-gradient text-light">
                                 <ul class="list-style-three">
-                                    <li>Audio/Video Translation</li>
-                                    <li>Document Translation</li>
-                                    <li>Audio/Video Transcription</li>
-                                    <li>Subtitling</li>
-                                    <li>Proofreading & Copy-Editing</li>
-                                    <li>Proofreading & AI Translation</li>
-                                    <li>Industry-Specific Services</li>
+                                    <li>Traducción de audio/video</li>
+                                    <li>Traducción de documentos</li>
+                                    <li>Transcripción de audio/video</li>
+                                    <li>Subtitulación</li>
+                                    <li>Profirer y copiar edición</li>
+                                    <li>Traducción de creadación y AI</li>
+                                    <li>Servicios específicos de la industria</li>
                                 </ul>
                             </div>
                         </div>
@@ -428,12 +428,12 @@
             <div class="row">
                 <div class="col-xl-6 order-xl-last pl-80 pl-md-15 pl-xs-15 choose-us-style-two-content mt-5">
                     <div class="info-style-one">
-                        <h4 class="sub-title">Why Choose Us</h4>
-                        <h2 class="title">Empowering success in technology since 2014 </h2>
+                        <h4 class="sub-title">Por qué elegirnos</h4>
+                        <h2 class="title">Empoderar el éxito en la tecnología desde 2014 </h2>
                         <p>
-                        At Translationwindows, we understand that every project and client has different requirements. The main causes of this are the variations in project size, industry, and language. We therefore approach each order with a unique technique. Our translators have experience in a variety of fields, such as education and medical. This enables us to match you with a thoroughly qualified and screened translator in your particular industry, ensuring accurate and quick professional translation services.
+                        En TradationWindows, entendemos que cada proyecto y cliente tiene diferentes requisitos.Las principales causas de esto son las variaciones en el tamaño del proyecto, la industria y el idioma.Por lo tanto, abordamos cada orden con una técnica única.Nuestros traductores tienen experiencia en una variedad de campos, como la educación y la médica.Esto nos permite igualarlo con un traductor completamente calificado y proyectado en su industria particular, asegurando servicios de traducción profesional precisos y rápidos.
                         </p>
-                        <a class="btn btn-md circle btn-gradient animation mt-20" href="javascript::">Learn More</a>
+                        <a class="btn btn-md circle btn-gradient animation mt-20" href="javascript::">Obtenga más información</a>
                     </div>
                 </div>
                 <div class="col-xl-6 pt-5">
@@ -458,17 +458,17 @@
                 </div>
                 <div class="col-xl-7 offset-xl-1 col-lg-8">
                     <div class="speciality-items">
-                        <h4 class="sub-title">Our expertise</h4>
-                        <h2 class="title">Our commitment <br> is client satisfaction </h2>
+                        <h4 class="sub-title">Nuestra experiencia</h4>
+                        <h2 class="title">Nuestro compromiso <br> es la satisfacción del cliente </h2>
                         <div class="d-grid mt-40">
                             <ul class="list-style-two">
-                                <li>Translation </li>
-                                <li>Transcription</li>
-                                <li>Subtitling</li>
+                                <li>Traducción </li>
+                                <li>Transcripción</li>
+                                <li>Subtitulación</li>
                             </ul>
                             <div class="progress-items">
                                 <div class="progress-box">
-                                    <h5>Translation</h5>
+                                    <h5>Traducción</h5>
                                     <div class="progress">
                                         <div class="progress-bar" role="progressbar" data-width="70">
                                             <span>70%</span>
@@ -476,7 +476,7 @@
                                     </div>
                                 </div>
                                 <div class="progress-box">
-                                    <h5>Transcription</h5>
+                                    <h5>Transcripción</h5>
                                     <div class="progress">
                                         <div class="progress-bar" role="progressbar" data-width="95">
                                             <span>95%</span>
@@ -484,7 +484,7 @@
                                     </div>
                                 </div>
                                 <div class="progress-box">
-                                    <h5>Subtitling</h5>
+                                    <h5>Subtitulación</h5>
                                     <div class="progress">
                                         <div class="progress-bar" role="progressbar" data-width="95">
                                             <span>75%</span>
@@ -616,19 +616,19 @@
                     <div class="col-xl-7 col-lg-7 pl-50 pl-md-15 pl-xs-15">
                         <div class="about-style-one-info">
                             <div class="content">
-                                <h2 class="title">With a team of 200+ experts, we're fluent in over 100 languages and ready to help.</h2>
+                                <h2 class="title">Con un equipo de más de 200 expertos, estamos con fluidez más de 100 idiomas y listos para ayudar.</h2>
                                 <p>
-                                Increase the ease and effectiveness of your communication. Semantix offers linguistic solutions that are tailored to meet all of your company's needs.
+                                Aumente la facilidad y efectividad de su comunicación.Semantix ofrece soluciones lingüísticas adaptadas para satisfacer todas las necesidades de su empresa.
                                 </p>
                             </div>
                             <ul class="card-list">
                                 <li>
-                                    <img src="{{ asset('/assets/img/icon/4.png') }}" alt="Image Not Found">
-                                    <h5>Award Winning Company</h5>
+                                    <img src="{{ asset('/assets/img/icon/4.png') }}" alt="Translationwindows">
+                                    <h5>Empresa galardonada</h5>
                                 </li>
                                 <li>
                                     <h2>3.8 X</h2>
-                                    <h5>Economical growth </h5>
+                                    <h5>Crecimiento económico </h5>
                                 </li>
                             </ul>
                         </div>
