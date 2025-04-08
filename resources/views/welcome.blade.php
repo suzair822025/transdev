@@ -35,6 +35,9 @@
     </div>
     <!-- End banner-area -->
 
+    <!-- Start Get Quote 
+============================================= -->
+
     <div class="services-content bg-gray-secondary default-padding d-md-block">
         <div class="container" id="getquoteForm">
             <div class="d-flex flex-column align-items-center justify-content-center">
@@ -169,7 +172,7 @@
             </div>
         </div>
     </div>    
-
+    <!-- End Get Quote -->     
     <!-- Start Services 
     ============================================= -->
     <div class="services-style-three-area default-padding bottom-less bg-gray-primary bg-cover" style="background-image: url({{ asset('/assets/img/shape/24.png)') }};">
@@ -327,6 +330,7 @@
     </div>
 </div>
     <!-- End CTA Section -->
+     
 <!-- Start Translation Services 
     ============================================= -->
     <div class="speciality-style-one-area">
@@ -411,55 +415,7 @@
         </div>
     </div>
     <!-- End About -->
-    <!-- Start Partner 
-    ============================================= -->
-    <div class="partner-style-one-area default-padding bg-dark text-light d-none" style="background-image: url({{ asset('/assets/img/shape/25.png') }});">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-xl-4">
-                    <h2 class="title">Thrusted brands work with us</h2>
-                </div>
-                <div class="col-xl-8 pl-60 pl-md-15 pl-xs-15 brand-one-contents">
-                    <div class="brand-style-one-items">
-                        <div class="brand-style-one-carousel swiper">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- Single Item -->
-                                <div class="swiper-slide">
-                                    <div class="brand-one">
-                                        <img src="{{ asset('/assets/img/brand/11.png') }}" alt="Image Not Found">
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
-                                 <!-- Single Item -->
-                                <div class="swiper-slide">
-                                    <div class="brand-one">
-                                        <img src="{{ asset('/assets/img/brand/22.png') }}" alt="Image Not Found">
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
-                                 <!-- Single Item -->
-                                <div class="swiper-slide">
-                                    <div class="brand-one">
-                                        <img src="{{ asset('/assets/img/brand/55.png') }}" alt="Image Not Found">
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
-                                 <!-- Single Item -->
-                                <div class="swiper-slide">
-                                    <div class="brand-one">
-                                        <img src="{{ asset('/assets/img/brand/66.png') }}" alt="Image Not Found">
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Partner -->
+
     <!-- Start Why Choose Us 
     ============================================= -->
     <div class="choose-us-style-two-area relative bg-dark text-light">
@@ -641,6 +597,7 @@
         </div>
     </div>
     <!-- End Gallery -->
+     
     <div class="services-content bg-white default-padding d-none d-md-block">
         <div class="container">
             <div class="about-style-one-items">

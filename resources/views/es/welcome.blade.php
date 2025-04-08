@@ -8,192 +8,35 @@
 </style>
     <!-- Start Banner Area 
     ============================================= -->
-    <div class="banner-area banner-style-two1 content-right navigation-custom-large zoom-effect overflow-hidden text-light">
-        <!-- Slider main container -->
-        <div class="banner-fade1">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Single Item -->
-                <div class="swiper-slide banner-style-two">
-                    <div class="banner-thumb bg-cover shadow dark homeslider-bg"></div>
-                        <div class="container">
-                            <div class="row align-center">
-                                <div class="col-xl-7 col-lg-7">
-                                    <div class="content">
-                                        <h2 class="slider-title1"><span class="sm-sl-title">Expert linguisic</span><br></bnr><strong>Services Tailored</strong> To Your Needs.</h2>
-                                        <span class="mt-n4">We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
-                                        <div class="shape-circle d-none"></div>
-                                    </div>
-                                </div>
-                                <div id="signup-form" class="col-lg-5 mt-5" style="text-align:right;">
-                                    <div class="mt-20">&nbsp;</div>
-                                    <img src="{{ asset('/assets/img/hro_img.avif') }}" alt="Translation windows empowering success in technology since 2014
-" width="300">
-                                    <p class="ajax-response"></p> 
-                                </div> <!-- ##signup-form -->
-                            </div>
-                        </div>
-                    <!-- Shape -->
-                    <div class="banner-angle-shape">
-                        <div class="shape-item" style="background: url({{ asset('/assets/img/shape/2.webp') }}"></div>
-                    </div>
-                    <!-- End Shape -->
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="swiper-slide banner-style-two">
-                    <div class="banner-thumb bg-cover shadow dark"></div>
-                    <img src="{{ asset('/assets/img/banner/transcription-banner-u.avif') }}" alt="" style="position: absolute; z-index:1; width:100%;">
-                    <div class="container">
-                        <div class="row align-center">
-                            <div class="col-xl-7 offset-xl-5 col-lg-10 offset-lg-1">
-                                <div class="content">
-                                    <h2><span class="sm-sl-title">Audio - video transcription</span><br><strong>Trancribe your</strong> Audio-Video Files</h2>
-                                    <div class="button">
-                                        <a class="btn circle btn-gradient btn-md radius animation" href="av-transscription.php">learn More</a>
-                                    </div>
-                                    <div class="shape-circle d-none"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Shape -->
-                    <div class="banner-angle-shape">
-                        <div class="shape-item" style="background: url({{ asset('/assets/img/shape/2.png') }});"></div>
-                    </div>
-                    <!-- End Shape -->
-                </div>
-                <!-- End Single Item -->
-            </div>
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>        
-    </div>
-    <!-- End Main -->
-    <!-- Start About
-    ============================================= -->
-    <div class="about-style-three-area default-padding">
+    <div class="hero-cont text-light">
         <div class="container">
-            <div class="row align-center">
-                <div class="col-lg-6">
-                    <div class="about-style-three-info">
-                        <h4 class="sub-title">About Us</h4>
-                        <h1 class="title">Providing solutions for translation services</h1>
-                        <p>Our business specializes in providing thorough translation solutions that are suited to your unique requirements. Our highly skilled linguists and cutting-edge technology guarantee accurate translations that are culturally appropriate for a variety of businesses. Whether you need localization, multilingual support, or document translation, we can help you close communication gaps and reach a worldwide audience with our dependable and effective services.</p>
-                        <div class="info-grid mt-50">
-                            <div class="left-info">
-                                <div class="fun-fact-card-two">
-                                    <h4 class="sub-title">Our Expertise</h4>
-                                    <div class="counter-title">
-                                        <div class="counter">
-                                            <div class="timer" data-to="10" data-speed="2000">10</div>
-                                            <div class="operator">+</div>
-                                        </div>
-                                    </div>
-                                    <span class="medium">Years of experience</span>
-                                </div>
-                            </div>
-                            <div class="right-info bg-gradient text-light">
-                                <ul class="list-style-three">
-                                    <li>Audio/Video Translation</li>
-                                    <li>Document Translation</li>
-                                    <li>Audio/Video Transcription</li>
-                                    <li>Subtitling</li>
-                                    <li>Proofreading & Copy-Editing</li>
-                                    <li>Proofreading & AI Translation</li>
-                                    <li>Industry-Specific Services</li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="row align-text-top">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="content mt-5">
+                        <h2 class="slider-title1"><span class="sm-sl-title">Expert linguisic</span><br></bnr><strong>Services Tailored</strong> To Your Needs.</h2>
+                        <span class="mt-n4">We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
+                        <ul class="my-2">
+                            <li><i class="fa fa-check-circle"></i> Supercharged by AI for Lightning-Fast Translations.</li>
+                            <li><i class="fa fa-check-circle"></i> Expert Business & Legal Translations You Can Trust.</li>
+                            <li><i class="fa fa-check-circle"></i> Worldwide Apostille & Notarisation, Handled for You.</li>
+                            <li><i class="fa fa-check-circle"></i> Clear, accurate translations that won’t break the <br>bank—starting at only $2.</li>
+                            <li><i class="fa fa-check-circle"></i> Clear, reliable transcriptions that don’t cost a <br>fortune—just $1 per minute.</li>
+                        </ul>
+                        <div class="my-5"></div>
+                        <button type="button" class="btn btn-primary" onclick="smoothScroll(event, 'getquoteForm')">Order Now <i class="fa fa-arrow-to-right hero-ordr-btn"></i></button>
                     </div>
                 </div>
-                <div class="col-lg-5 offset-lg-1">
-                    <div class="thumb-style-two">
-                        <img src="{{ asset('/assets/img/about/4.jpg') }}" alt="Providing solutions for translation services
-">
-                    </div>
-                </div>
+                <div class="col-lg-7 mt-5" style="text-align:right;">
+                    <img src="{{ asset('/assets/img/hro_img.avif') }}" alt="Translation windows empowering success in technology since 2014" class="img-fluid">
+                    <p class="ajax-response"></p> 
+                </div> <!-- ##signup-form -->
             </div>
         </div>
     </div>
-    <!-- End About -->
-    <!-- Start Partner 
-    ============================================= -->
-    <div class="partner-style-one-area default-padding bg-dark text-light d-none" style="background-image: url({{ asset('/assets/img/shape/25.png') }});">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-xl-4">
-                    <h2 class="title">Thrusted brands work with us</h2>
-                </div>
-                <div class="col-xl-8 pl-60 pl-md-15 pl-xs-15 brand-one-contents">
-                    <div class="brand-style-one-items">
-                        <div class="brand-style-one-carousel swiper">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- Single Item -->
-                                <div class="swiper-slide">
-                                    <div class="brand-one">
-                                        <img src="{{ asset('/assets/img/brand/11.png') }}" alt="Image Not Found">
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
-                                 <!-- Single Item -->
-                                <div class="swiper-slide">
-                                    <div class="brand-one">
-                                        <img src="{{ asset('/assets/img/brand/22.png') }}" alt="Image Not Found">
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
-                                 <!-- Single Item -->
-                                <div class="swiper-slide">
-                                    <div class="brand-one">
-                                        <img src="{{ asset('/assets/img/brand/55.png') }}" alt="Image Not Found">
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
-                                 <!-- Single Item -->
-                                <div class="swiper-slide">
-                                    <div class="brand-one">
-                                        <img src="{{ asset('/assets/img/brand/66.png') }}" alt="Image Not Found">
-                                    </div>
-                                </div>
-                                <!-- End Single Item -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Partner -->
-    <!-- Start Why Choose Us 
-    ============================================= -->
-    <div class="choose-us-style-two-area relative bg-dark text-light">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-xl-6 order-xl-last pl-80 pl-md-15 pl-xs-15 choose-us-style-two-content">
-                    <div class="info-style-one">
-                        <h4 class="sub-title">Why Choose Us</h4>
-                        <h2 class="title">Empowering success in technology since 2014 </h2>
-                        <p>
-                        At Translationwindows, we understand that every project and client has different requirements. The main causes of this are the variations in project size, industry, and language. We therefore approach each order with a unique technique. Our translators have experience in a variety of fields, such as education and medical. This enables us to match you with a thoroughly qualified and screened translator in your particular industry, ensuring accurate and quick professional translation services.
-                        </p>
-                        <a class="btn btn-md circle btn-gradient animation mt-20" href="about-us.html">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="thumb-style-three">
-                        <img src="{{ asset('/assets/img/illustration/7.webp') }}" alt="Translation windows empowering success in technology since 2014
-" width="539">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Why Choose Us -->
+    <!-- End banner-area -->
 
-        <!-- Start Get Quote 
-    ============================================= -->
+    <!-- Start Get Quote 
+============================================= -->
 
     <div class="services-content bg-gray-secondary default-padding d-md-block">
         <div class="container">
@@ -266,11 +109,7 @@
                                 <label>Upload File: <span style="color:red;">*</span></label>
                                 <input type="file" name="file_name" class="file-upload-cls form-control"  required>
                                 <div id="uploadStatus" class="mt-3"></div>
-                                <span>File Upload info </span>                                <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words.
-
-Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote.
-
-Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span>
+                                <span>File Upload info </span><span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span>
 
                                 <input type="hidden" name="file_id" class="record-file-id" value="0" />
                             </div>
@@ -333,450 +172,14 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Get Quote -->
-    <!-- CTA Starts -->
-    <div class="cta-bg pt-30 pb-30">
-      <div class="container space-2">
-        <div class="row justify-content-md-center align-items-md-center">
-          <div class="col-md-4 col-lg-3 d-none d-md-inline-block">
-            <img class="img-fluid" src="{{ asset('/assets/img/cta-img.webp') }}" alt="">
-          </div>
-          <div class="col-md-8 col-lg-6 offset-lg-1">
-            <!-- Title -->
-            <div class="mb-5">
-              <h2 class="text-white mb-1">Start talking to us today</h2>
-              <p class="lead text-light">Contact for more information at <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(254) 271-4094">(254) 271-4094</a></p>
-            </div>
-            <!-- End Title -->
-            <!-- Button -->
-            <a class="btn btn-xs btn-light text-left mb-2 mb-md-0 mr-md-2" href="javascript:void(Tawk_API.toggle())">
-              <span class="media align-items-center">
-                <span class="fa fa-regular fa-headset fa-3x mr-3"></span>
-                <span class="d-block">
-                  <span class="d-block">Start Chat Now</span>
-                </span>
-              </span>
-            </a>
-            <!-- End Button -->
-            <!-- Button -->
-            <a class="btn btn-xs btn-light text-left mb-2 mb-md-0" href="tel:(254) 271-4094">
-              <span class="media align-items-center">
-                <span class="far fa-phone fa-3x mr-3"></span>
-                <span class="d-block">
-                  <span class="d-block">Call Now</span>
-                </span>
-              </span>
-            </a>
-            <!-- End Button -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End CTA Section -->
+    <!-- End Get Quote -->    
+
     <!-- Start Services 
-    ============================================= -->
+============================================= -->
     <div class="services-style-three-area default-padding bottom-less bg-gray-secondary bg-cover" style="background-image: url({{ asset('/assets/img/shape/24.png)') }};">
         <div class="container">
             <div class="row">
@@ -893,11 +296,51 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
     </div>
     <!-- End Services -->
 
+<!-- CTA Starts -->
+<div class="cta-bg pt-30 pb-30">
+    <div class="container space-2">
+    <div class="row justify-content-md-center align-items-md-center">
+        <div class="col-md-4 col-lg-4 d-none d-md-inline-block">
+        <img class="img-fluid" src="{{ asset('/assets/img/cta-img.avif') }}" alt="">
+        </div>
+        <div class="col-md-8 col-lg-6 offset-lg-1">
+        <!-- Title -->
+        <div class="mb-5">
+            <h2 class="text-white mb-1">Start talking to us today</h2>
+            <p class="lead text-light">Contact for more information at <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(254) 271-4094">(254) 271-4094</a></p>
+        </div>
+        <!-- End Title -->
+        <!-- Button -->
+        <a class="btn btn-xs btn-light text-left mb-2 mb-md-0 mr-md-2" href="javascript:void(Tawk_API.toggle())">
+            <span class="media align-items-center">
+            <span class="fa fa-regular fa-headset fa-3x mr-3"></span>
+            <span class="d-block">
+                <span class="d-block">Start Chat Now</span>
+            </span>
+            </span>
+        </a>
+        <!-- End Button -->
+        <!-- Button -->
+        <a class="btn btn-xs btn-light text-left mb-2 mb-md-0" href="tel:(254) 271-4094">
+            <span class="media align-items-center">
+            <span class="far fa-phone fa-3x mr-3"></span>
+            <span class="d-block">
+                <span class="d-block">Call Now</span>
+            </span>
+            </span>
+        </a>
+        <!-- End Button -->
+        </div>
+    </div>
+    </div>
+</div>
+    <!-- End CTA Section -->    
+
 <!-- Start Translation Services 
     ============================================= -->
-    <div class="speciality-style-one-area default-padding-bottom">
+    <div class="speciality-style-one-area">
         <div class="container">
-            <div class="row align-center my-3">
+            <div class="row align-center my-5">
                 <div class="d-flex flex-column align-items-center justify-content-center">
                     <h4 class="sub-title">Translation Services</h4>
                     <h5>We provide comprehensive services in translation, and legalization for individuals and businesses.</h5>
@@ -928,7 +371,83 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
             </div>
         </div>
     </div>
-    <!-- End Translation Services -->    
+    <!-- End Translation Services -->         
+     
+    <!-- Start About
+    ============================================= -->
+    <div class="about-style-three-area default-padding">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6">
+                    <div class="about-style-three-info">
+                        <h4 class="sub-title">About Us</h4>
+                        <h1 class="title">Providing solutions for translation services</h1>
+                        <p>Our business specializes in providing thorough translation solutions that are suited to your unique requirements. Our highly skilled linguists and cutting-edge technology guarantee accurate translations that are culturally appropriate for a variety of businesses. Whether you need localization, multilingual support, or document translation, we can help you close communication gaps and reach a worldwide audience with our dependable and effective services.</p>
+                        <div class="info-grid mt-50">
+                            <div class="left-info">
+                                <div class="fun-fact-card-two">
+                                    <h4 class="sub-title">Our Expertise</h4>
+                                    <div class="counter-title">
+                                        <div class="counter">
+                                            <div class="timer" data-to="10" data-speed="2000">10</div>
+                                            <div class="operator">+</div>
+                                        </div>
+                                    </div>
+                                    <span class="medium">Years of experience</span>
+                                </div>
+                            </div>
+                            <div class="right-info bg-gradient text-light">
+                                <ul class="list-style-three">
+                                    <li>Audio/Video Translation</li>
+                                    <li>Document Translation</li>
+                                    <li>Audio/Video Transcription</li>
+                                    <li>Subtitling</li>
+                                    <li>Proofreading & Copy-Editing</li>
+                                    <li>Proofreading & AI Translation</li>
+                                    <li>Industry-Specific Services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="thumb-style-two">
+                        <img src="{{ asset('/assets/img/about/4.avif') }}" alt="Providing solutions for translation services
+">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+    
+    <!-- Start Why Choose Us 
+    ============================================= -->
+    <div class="choose-us-style-two-area relative bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 order-xl-last pl-80 pl-md-15 pl-xs-15 choose-us-style-two-content mt-5">
+                    <div class="info-style-one">
+                        <h4 class="sub-title">Why Choose Us</h4>
+                        <h2 class="title">Empowering success in technology since 2014 </h2>
+                        <p>
+                        At Translationwindows, we understand that every project and client has different requirements. The main causes of this are the variations in project size, industry, and language. We therefore approach each order with a unique technique. Our translators have experience in a variety of fields, such as education and medical. This enables us to match you with a thoroughly qualified and screened translator in your particular industry, ensuring accurate and quick professional translation services.
+                        </p>
+                        <a class="btn btn-md circle btn-gradient animation mt-20" href="javascript::">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-xl-6 pt-5">
+                    <div class="thumb-style-three">
+                        <img src="{{ asset('/assets/img/illustration/7.avif') }}" alt="Translation windows empowering success in technology since 2014
+" width="539">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Why Choose Us -->
+
+
     <!-- Start Speciality 
     ============================================= -->
     <div class="speciality-style-one-area default-padding-bottom">
@@ -980,6 +499,7 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
         </div>
     </div>
     <!-- End Speciality -->
+
     <!-- Start Gallery 
     ============================================= -->
     <div class="gallery-style-one-area bg-gray default-padding d-none">
@@ -1083,19 +603,20 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
         </div>
     </div>
     <!-- End Gallery -->
+
     <div class="services-content bg-white default-padding d-none d-md-block">
         <div class="container">
             <div class="about-style-one-items">
                 <div class="row">
-                    <div class="col-xl-7 col-lg-6">
+                    <div class="col-xl-5 col-lg-5">
                         <div class="thumb-style-one">
-                            <img src="{{ asset('/assets/img/about/1.webp') }}" alt="">
+                            <img src="{{ asset('/assets/img/about/1.avif') }}" alt="">
                         </div>
                     </div>
-                    <div class="col-xl-5 col-lg-6 pl-50 pl-md-15 pl-xs-15">
+                    <div class="col-xl-7 col-lg-7 pl-50 pl-md-15 pl-xs-15">
                         <div class="about-style-one-info">
                             <div class="content">
-                                <h2 class="title">We have a staff of more than 200 translators and language specialists available to help, and we are fluent in more than 100 languages.</h2>
+                                <h2 class="title">With a team of 200+ experts, we're fluent in over 100 languages and ready to help.</h2>
                                 <p>
                                 Increase the ease and effectiveness of your communication. Semantix offers linguistic solutions that are tailored to meet all of your company's needs.
                                 </p>
@@ -1201,13 +722,19 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
     <!-- End Testimonials -->
     
     <div class="modal fade" id="langModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content rounded-5 overflow-hidden">
-                <div class="modal-body p-0">
+                <div class="modal-body">
                     <div class="row text-center">
                         <div class="col">
-                            <div class="separator">
-                                <a href="javascript:;" class="usflag" onclick="setLanguage('english')"></a><a class="spflag" onclick="setLanguage('español')" href="javascript:;">&nbsp;</a>
+                            <h5>Your journey starts here—what’s your first language?</h5>
+                            <div class="flag-cont">
+                                <a href="javascript:;" class="usflag" onclick="setLanguage('english', '/')">
+                                    <img src="{{ asset('/assets/img/flag_us.avif') }}" alt="Translation windows empowering success in technology since 2014">English
+                                </a>
+                                <a class="spflag" onclick="setLanguage('español', '/es')" href="javascript:;">
+                                    <img src="{{ asset('/assets/img/flag_sp.avif') }}" alt="Translation windows empowering success in technology since 2014">Española
+                                </a>
                             </div>
                         </div>
                     </div>
