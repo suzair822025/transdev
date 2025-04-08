@@ -144,13 +144,13 @@
             // Check if it is not a homepage Navbar Fixed and navbar color change
             // ------------------------------------------------------------------------------ //
             
-            var Is_homepage = (window.location.pathname === "/" || window.location.pathname === "/index.php");
-            if (Is_homepage) {
-                 getNav.addClass("no-background");
-            }
-            else  {
-                 getNav.removeClass("no-background");
-            }
+            // var Is_homepage = (window.location.pathname === "/" || window.location.pathname === "/index.php");
+            // if (Is_homepage) {
+            //      getNav.addClass("no-background");
+            // }
+            // else  {
+            //      getNav.removeClass("no-background");
+            // }
             
 
             // ------------------------------------------------------------------------------ //
@@ -605,7 +605,7 @@
 
     // Sticky Header Js
 
-    var Width = $(document).width();
+/*    var Width = $(document).width();
     var scroll = $(window).scrollTop();
     var Is_homepage = (window.location.pathname === "/" || window.location.pathname === "/index.php");
     var check_sticky = $(".navbar-sticky").hasClass("sticked");
@@ -627,9 +627,9 @@
                 $(".navbar-sticky").removeClass("no-background");
             }
             
-        } else { }
+        } else { } 
         
-    });
+    }); */
 
 
 	/* ==================================================

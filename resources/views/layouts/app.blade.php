@@ -3,7 +3,7 @@
     ============================================= -->
     <header>
         <!-- Start Navigation -->
-        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed white no-background">
+        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed white sticked">
             <div class="container d-flex justify-content-between align-items-center">            
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
@@ -52,15 +52,7 @@
                 <!-- /.navbar-collapse -->
                 <div class="attr-right">
                     <!-- Start Atribute Navigation -->
-                    <div class="attr-nav">
-                        <ul>
-                            <li class="contact">
-                                <div class="call">
-                                    <a class="btn btn-md circle btn-gradient animation mt-20" href="#">Get A Quote</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                    <a class="btn circle btn-gradient animation" href="#" onclick="smoothScroll(event, 'getquoteForm')">Get A Quote</a>
                     <!-- End Atribute Navigation -->
                 </div>
             </div>   

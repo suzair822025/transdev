@@ -523,8 +523,8 @@ p {
 }
 
 .default-padding {
-	padding-top: 120px;
-	padding-bottom: 120px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -565,7 +565,7 @@ p {
 }
 
 .default-padding.bottom-less {
-	padding-top: 120px;
+	padding-top: 80px;
 	padding-bottom: 90px;
 }
 
@@ -646,7 +646,7 @@ p {
 
 .title {
 	font-weight: 600;
-	font-size: 50px;
+	font-size: 30px;
 }
 
 @media (max-width: 767px) {
@@ -2688,10 +2688,9 @@ p {
 	transition: all 500ms ease;
 	-webkit-transform: translateY(50%);
 	transform: translateY(50%);
-	opacity: 0;
+	opacity: 1;
 	padding-right: 25%;
 	margin: 0;
-	visibility: hidden;
 }
 
 @media (max-width: 1023px) {
@@ -5578,13 +5577,13 @@ a.btn-large:hover::after {
 }
 
 .thumb-style-three img {
-	width: auto;
+	width: 80%;
 	max-width: max-content;
 }
 
 @media (min-width: 1024px) {
 	.info-style-one {
-		padding-bottom: 120px;
+		padding-bottom: 80px;
 	}
 }
 
@@ -11697,10 +11696,48 @@ button.rbutton {
 	.homeslider-bg{background-image: none; background: var(--color-primary);}	
 }
 .banner-area h2.slider-title1{opacity:1; visibility: visible; margin-top:15%; margin-bottom: 0;}
-.separator {position: relative;	max-width: 328px; height: 100px; display: flex;  align-items: center;}
-.separator a.usflag {width: 50%; }
-.separator a.spflag {width: 50%; }
+.flag-cont {position: relative;	width: 100%; display: flex;  align-items: center; justify-content: center;}
+.flag-cont a.usflag {width: 100px; margin:0 0.5rem; }
+.flag-cont a.spflag {width: 100px; margin:0 0.5rem; }
 .rounded-5{border-radius: 1.5rem;}
 .cust-radios{max-width: 1.0rem;}
 .homebann-subtitle{margin-top: -0.5rem; display: block;}
 .swiper-slide .mt-n4{margin-top: -2.5rem; display: block;}
+.hero-cont{background-image: url(../img/hero_bg.avif); background-repeat: no-repeat; background-position: center; background-size: cover; margin-top: 87px; padding-bottom: 10%;}
+.btn i.hero-ordr-btn{transform: none;}
+.popup-contactBtn {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 1050;
+	transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+  }
+  .btn.popup-contactBtn:hover {
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Smooth drop shadow */
+  }
+  /* Popup Contact form */
+  .popup-contactForm {
+	position: fixed;
+	bottom: 5rem;
+	right: 1rem;
+	width: 100%;
+	max-width: 320px;
+	background: #fff;
+	padding: 1.25rem;
+	border-radius: 0.75rem;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	transform: translateY(20px);
+	pointer-events: none;
+	transition: all 0.4s ease;
+	z-index: 1040;
+  }
+
+  .popup-contactForm.show {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+  }
+  button.popup-contactBtn{position: fixed;}
+  .btn.notransform i { transform:none; line-height: normal;}
+  .default-padding-footer {	padding-top: 120px;	padding-bottom: 80px;}

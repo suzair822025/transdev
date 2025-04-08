@@ -4,8 +4,8 @@
     <div class="cta-bg pt-30 pb-30">
       <div class="container space-2">
         <div class="row justify-content-md-center align-items-md-center">
-          <div class="col-md-4 col-lg-3 d-none d-md-inline-block">
-            <img class="img-fluid" src="{{ asset ('/assets/img/cta-img.webp') }}" alt="">
+          <div class="col-md-4 col-lg-4 d-none d-md-inline-block">
+            <img class="img-fluid" src="{{ asset ('/assets/img/cta-img.avif') }}" alt="">
           </div>
 
           <div class="col-md-8 col-lg-6 offset-lg-1">
@@ -43,7 +43,7 @@
     </div>
     <!-- End CTA Section -->
         <div class="container">
-            <div class="f-items default-padding">
+            <div class="f-items default-padding-footer">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
                         <div class="f-item address">
@@ -165,6 +165,30 @@
         </div>
         <!-- End Footer Bottom -->
     </footer>
+
+   <!-- Popup Contact Form -->
+<div id="popupcontactForm" class="popup-contactForm shadow-sm">
+    <h5 class="mb-3">Contact Us</h5>
+    <form>
+        <div class="mb-2">
+            <input type="text" class="form-control" placeholder="Your Name" required />
+        </div>
+        <div class="mb-2">
+            <input type="email" class="form-control" placeholder="Your Email" required />
+        </div>
+        <div class="mb-2">
+            <input type="tel" class="form-control" placeholder="Your Phone Number" required />
+        </div>        
+        <div class="mb-2">
+            <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Send</button>
+    </form>
+</div>
+<button id="popup_contactBtn" class="popup-contactBtn btn btn-primary rounded-pill d-flex align-items-center gap-2 notransform">
+  <i id="contactIcon" class="fa fa-envelope"></i>
+  <span id="contactText">Contact Us</span>
+</button>
 <!--========== END FOOTER ==========-->
 
 

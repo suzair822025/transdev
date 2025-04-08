@@ -8,68 +8,362 @@
 </style>
     <!-- Start Banner Area 
     ============================================= -->
-    <div class="banner-area banner-style-two1 content-right navigation-custom-large zoom-effect overflow-hidden text-light">
-        <!-- Slider main container -->
-        <div class="banner-fade1">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Single Item -->
-                <div class="swiper-slide banner-style-two">
-                    <div class="banner-thumb bg-cover shadow dark homeslider-bg"></div>
-                        <div class="container">
-                            <div class="row align-center">
-                                <div class="col-xl-7 col-lg-7">
-                                    <div class="content">
-                                        <h2 class="slider-title1"><span class="sm-sl-title">Expert linguisic</span><br></bnr><strong>Services Tailored</strong> To Your Needs.</h2>
-                                        <span class="mt-n4">We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
-                                        <div class="shape-circle d-none"></div>
-                                    </div>
-                                </div>
-                                <div id="signup-form" class="col-lg-5 mt-5" style="text-align:right;">
-                                    <div class="mt-20">&nbsp;</div>
-                                    <img src="{{ asset('/assets/img/hro_img.avif') }}" alt="Translation windows empowering success in technology since 2014
-" width="300">
-                                    <p class="ajax-response"></p> 
-                                </div> <!-- ##signup-form -->
+    <div class="hero-cont text-light">
+        <div class="container">
+            <div class="row align-text-top">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="content mt-5">
+                        <h2 class="slider-title1"><span class="sm-sl-title">Expert linguisic</span><br></bnr><strong>Services Tailored</strong> To Your Needs.</h2>
+                        <span class="mt-n4">We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
+                        <ul class="my-2">
+                            <li><i class="fa fa-check-circle"></i> Supercharged by AI for Lightning-Fast Translations.</li>
+                            <li><i class="fa fa-check-circle"></i> Expert Business & Legal Translations You Can Trust.</li>
+                            <li><i class="fa fa-check-circle"></i> Worldwide Apostille & Notarisation, Handled for You.</li>
+                            <li><i class="fa fa-check-circle"></i> Clear, accurate translations that won’t break the <br>bank—starting at only $2.</li>
+                            <li><i class="fa fa-check-circle"></i> Clear, reliable transcriptions that don’t cost a <br>fortune—just $1 per minute.</li>
+                        </ul>
+                        <div class="my-5"></div>
+                        <button type="button" class="btn btn-primary" onclick="smoothScroll(event, 'getquoteForm')">Order Now <i class="fa fa-arrow-to-right hero-ordr-btn"></i></button>
+                    </div>
+                </div>
+                <div class="col-lg-7 mt-5" style="text-align:right;">
+                    <img src="{{ asset('/assets/img/hro_img.avif') }}" alt="Translation windows empowering success in technology since 2014" class="img-fluid">
+                    <p class="ajax-response"></p> 
+                </div> <!-- ##signup-form -->
+            </div>
+        </div>
+    </div>
+    <!-- End banner-area -->
+
+    <div class="services-content bg-gray-secondary default-padding d-md-block">
+        <div class="container" id="getquoteForm">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <h4 class="sub-title mb-5">Simple Procedure for Online Orders</h4>
+            </div>
+            <div class="about-style-one-items">
+                <div class="row my-5">
+                <div class="row">
+                <div class="col-md-8">
+                    <!-- <h2>Get a Quote & Place Your Order</h2> -->
+                    <form id="QuoteForm">
+                        <input type="hidden" name="service_type_amount" class="service-type-amount" value="0" />
+                        <input type="hidden" name="number_of_pages_anount" class="number-of-pages-amount" value="0" />
+                        <input type="hidden" name="estimated_delivery_amount" class="estimated-delivery-amount" value="0" />
+                        <input type="hidden" name="sum_of_all_amount" class="sum-of-all-amount" value="0" />
+                       
+                        <input type="hidden" name="request_reference" value="{{$randomString}}" />
+                        <div class="row">
+                            <div class="col-md-6" style="display:none;">
+                                <label>Who You Are: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline"><input type="radio" name="who_name" value="1" checked /> Individual</label>
+                                <label class="radio-inline"><input type="radio" name="who_name" value="2" /> Business Customer</label>
+                                <label class="radio-inline"><input type="radio" name="who_name" value="3" /> Translator</label>
+                            </div>
+
+                            <div class="col-md-6 form-check form-check-inline">
+                                <label class="w-100">Service Type: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate</span></label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe</span></label>
                             </div>
                         </div>
-                    <!-- Shape -->
-                    <div class="banner-angle-shape">
-                        <div class="shape-item" style="background: url({{ asset('/assets/img/shape/2.webp') }}"></div>
-                    </div>
-                    <!-- End Shape -->
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label>Translate From: <span style="color:red;">*</span></label>
+                                <select name="translate_from" class="form-control" required>
+                                    <option value="" selected>Select Language</option>
+                                    @forelse($languages as $l)
+                                     <option value="{{$l->id}}">{{$l->name}}</option>
+                                    @empty
+                                    @endforelse
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Translate To: <span style="color:red;">*</span></label>
+                                <select name="translate_to" class="form-control" required>
+                                <option value="" selected>Select Language</option>
+                                    @forelse($languages as $l)
+                                     <option value="{{$l->id}}">{{$l->name}}</option>
+                                    @empty
+                                    @endforelse
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label>Number of Pages: <span style="color:red;">*</span></label>
+                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages" required>
+                                <span>1 page = 250 words max</span>
+                                <span data-toggle="tooltip" data-placement="top" title="Enter the number of pages you need to translate. One page is approximately 250 words."><i class="fa fa-info-circle"></i></span>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Upload File: <span style="color:red;">*</span></label>
+                                <input type="file" name="file_name" class="file-upload-cls form-control"  required>
+                                <div id="uploadStatus" class="mt-3"></div>
+                                <span>File Upload info </span>
+                                <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span>
+                                <input type="hidden" name="file_id" class="record-file-id" value="0" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6 form-check form-check-inline">
+                                <label class="w-100">Estimated Delivery: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required> Standard</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required> Priority</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required> Urgent</label>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Name: <span style="color:red;">*</span></label>
+                                <input type="text" class="form-control" name="customer_name" placeholder="Enter your name" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label>Email: <span style="color:red;">*</span></label>
+                                <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Phone: <span style="color:red;">*</span></label>
+                                <input type="tel" class="form-control" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label>Comments:</label>
+                                <textarea class="form-control" name="comments" rows="3" placeholder="Enter your comments"></textarea>
+                            </div>
+                        </div>
+
+                        <input type="submit" id="HiddenSubmit" style="display:none;" /> 
+                        <div class="text-center mt-4">
+                        </div>
+                    </form>
+                    
+                   
                 </div>
+                <div class="col-md-4">
+                    <div class="order-summary">
+                        <h4>Order Summary</h4>
+                        <p><strong>Service Type:</strong> <span class="service-type-container"></span></p>
+                        <p><strong>Number of Pages:</strong> <span class="pages-count">$0.00</span></p>
+                        <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
+                        <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>
+                        <p><strong>Total Amount:</strong> <span class="total-amount">$0.00</span></p>       
+                        <button type="button" class="btn-form-submit btn btn-primary">Place Order</button>
+                        <!-- <div id="paypal-button-container" data-id="0"></div> -->
+                        <div id="card-button-container"  data-id="0"></div>
+                        <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.</div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <!-- Start Services 
+    ============================================= -->
+    <div class="services-style-three-area default-padding bottom-less bg-gray-primary bg-cover" style="background-image: url({{ asset('/assets/img/shape/24.png)') }};">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                    <div class="site-heading text-center">
+                        <h4 class="sub-title">Our Services</h4>
+                        <h2 class="title">Empower your business with our services.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Single Item -->
+                <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-1.webp') }}" alt="">
+                            <h4><a href="av-translation.php">Translation</a></h4>
+                            <p>
+                            We, at Translationwindows, we completely understand that effective communication across languages goes beyond just translation.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="av-translation.php"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
                 <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="swiper-slide banner-style-two">
-                    <div class="banner-thumb bg-cover shadow dark"></div>
-                    <img src="{{ asset('/assets/img/banner/transcription-banner-u.avif') }}" alt="" style="position: absolute; z-index:1; width:100%;">
-                    <div class="container">
-                        <div class="row align-center">
-                            <div class="col-xl-7 offset-xl-5 col-lg-10 offset-lg-1">
-                                <div class="content">
-                                    <h2><span class="sm-sl-title">Audio - video transcription</span><br><strong>Trancribe your</strong> Audio-Video Files</h2>
-                                    <div class="button">
-                                        <a class="btn circle btn-gradient btn-md radius animation" href="av-transscription.php">learn More</a>
-                                    </div>
-                                    <div class="shape-circle d-none"></div>
-                                </div>
+                 <!-- Single Item -->
+                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-2.webp') }}" alt="">
+                            <h4><a href="av-transcription.php">Transcription</a></h4>
+                            <p>
+                            Translationwindows excels in providing comprehensive transcription services across a multitude of languages, combining unparalleled accuracy.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="av-transcription.php"><i class="fas fa-long-arrow-right"></i></a>
                             </div>
-                        </div>
+                       </div>
                     </div>
-                    <!-- Shape -->
-                    <div class="banner-angle-shape">
-                        <div class="shape-item" style="background: url({{ asset('/assets/img/shape/2.png') }});"></div>
+                 </div>
+                <!-- End Single Item -->
+                 <!-- Single Item -->
+                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-3.webp') }}" alt="">
+                            <h4><a href="subtitling.php">Subtitling</a></h4>
+                            <p>
+                                Translationwindows specializes in providing expert subtitling services for diverse audio and video content, ensuring precise translation in all languages.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="subtitling.php"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
                     </div>
-                    <!-- End Shape -->
-                </div>
+                 </div>
                 <!-- End Single Item -->
             </div>
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>        
+            <div class="row">
+                <!-- Single Item -->
+                <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-4.webp') }}" alt="">
+                            <h4><a href="proofreading-copy-editing.php">Proofreading & Copy-Editing</a></h4>
+                            <p>
+                                To ensure your text is clear, accurate, and of a professional calibre, we Translationwindows.com provides professional proofreading and copy-editing services.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="proofreading-copy-editing.php"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                <!-- End Single Item -->
+                 <!-- Single Item -->
+                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-5.webp') }}" alt="">
+                            <h4><a href="proofreading-translation.php">Proofreading & Translation Of AI Content</a></h4>
+                            <p>
+                                Our speciality at Translationwindows.com is editing and translating AI-generated content to make sure it is precise, well-written, and appropriate for the target culture.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="proofreading-translation.php"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                <!-- End Single Item -->
+                 <!-- Single Item -->
+                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-6.webp') }}" alt="">
+                            <h4><a href="industry-specific-services.php">Industry-Specific Services</a></h4>
+                            <p>
+                            Our expertise at Translationwindows.com lies in offering personalized translation and design services, ensuring they are tailored to meet the specific needs of your industry.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="industry-specific-services.php"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                <!-- End Single Item -->
+            </div>
+        </div>
     </div>
-    <!-- End Main -->
+    <!-- End Services -->
+
+<!-- CTA Starts -->
+<div class="cta-bg pt-30 pb-30">
+    <div class="container space-2">
+    <div class="row justify-content-md-center align-items-md-center">
+        <div class="col-md-4 col-lg-4 d-none d-md-inline-block">
+        <img class="img-fluid" src="{{ asset('/assets/img/cta-img.avif') }}" alt="">
+        </div>
+        <div class="col-md-8 col-lg-6 offset-lg-1">
+        <!-- Title -->
+        <div class="mb-5">
+            <h2 class="text-white mb-1">Start talking to us today</h2>
+            <p class="lead text-light">Contact for more information at <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(254) 271-4094">(254) 271-4094</a></p>
+        </div>
+        <!-- End Title -->
+        <!-- Button -->
+        <a class="btn btn-xs btn-light text-left mb-2 mb-md-0 mr-md-2" href="javascript:void(Tawk_API.toggle())">
+            <span class="media align-items-center">
+            <span class="fa fa-regular fa-headset fa-3x mr-3"></span>
+            <span class="d-block">
+                <span class="d-block">Start Chat Now</span>
+            </span>
+            </span>
+        </a>
+        <!-- End Button -->
+        <!-- Button -->
+        <a class="btn btn-xs btn-light text-left mb-2 mb-md-0" href="tel:(254) 271-4094">
+            <span class="media align-items-center">
+            <span class="far fa-phone fa-3x mr-3"></span>
+            <span class="d-block">
+                <span class="d-block">Call Now</span>
+            </span>
+            </span>
+        </a>
+        <!-- End Button -->
+        </div>
+    </div>
+    </div>
+</div>
+    <!-- End CTA Section -->
+<!-- Start Translation Services 
+    ============================================= -->
+    <div class="speciality-style-one-area">
+        <div class="container">
+            <div class="row align-center my-5">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <h4 class="sub-title">Translation Services</h4>
+                    <h5>We provide comprehensive services in translation, and legalization for individuals and businesses.</h5>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-5"><img src="{{ asset('/assets/img/ct.webp') }}" alt=""></div>
+                <div class="col-lg-7 px-5"><h2 class="title">Certified Translations </h2>
+                    <p class="card-text lead">Get certified, notarised, sworn, and legalised translations—trusted and accepted worldwide!</p>
+                    <ul class="list-style-one">
+                        <li>Documents Translated and Certified with Precision.</li>   
+                        <li>Secure Digital PDF delivery with the option for worldwide shipping.</li>
+                        <li>Expert Apostille and Notarisation Services, Trusted Worldwide.</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-lg-5"><img src="{{ asset('/assets/img/pt.webp') }}" alt=""></div>
+                <div class="col-lg-7 px-5"><h2 class="title">Professional Translations </h2>
+                    <p class="card-text lead">Fast and reliable standard translations tailored for individuals and businesses!</p>
+                    <ul class="list-style-one">
+                        <li>Expert Translators with Specialized Subject Matter Knowledge.</li>
+                        <li>Expert Assistance for Business, Technical, and Legal Documents.</li>
+                        <li>Accelerate your translations with AI—faster, smarter, and more cost-effective!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Translation Services -->    
+         
     <!-- Start About
     ============================================= -->
     <div class="about-style-three-area default-padding">
@@ -109,7 +403,7 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="thumb-style-two">
-                        <img src="{{ asset('/assets/img/about/4.jpg') }}" alt="Providing solutions for translation services
+                        <img src="{{ asset('/assets/img/about/4.avif') }}" alt="Providing solutions for translation services
 ">
                     </div>
                 </div>
@@ -170,20 +464,20 @@
     ============================================= -->
     <div class="choose-us-style-two-area relative bg-dark text-light">
         <div class="container">
-            <div class="row align-center">
-                <div class="col-xl-6 order-xl-last pl-80 pl-md-15 pl-xs-15 choose-us-style-two-content">
+            <div class="row">
+                <div class="col-xl-6 order-xl-last pl-80 pl-md-15 pl-xs-15 choose-us-style-two-content mt-5">
                     <div class="info-style-one">
                         <h4 class="sub-title">Why Choose Us</h4>
                         <h2 class="title">Empowering success in technology since 2014 </h2>
                         <p>
                         At Translationwindows, we understand that every project and client has different requirements. The main causes of this are the variations in project size, industry, and language. We therefore approach each order with a unique technique. Our translators have experience in a variety of fields, such as education and medical. This enables us to match you with a thoroughly qualified and screened translator in your particular industry, ensuring accurate and quick professional translation services.
                         </p>
-                        <a class="btn btn-md circle btn-gradient animation mt-20" href="about-us.html">Learn More</a>
+                        <a class="btn btn-md circle btn-gradient animation mt-20" href="javascript::">Learn More</a>
                     </div>
                 </div>
-                <div class="col-xl-6">
+                <div class="col-xl-6 pt-5">
                     <div class="thumb-style-three">
-                        <img src="{{ asset('/assets/img/illustration/7.webp') }}" alt="Translation windows empowering success in technology since 2014
+                        <img src="{{ asset('/assets/img/illustration/7.avif') }}" alt="Translation windows empowering success in technology since 2014
 " width="539">
                     </div>
                 </div>
@@ -192,746 +486,10 @@
     </div>
     <!-- End Why Choose Us -->
 
-        <!-- Start Get Quote 
-    ============================================= -->
-
-    <div class="services-content bg-gray-secondary default-padding d-md-block">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center">
-                <h4 class="sub-title mb-5">Simple Procedure for Online Orders</h4>
-            </div>
-            <div class="about-style-one-items">
-                <div class="row my-5">
-                    
-                <div class="row">
-                <div class="col-md-8">
-                    <!-- <h2>Get a Quote & Place Your Order</h2> -->
-                    <form id="QuoteForm">
-                        
-                    <input type="hidden" name="service_type_amount" class="service-type-amount" value="0" />
-                        <input type="hidden" name="number_of_pages_anount" class="number-of-pages-amount" value="0" />
-                        <input type="hidden" name="estimated_delivery_amount" class="estimated-delivery-amount" value="0" />
-                        <input type="hidden" name="sum_of_all_amount" class="sum-of-all-amount" value="0" />
-                       
-                        <input type="hidden" name="request_reference" value="{{$randomString}}" />
-                        <div class="row">
-                            <div class="col-md-6" style="display:none;">
-                                <label>Who You Are: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline"><input type="radio" name="who_name" value="1" checked /> Individual</label>
-                                <label class="radio-inline"><input type="radio" name="who_name" value="2" /> Business Customer</label>
-                                <label class="radio-inline"><input type="radio" name="who_name" value="3" /> Translator</label>
-                            </div>
-
-                            <div class="col-md-6 form-check form-check-inline">
-                                <label class="w-100">Service Type: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate</span></label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe</span></label>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <label>Translate From: <span style="color:red;">*</span></label>
-                                <select name="translate_from" class="form-control" required>
-                                    <option value="" selected>Select Language</option>
-                                    @forelse($languages as $l)
-                                     <option value="{{$l->id}}">{{$l->name}}</option>
-                                    @empty
-                                    @endforelse
-                                </select>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label>Translate To: <span style="color:red;">*</span></label>
-                                <select name="translate_to" class="form-control" required>
-                                <option value="" selected>Select Language</option>
-                                    @forelse($languages as $l)
-                                     <option value="{{$l->id}}">{{$l->name}}</option>
-                                    @empty
-                                    @endforelse
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <label>Number of Pages: <span style="color:red;">*</span></label>
-                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages" required>
-                                <span>1 page = 250 words max</span>
-                                <span data-toggle="tooltip" data-placement="top" title="Enter the number of pages you need to translate. One page is approximately 250 words."><i class="fa fa-info-circle"></i></span>
-
-                            </div>
-
-                            <div class="col-md-6">
-                                <label>Upload File: <span style="color:red;">*</span></label>
-                                <input type="file" name="file_name" class="file-upload-cls form-control"  required>
-                                <div id="uploadStatus" class="mt-3"></div>
-                                <span>File Upload info </span>                                <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words.
-
-Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote.
-
-Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span>
-
-                                <input type="hidden" name="file_id" class="record-file-id" value="0" />
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-md-6 form-check form-check-inline">
-                                <label class="w-100">Estimated Delivery: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required> Standard</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required> Priority</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required> Urgent</label>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label>Name: <span style="color:red;">*</span></label>
-                                <input type="text" class="form-control" name="customer_name" placeholder="Enter your name" required>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <label>Email: <span style="color:red;">*</span></label>
-                                <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label>Phone: <span style="color:red;">*</span></label>
-                                <input type="tel" class="form-control" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required>
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-                            <div class="col-md-12">
-                                <label>Comments:</label>
-                                <textarea class="form-control" name="comments" rows="3" placeholder="Enter your comments"></textarea>
-                            </div>
-                        </div>
-
-                        <input type="submit" id="HiddenSubmit" style="display:none;" /> 
-                        <div class="text-center mt-4">
-                        </div>
-                    </form>
-                    
-                   
-                </div>
-                <div class="col-md-4">
-                <div class="order-summary">
-                        <h4>Order Summary</h4>
-                        <p><strong>Service Type:</strong> <span class="service-type-container"></span></p>
-                        <p><strong>Number of Pages:</strong> <span class="pages-count">$0.00</span></p>
-                        <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
-                        <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>
-                        <p><strong>Total Amount:</strong> <span class="total-amount">$0.00</span></p>       
-                        <button type="button" class="btn-form-submit btn btn-primary">Place Order</button>
-                        <!-- <div id="paypal-button-container" data-id="0"></div> -->
-                        <div id="card-button-container"  data-id="0"></div>
-                        <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.
-                        
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Get Quote -->
-    <!-- CTA Starts -->
-    <div class="cta-bg pt-30 pb-30">
-      <div class="container space-2">
-        <div class="row justify-content-md-center align-items-md-center">
-          <div class="col-md-4 col-lg-3 d-none d-md-inline-block">
-            <img class="img-fluid" src="{{ asset('/assets/img/cta-img.webp') }}" alt="">
-          </div>
-          <div class="col-md-8 col-lg-6 offset-lg-1">
-            <!-- Title -->
-            <div class="mb-5">
-              <h2 class="text-white mb-1">Start talking to us today</h2>
-              <p class="lead text-light">Contact for more information at <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(254) 271-4094">(254) 271-4094</a></p>
-            </div>
-            <!-- End Title -->
-            <!-- Button -->
-            <a class="btn btn-xs btn-light text-left mb-2 mb-md-0 mr-md-2" href="javascript:void(Tawk_API.toggle())">
-              <span class="media align-items-center">
-                <span class="fa fa-regular fa-headset fa-3x mr-3"></span>
-                <span class="d-block">
-                  <span class="d-block">Start Chat Now</span>
-                </span>
-              </span>
-            </a>
-            <!-- End Button -->
-            <!-- Button -->
-            <a class="btn btn-xs btn-light text-left mb-2 mb-md-0" href="tel:(254) 271-4094">
-              <span class="media align-items-center">
-                <span class="far fa-phone fa-3x mr-3"></span>
-                <span class="d-block">
-                  <span class="d-block">Call Now</span>
-                </span>
-              </span>
-            </a>
-            <!-- End Button -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End CTA Section -->
-    <!-- Start Services 
-    ============================================= -->
-    <div class="services-style-three-area default-padding bottom-less bg-gray-secondary bg-cover" style="background-image: url({{ asset('/assets/img/shape/24.png)') }};">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4 class="sub-title">Our Services</h4>
-                        <h2 class="title">Empower your business with our services.</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <!-- Single Item -->
-                <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
-                    <div class="services-style-three-item">
-                       <div class="item-title">
-                            <img src="{{ asset('/assets/img/icon/icon-1.webp') }}" alt="">
-                            <h4><a href="av-translation.php">Translation</a></h4>
-                            <p>
-                            We, at Translationwindows, we completely understand that effective communication across languages goes beyond just translation.
-                            </p>
-                            <div class="d-flex mt-30">
-                                <a href="av-translation.php"><i class="fas fa-long-arrow-right"></i></a>
-                            </div>
-                       </div>
-                    </div>
-                 </div>
-                <!-- End Single Item -->
-                 <!-- Single Item -->
-                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
-                    <div class="services-style-three-item">
-                       <div class="item-title">
-                            <img src="{{ asset('/assets/img/icon/icon-2.webp') }}" alt="">
-                            <h4><a href="av-transcription.php">Transcription</a></h4>
-                            <p>
-                            Translationwindows excels in providing comprehensive transcription services across a multitude of languages, combining unparalleled accuracy.
-                            </p>
-                            <div class="d-flex mt-30">
-                                <a href="av-transcription.php"><i class="fas fa-long-arrow-right"></i></a>
-                            </div>
-                       </div>
-                    </div>
-                 </div>
-                <!-- End Single Item -->
-                 <!-- Single Item -->
-                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
-                    <div class="services-style-three-item">
-                       <div class="item-title">
-                            <img src="{{ asset('/assets/img/icon/icon-3.webp') }}" alt="">
-                            <h4><a href="subtitling.php">Subtitling</a></h4>
-                            <p>
-                                At Translationwindows, we offer expert subtitling services for a wide range of audio and video content in every language.
-                            </p>
-                            <div class="d-flex mt-30">
-                                <a href="subtitling.php"><i class="fas fa-long-arrow-right"></i></a>
-                            </div>
-                       </div>
-                    </div>
-                 </div>
-                <!-- End Single Item -->
-            </div>
-            <div class="row">
-                <!-- Single Item -->
-                <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
-                    <div class="services-style-three-item">
-                       <div class="item-title">
-                            <img src="{{ asset('/assets/img/icon/icon-4.webp') }}" alt="">
-                            <h4><a href="proofreading-copy-editing.php">Proofreading & Copy-Editing</a></h4>
-                            <p>
-                                To ensure your text is clear, accurate, and of a professional calibre, Translationwindows.com provides professional proofreading and copy-editing services.
-                            </p>
-                            <div class="d-flex mt-30">
-                                <a href="proofreading-copy-editing.php"><i class="fas fa-long-arrow-right"></i></a>
-                            </div>
-                       </div>
-                    </div>
-                 </div>
-                <!-- End Single Item -->
-                 <!-- Single Item -->
-                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
-                    <div class="services-style-three-item">
-                       <div class="item-title">
-                            <img src="{{ asset('/assets/img/icon/icon-5.webp') }}" alt="">
-                            <h4><a href="proofreading-translation.php">Proofreading & Translation Of AI Content</a></h4>
-                            <p>
-                                Our speciality at Translationwindows.com is editing and translating AI-generated content to make sure it is precise, well-written, and appropriate for the target culture.
-                            </p>
-                            <div class="d-flex mt-30">
-                                <a href="proofreading-translation.php"><i class="fas fa-long-arrow-right"></i></a>
-                            </div>
-                       </div>
-                    </div>
-                 </div>
-                <!-- End Single Item -->
-                 <!-- Single Item -->
-                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
-                    <div class="services-style-three-item">
-                       <div class="item-title">
-                            <img src="{{ asset('/assets/img/icon/icon-6.webp') }}" alt="">
-                            <h4><a href="industry-specific-services.php">Industry-Specific Services</a></h4>
-                            <p>
-                                Personalised translation and design services made to fit the particular requirements of your sector.
-                            </p>
-                            <div class="d-flex mt-30">
-                                <a href="industry-specific-services.php"><i class="fas fa-long-arrow-right"></i></a>
-                            </div>
-                       </div>
-                    </div>
-                 </div>
-                <!-- End Single Item -->
-            </div>
-        </div>
-    </div>
-    <!-- End Services -->
-
-<!-- Start Translation Services 
-    ============================================= -->
-    <div class="speciality-style-one-area default-padding-bottom">
-        <div class="container">
-            <div class="row align-center my-3">
-                <div class="d-flex flex-column align-items-center justify-content-center">
-                    <h4 class="sub-title">Translation Services</h4>
-                    <h5>We provide comprehensive services in translation, and legalization for individuals and businesses.</h5>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-lg-5"><img src="{{ asset('/assets/img/ct.webp') }}" alt=""></div>
-                <div class="col-lg-7 px-5"><h2 class="title">Certified Translations </h2>
-                    <p class="card-text lead">Get certified, notarised, sworn, and legalised translations—trusted and accepted worldwide!</p>
-                    <ul class="list-style-one">
-                        <li>Documents Translated and Certified with Precision.</li>   
-                        <li>Secure Digital PDF delivery with the option for worldwide shipping.</li>
-                        <li>Expert Apostille and Notarisation Services, Trusted Worldwide.</li>
-
-                    </ul>
-                </div>
-            </div>
-            <div class="row my-3">
-                <div class="col-lg-5"><img src="{{ asset('/assets/img/pt.webp') }}" alt=""></div>
-                <div class="col-lg-7 px-5"><h2 class="title">Professional Translations </h2>
-                    <p class="card-text lead">Fast and reliable standard translations tailored for individuals and businesses!</p>
-                    <ul class="list-style-one">
-                        <li>Expert Translators with Specialized Subject Matter Knowledge.</li>
-                        <li>Expert Assistance for Business, Technical, and Legal Documents.</li>
-                        <li>Accelerate your translations with AI—faster, smarter, and more cost-effective!</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Translation Services -->    
+  
     <!-- Start Speciality 
     ============================================= -->
-    <div class="speciality-style-one-area default-padding-bottom">
+    <div class="speciality-style-one-area default-padding-bottom mt-5">
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-4">
@@ -1087,15 +645,15 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
         <div class="container">
             <div class="about-style-one-items">
                 <div class="row">
-                    <div class="col-xl-7 col-lg-6">
+                    <div class="col-xl-5 col-lg-5">
                         <div class="thumb-style-one">
-                            <img src="{{ asset('/assets/img/about/1.webp') }}" alt="">
+                            <img src="{{ asset('/assets/img/about/1.avif') }}" alt="">
                         </div>
                     </div>
-                    <div class="col-xl-5 col-lg-6 pl-50 pl-md-15 pl-xs-15">
+                    <div class="col-xl-7 col-lg-7 pl-50 pl-md-15 pl-xs-15">
                         <div class="about-style-one-info">
                             <div class="content">
-                                <h2 class="title">We have a staff of more than 200 translators and language specialists available to help, and we are fluent in more than 100 languages.</h2>
+                                <h2 class="title">With a team of 200+ experts, we're fluent in over 100 languages and ready to help.</h2>
                                 <p>
                                 Increase the ease and effectiveness of your communication. Semantix offers linguistic solutions that are tailored to meet all of your company's needs.
                                 </p>
@@ -1201,12 +759,13 @@ Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, js
     <!-- End Testimonials -->
     
     <div class="modal fade" id="langModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content rounded-5 overflow-hidden">
                 <div class="modal-body">
                     <div class="row text-center">
                         <div class="col">
-                            <div class="separator">
+                            <h5>Your journey starts here—what’s your first language?</h5>
+                            <div class="flag-cont">
                                 <a href="javascript:;" class="usflag" onclick="setLanguage('english', '/')">
                                     <img src="{{ asset('/assets/img/flag_us.avif') }}" alt="Translation windows empowering success in technology since 2014">English
                                 </a>

@@ -157,7 +157,29 @@ function setLanguage(lang, url) {
 	languageModal.hide();
 	window.location.href = url;
 }
+function smoothScroll(event, targetId) {
+    event.preventDefault();
+    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+  }
 
+/// script for contact form in a popup
+  const contactBtn = document.getElementById('popup_contactBtn');
+  const contactForm = document.getElementById('popupcontactForm');
+  const contactText = document.getElementById('contactText');
+  const contactIcon = document.getElementById('contactIcon');
+
+  contactBtn.addEventListener('click', () => {
+    const isVisible = contactForm.classList.toggle('show');
+
+    // Toggle text and icon
+    if (isVisible) {
+      contactText.textContent = '';
+      contactIcon.className = 'fa fa-times';
+    } else {
+      contactText.textContent = 'Contact Us';
+      contactIcon.className = 'fa fa-envelope';
+    }
+  });  /// script for contact form in a popup ends here
 window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
