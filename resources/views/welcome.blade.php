@@ -5,6 +5,102 @@
             margin-top: 12px;
             display:none;
         }
+        .service-container {
+  font-family: Arial, sans-serif;
+  width: 550px;
+  /* margin: 20px; */
+  margin-bottom:5px;
+}
+
+.question {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.service-options {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+.option {
+  flex: 1;
+  padding: 15px 20px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.option:last-child {
+  border-right: none;
+}
+
+.option h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #888;
+}
+
+.option p {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.option.selected {
+  background-color: #0a58ca;
+  color: white;
+}
+
+.option.selected h3 {
+  color: white;
+}
+
+.option.selected p {
+  color: #cde8f2;
+}
+.document-option-selection{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+.special-price{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+.audiovideo-option-selection{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+.transcription-audiovideo-option-selection{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+
+.estimated-delivery-info{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+.file-type-container{
+    display:none;
+}
 </style>
     <!-- Start Banner Area 
     ============================================= -->
@@ -35,13 +131,10 @@
     </div>
     <!-- End banner-area -->
 
-    <!-- Start Get Quote 
-============================================= -->
-
     <div class="services-content bg-gray-secondary default-padding d-md-block">
         <div class="container" id="getquoteForm">
             <div class="d-flex flex-column align-items-center justify-content-center">
-                <h4 class="sub-title mb-5">Simple Procedure for Online Orders</h4>
+                <h4 class="sub-title mb-1">Simple Procedure for Online Orders</h4>
             </div>
             <div class="about-style-one-items">
                 <div class="row my-5">
@@ -53,20 +146,56 @@
                         <input type="hidden" name="number_of_pages_anount" class="number-of-pages-amount" value="0" />
                         <input type="hidden" name="estimated_delivery_amount" class="estimated-delivery-amount" value="0" />
                         <input type="hidden" name="sum_of_all_amount" class="sum-of-all-amount" value="0" />
+                        <input type="hidden" name="main_service_type" class="main-service-type" value="1" />
                        
                         <input type="hidden" name="request_reference" value="{{$randomString}}" />
+
                         <div class="row">
-                            <div class="col-md-6" style="display:none;">
+
+                        <div class="col-md-12">
+
+                        <div class="service-container">
+  <p class="question">What type of service do you need?</p>
+  <div class="service-options">
+    <div class="opt-cls option selected" data-id="1">
+      <h3>Certified Translation</h3>
+      <p>Certified, sworn, notarised and legalised translations, acceptable globally.</p>
+    </div>
+    <div class="opt-cls option" data-id="2">
+      <h3>Professional Translation</h3>
+      <p>Standard, regular translation for individual and business use.</p>
+    </div>
+  </div>
+</div>
+
+
+                        </div>
+
+                        </div>
+                        <div class="col-md-6" style="display:none;">
                                 <label>Who You Are: <span style="color:red;">*</span></label><br>
                                 <label class="radio-inline"><input type="radio" name="who_name" value="1" checked /> Individual</label>
                                 <label class="radio-inline"><input type="radio" name="who_name" value="2" /> Business Customer</label>
                                 <label class="radio-inline"><input type="radio" name="who_name" value="3" /> Translator</label>
                             </div>
+                        <div class="row">
+                            
 
-                            <div class="col-md-6 form-check form-check-inline">
+
+                            <div class="col-md-6">
                                 <label class="w-100">Service Type: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate</span></label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe</span></label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate  <span class="starting-from"></span> </span></label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe <span class="starting-from"></span> </span></label>
+                            </div>
+                            <div class="col-md-6 file-type-container">
+                                <label class="w-100">File Type: <span style="color:red;">*</span></label><br>
+                                <span class="doptintranscribe">
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Document   <span class="starting-from"></span> </span></label>
+</span>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="2" required> <span class="">Audio / Video <span class="starting-from"></span> </span></label>
+                                <div class="document-option-selection">Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20.</div>
+                                <div class="audiovideo-option-selection">Audio and video translations starting at just $2 per minute.</div>
+                                <div class="transcription-audiovideo-option-selection">Audio and video transcription starting at just $1 per minute.</div>
                             </div>
                         </div>
 
@@ -96,31 +225,42 @@
 
                         <div class="row mt-3">
                             <div class="col-md-6">
-                                <label>Number of Pages: <span style="color:red;">*</span></label>
+                                <label>Number of Pages: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20."><i class="fa fa-info-circle"></i></span></label>
+                                <div class="input-group">
                                 <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages" required>
+                                <span class="input-group-text">Pages</span>
+                                </div>
                                 <span>1 page = 250 words max</span>
-                                <span data-toggle="tooltip" data-placement="top" title="Enter the number of pages you need to translate. One page is approximately 250 words."><i class="fa fa-info-circle"></i></span>
+                                <div class="special-price">You're eligible for our special pricing! Simply request a quote, and our team will reach out to discuss the details with you.</div>
 
                             </div>
 
                             <div class="col-md-6">
-                                <label>Upload File: <span style="color:red;">*</span></label>
+                                <label>Upload File: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span></label>
                                 <input type="file" name="file_name" class="file-upload-cls form-control"  required>
                                 <div id="uploadStatus" class="mt-3"></div>
-                                <span>File Upload info </span>
-                                <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span>
+                                <!-- <span>File Upload info </span> -->
+                                
                                 <input type="hidden" name="file_id" class="record-file-id" value="0" />
                             </div>
                         </div>
 
                         <div class="row mt-3">
-                            <div class="col-md-6 form-check form-check-inline">
+                            <div class="col-md-6">
                                 <label class="w-100">Estimated Delivery: <span style="color:red;">*</span></label><br>
                                 <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required> Standard</label>
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required> Priority</label>
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required> Urgent</label>
                             </div>
 
+                            <div class="col-md-6">
+                                <label>&nbsp;</label>
+                                <div class="estimated-delivery-info"></div>
+
+                            </div>
+</div>
+
+                            <div class="row mt-3">
                             <div class="col-md-6">
                                 <label>Name: <span style="color:red;">*</span></label>
                                 <input type="text" class="form-control" name="customer_name" placeholder="Enter your name" required>
@@ -172,7 +312,7 @@
             </div>
         </div>
     </div>    
-    <!-- End Get Quote -->     
+
     <!-- Start Services 
     ============================================= -->
     <div class="services-style-three-area default-padding bottom-less bg-gray-primary bg-cover" style="background-image: url({{ asset('/assets/img/shape/24.png)') }};">
@@ -330,7 +470,6 @@
     </div>
 </div>
     <!-- End CTA Section -->
-     
 <!-- Start Translation Services 
     ============================================= -->
     <div class="speciality-style-one-area">
@@ -415,7 +554,55 @@
         </div>
     </div>
     <!-- End About -->
-
+    <!-- Start Partner 
+    ============================================= -->
+    <div class="partner-style-one-area default-padding bg-dark text-light d-none" style="background-image: url({{ asset('/assets/img/shape/25.png') }});">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-xl-4">
+                    <h2 class="title">Thrusted brands work with us</h2>
+                </div>
+                <div class="col-xl-8 pl-60 pl-md-15 pl-xs-15 brand-one-contents">
+                    <div class="brand-style-one-items">
+                        <div class="brand-style-one-carousel swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Single Item -->
+                                <div class="swiper-slide">
+                                    <div class="brand-one">
+                                        <img src="{{ asset('/assets/img/brand/11.png') }}" alt="Image Not Found">
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                 <!-- Single Item -->
+                                <div class="swiper-slide">
+                                    <div class="brand-one">
+                                        <img src="{{ asset('/assets/img/brand/22.png') }}" alt="Image Not Found">
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                 <!-- Single Item -->
+                                <div class="swiper-slide">
+                                    <div class="brand-one">
+                                        <img src="{{ asset('/assets/img/brand/55.png') }}" alt="Image Not Found">
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                 <!-- Single Item -->
+                                <div class="swiper-slide">
+                                    <div class="brand-one">
+                                        <img src="{{ asset('/assets/img/brand/66.png') }}" alt="Image Not Found">
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Partner -->
     <!-- Start Why Choose Us 
     ============================================= -->
     <div class="choose-us-style-two-area relative bg-dark text-light">
@@ -431,7 +618,7 @@
                         <a class="btn btn-md circle btn-gradient animation mt-20" href="javascript::">Learn More</a>
                     </div>
                 </div>
-                <div class="col-xl-6 pt-5">
+                <div class="col-xl-6">
                     <div class="thumb-style-three">
                         <img src="{{ asset('/assets/img/illustration/7.avif') }}" alt="Translation windows empowering success in technology since 2014
 " width="539">
@@ -449,7 +636,7 @@
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-4">
-                    <img src="{{ asset('/assets/img/comit.webp') }}" alt="">
+                    <img src="{{ asset('/assets/img/comit.avif') }}" alt="">
                 </div>
                 <div class="col-xl-7 offset-xl-1 col-lg-8">
                     <div class="speciality-items">
@@ -597,7 +784,6 @@
         </div>
     </div>
     <!-- End Gallery -->
-     
     <div class="services-content bg-white default-padding d-none d-md-block">
         <div class="container">
             <div class="about-style-one-items">
@@ -1028,6 +1214,19 @@ paypal.Buttons({
 
         $(".service-type-cls").click(function(){
 
+            /* initialize */
+            $(".file-type-container").show();
+
+            $(".document-option-selection").hide();
+
+            $(".audiovideo-option-selection").hide();
+
+            $(".transcription-audiovideo-option-selection").hide();
+
+            $(".file-type-cls").prop("checked", false);
+
+             /* initialize */
+
             var serviceAmount = 0;
             var serviceType = $(this).val();
             var text = "";
@@ -1035,11 +1234,16 @@ paypal.Buttons({
             {
                 text = "Translate";
                 serviceAmount = 0;
+                $(document).find(".doptintranscribe").show();
             }
             if(serviceType == 2)
             {
                 text = "Transcribe";
                 serviceAmount = 0;
+                $(document).find(".doptintranscribe").hide();
+                $('.file-type-cls[value="2"]').prop('checked', true);
+                $(".transcription-audiovideo-option-selection").show();
+
             }
 
             $(".service-type-amount").val(serviceAmount);
@@ -1063,39 +1267,93 @@ paypal.Buttons({
                 $(".pages-count").text(page + " ( $"+cls+" )");
             }
 
+            if(page > 10)
+            {
+                $(".special-price").show();
+            }
+            else{
+                $(".special-price").hide();
+            }
+
             Total();
 
         });
 
         $(".delivery-type-cls").click(function(){
 
+            $(".estimated-delivery-info").hide();
+
             var type = $(this).val();
 
             var txt ="";
+            var txtx ="";
 
             var amount = 0;
 
             if(type == 1)
             {
-                txt ="Standard ( +$10 )";
-                amount = 10;
+                txt ="Standard (+$20)";
+                txtx ="Estimated Delivery : Standard (+$20), 4 to 6 Days";
+                
+                amount = 20;
             }
             if(type == 2)
             {
-                txt ="Priority ( +$20 )";
-                amount = 20;
+                txt ="Priority (+$25)";
+                txtx ="Estimated Delivery : Priority (+$25), 2 to 4 Days";
+                amount = 25;
             }
             if(type == 3)
             {
-                txt ="Urgent ( +$30 )";
-                amount = 30;
+                txt ="Urgent (+$35)";
+                txtx ="Estimated Delivery : Urgent (+$35), 24 to 48 Hours";
+                amount = 35;
             }
+
+            $(".estimated-delivery-info").text(txtx);
+
+            $(".estimated-delivery-info").show();
 
             $(".estimated-delivery-amount").val(amount);
 
             $(".delivery-time").text(txt);
 
             Total();
+
+        });
+
+
+        $(document).on('click','.opt-cls',function(){
+
+            var id = $(this).attr("data-id");
+
+            $(".option").removeClass("selected");
+
+            $(this).addClass("selected");
+
+            $(".main-service-type").val(id);
+        });
+
+        $(document).on('click','.file-type-cls',function(){
+
+            var fileType = $(this).val();
+
+            var ServiceType = $(".service-type-cls:checked").val();
+
+            $(".document-option-selection").hide();
+
+            $(".audiovideo-option-selection").hide();
+
+            if(ServiceType==1 && fileType==1)
+            {
+                $(".document-option-selection").show();
+            }
+            
+            if(ServiceType==1 && fileType==2)
+            {
+                $(".audiovideo-option-selection").show();
+            }
+
 
         });
 

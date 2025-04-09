@@ -5573,11 +5573,12 @@ a.btn-large:hover::after {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .thumb-style-three img {
-	width: 80%;
+	width: 100%;
 	max-width: max-content;
 }
 

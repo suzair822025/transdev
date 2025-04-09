@@ -436,7 +436,7 @@
                         <a class="btn btn-md circle btn-gradient animation mt-20" href="javascript::">Obtenga más información</a>
                     </div>
                 </div>
-                <div class="col-xl-6 pt-5">
+                <div class="col-xl-6">
                     <div class="thumb-style-three">
                         <img src="{{ asset('/assets/img/illustration/7.avif') }}" alt="Translation windows empowering success in technology since 2014
 " width="539">
@@ -454,7 +454,7 @@
         <div class="container">
             <div class="row align-center">
                 <div class="col-lg-4">
-                    <img src="{{ asset('/assets/img/comit.webp') }}" alt="">
+                    <img src="{{ asset('/assets/img/comit.avif') }}" alt="">
                 </div>
                 <div class="col-xl-7 offset-xl-1 col-lg-8">
                     <div class="speciality-items">
