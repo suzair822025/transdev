@@ -1,72 +1,151 @@
 @extends('layouts.app')
 
+@section('style')
+<link href="{{ asset('/assets/css/dropzone.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/assets/css/basic.min.css') }}" rel="stylesheet" type="text/css" />
+@endsection
+
 @section('content')
-<!-- Star Services Details Area
-============================================= -->
-<div class="services-details-area default-padding">
-    <div class="cotnainer">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-                <div class="site-heading text-center">
-                    <h4 class="sub-title">Career</h4>
-                    <h2 class="title">Careers @ Translationwindows</h2>
-                </div>
-            </div>
-        </div>
+<!--========== PARALLAX ==========-->
+<div class="parallax-window" data-parallax="scroll" data-image-src="{{ asset('/assets/img/1920x1080/01.jpg') }}">
+    <div class="parallax-content container innerpage">
+        <h1 class="carousel-title">Careers</h1>
+        <p class="white-text">&nbsp;</p>
     </div>
-    <div class="container">
-        <div class="services-details-items">
+</div>
+<!--========== PARALLAX ==========-->
+
+<!--========== PAGE LAYOUT ==========-->
+
+<div class="section-seperator">
+    <div class="content-lg container space20px">
+        <p><strong> Join Leebon</strong></p>
+        <p>Whether you have years of translation/transcription services experience or are just starting your career, we’ll help you realize your full potential and achieve your career goals. We’ll help you become the best you can be, because a better you means a better us..</p>
+        <p><strong>Our People</strong></p>
+        <p>Our people are our biggest asset. We empower and develop our people and help them fulfill their potential by providing them with an enabling working environment and cutting edge learning opportunities. We believe that investing in our human capital will help us achieve and exceed our business goals.
+            We not only offer job opportunities- we offer careers.
+		</p>
+		<p><strong>Diversity & Inclusion</strong></p>
+		<p>When you join Leebon, you’ll be part of a culture built on respect – one that recognizes the unique talents of everyone on the team.</p>
+		
+        <div class="clearfix"></div>
+
+        @if (Session::has('response'))
+            @if (Session::get('response.code') == 200)
+                <div class="alert col-sm-offset-3 col-sm-6 col-md-6 alert-info" style="text-align: center; font-size: 17px;">
+                    {{Session::get('response.message')}}
+                </div>
+            @endif
+
+            @if (Session::get('response.code') == 400)
+                <div class="alert col-sm-offset-3 col-sm-6 col-md-6 alert-danger" style="text-align: center; font-size: 17px;">
+                    {{Session::get('response.message')}}
+                </div>
+            @endif
+        @endif
+		
+        <form action="{{ url('careers_add') }}" method="POST" id="careersForm" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="row">
-                
-                <div class="col-xl-12 services-single-content">
-                    <div class="thumb mb-50">
-                        <img src="assets/img/banner/career.webp" alt="">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="YourName">Name</label>
+                        <input type="text" class="form-control" id="Name" name="name" placeholder="Enter Full Name">
+                        <p class="text-danger">{{ $errors->first('name') }}</p>
                     </div>
-                    <p>
-                        At Translationwindows, we offer a streamlined process for both translation and transcription services to ensure efficiency and high-quality results. Here’s a detailed overview of how our services work:
-                    </p>
-                    <div class="process-style-one-items mt-50">
-                        <div class="choose-us-one-thumb">
-                            <div class="content">
-                                <div class="left-info">
-                                    <h2 class="title">Career Openings</h2>
-                                </div>
-                                <div class="process-style-one">
-                                    <div class="process-style-one-item">
-                                        <span>01</span>
-                                        <h4>SEO<br>Expert</h4>
-                                        <p>
-                                            <ul class="list-unstyled ul-list-innerpage">
-                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
-                                                    </svg></b><strong><em>Email:</em></strong> Please email your resume at hr@translationwindows.com.
-                                                </li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                    <div class="process-style-one-item">
-                                        <span>02</span>
-                                        <h4>Full-Stack<br>Developer</h4>
-                                        <p>
-                                            <ul class="list-unstyled ul-list-innerpage">
-                                                <li><b><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M15.794 2.17595C14.426 3.42395 13.094 4.87595 11.798 6.53195C10.67 7.95995 9.656 9.42395 8.756 10.924C7.94 12.268 7.346 13.42 6.974 14.38C6.962 14.416 6.938 14.446 6.902 14.47C6.866 14.506 6.824 14.524 6.776 14.524C6.764 14.536 6.752 14.542 6.74 14.542C6.656 14.542 6.596 14.518 6.56 14.47L0.134 7.93595C0.122 7.92395 0.278 7.76795 0.602 7.46795C0.926 7.15595 1.244 6.87395 1.556 6.62195C1.904 6.33395 2.09 6.20195 2.114 6.22595L5.642 8.99795C6.674 7.78595 7.832 6.58595 9.116 5.39795C11.048 3.62195 13.04 2.10995 15.092 0.861953C15.128 0.861953 15.266 1.02995 15.506 1.36595L15.866 1.88795C15.878 1.93595 15.878 1.98995 15.866 2.04995C15.854 2.09795 15.83 2.13995 15.794 2.17595Z" fill="currentColor"></path>
-                                                    </svg></b><strong><em>Email:</em></strong> Please email your resume at hr@translationwindows.com.
-                                                </li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="YourEmail">Email</label>
+                        <input type="email" class="form-control" id="Email" name="email" placeholder="Enter Email Address">
+                        <p class="text-danger">{{ $errors->first('email') }}</p>
+                    </div>
+                </div>
+        	</div>
+
+        	<div class="row">
+        		<div class="col-md-4">
+        			<div class="form-group">
+                        <label for="YourEmail">Phone</label>
+                        <input type="tell" class="form-control" id="phone" name="phone" placeholder="Enter Phone" onkeypress="javascript:return isNumber(event)">
+                        <p class="text-danger">{{ $errors->first('phone') }}</p>
+                	</div>
+        		</div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="YourLanguage">Native Language</label>
+                        <input type="text" class="form-control" id="native-language" name="native_language" placeholder="Enter Native Language">
+                        <p class="text-danger">{{ $errors->first('native_language') }}</p>
+                    </div>
+                </div>
+        	</div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="YourEmail" class="mb-4">Skills</label>
+                    <div class="clearfix"></div>
+                    <div class="checkbox-inline">
+                        <label class="font-lightweight">
+                            <input type="checkbox" name="skills[]" value="Audio/Video Translation"> Audio/Video Translation
+                        </label>
+                    </div>
+                    <div class="checkbox-inline">
+                        <label class="font-lightweight">
+                            <input type="checkbox" name="skills[]" value="Document Translation"> Document Translation
+                        </label>
+                    </div>
+                    <div class="checkbox-inline pl-3">
+                        <label class="font-lightweight">
+                            <input type="checkbox" name="skills[]" value="Transcription"> Transcription
+                        </label>
                     </div>
                 </div>
             </div>
-        </div>
+
+        	<div class="row">
+        		<div class="col-md-4">
+	        		<div class="form-group">
+	            		<input type="file" id="docUpload" name="careerFile" style="visibility: hidden; position: absolute;" />
+                        <button class="btn-theme btn-theme-sm text-uppercase" id="OpendocUpload">Upload Resume</button>
+                        <br>
+                        <span id="fileName"></span>
+                        <p class="text-danger">{{ $errors->first('careerFile') }}</p>
+	            	</div>
+            	</div>
+            	<div class="col-md-4">
+        			<div clsss="row">
+
+                        <button type="submit" id="careersForm_submit" class="btn-theme btn-theme-sm text-uppercase submit pull-right" id=""><i class="fa fa-paper-plane" aria-hidden="true" style="color: #fff"></i>Submit</button>
+                    </div>
+            	</div>
+        	</div>
+
+        </form>
     </div>
 </div>
 
+<!--========== END PAGE LAYOUT ==========-->
+@endsection
 
-<!-- End Service Details -->
+@section('scripts')
+<script src="{{ asset('/assets/js/bootstrap-formavalidation.js') }}"></script>
+<script src="{{ asset('/assets/js/validation-forms.js') }}"></script>
+<!-- <script src="{{ asset('/assets/js/dropzone.js') }}" type="text/javascript"></script> -->
+<script src="{{ asset('/assets/js/scripts.js') }}"></script>
 
+<script>
+    $(document).ready(function(){
+        $("#docUpload").change(function(e){
+            fileName = this.files[0].name;
+            $("#fileName").html(fileName);
+        });
+    });
+    // Validating Phone Field so it accepts numbers only.
+    function isNumber(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+        return true;
+    }    
+</script>
 @endsection

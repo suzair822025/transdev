@@ -244,15 +244,21 @@ class QuoteController extends Controller
         //     [phone] => 44455
         //     [comments] => this is testing work
         // )
+        // print_r($r->all());
+        // exit;
         
         $arr_request = [
             'request_reference' => $r->request_reference,
             'file_id' => $r->file_id,
             'who_you_are' => $r->who_name,
             'service_type' => $r->service_type,
-            'translate_from' => $r->translate_from,
+            'translation_type' => !empty($r->translation_type) ? $r->translation_type : 0,
+            'file_type' => $r->file_type,
+            'translate_from' => !empty($r->translate_from)? $r->translate_from : 0,
             'translate_to' => $r->translate_to,
-            'number_of_pages' => $r->page_number,
+            'number_of_pages' => !empty($r->page_number) ? $r->page_number : 0,
+            'number_of_words' => !empty($r->number_of_words) ? $r->number_of_words : 0,
+            'number_of_minutes' => !empty($r->number_of_minutes) ? $r->number_of_minutes : 0,
             'estimated_delivery' => $r->delivery_type,
             'estimated_delivery_date' => now(),
             'name' => $r->customer_name,
@@ -260,7 +266,9 @@ class QuoteController extends Controller
             'phone' => $r->phone,
             'comments' => $r->comments,
             'service_type_amount' => $r->service_type_amount,
-            'number_of_pages_amount' => $r->number_of_pages_anount,
+            'number_of_pages_amount' => !empty($r->number_of_pages_anount) ? $r->number_of_pages_anount : 0,
+            'number_of_word_amount' => !empty($r->number_of_word_anount) ? $r->number_of_word_anount : 0,
+            'number_of_minute_amount' => !empty($r->number_of_minute_anount) ? $r->number_of_minute_anount : 0,
             'estimated_delivery_amount' => $r->estimated_delivery_amount,
             'total_amount' => $r->sum_of_all_amount,
             'created_at' => now() 
@@ -280,11 +288,26 @@ class QuoteController extends Controller
             ]);
 
         DB::commit();
+        
+        
+
+        $isReqSub = 0;
+
+        if(!empty($r->translation_type) && $r->translation_type > 0)
+        {
+            $isReqSub = 1;
+        }
+
+        if(!empty($r->page_number) && $r->page_number > 10)
+        {
+            $isReqSub = 1;
+        }
 
         return response()->json([
             'success' => true,
             'message' => 'File uploaded successfully!',
-            'request_id' => $rid
+            'request_id' => $rid,
+            'request_submission' => $isReqSub,
         ]);
     }
 
@@ -316,9 +339,9 @@ class QuoteController extends Controller
 
         DB::commit();
 
-        $this->AdminEmail($r->RequestID,$paymentId);
+        // $this->AdminEmail($r->RequestID,$paymentId);
 
-        $this->CustomerEmail($r->RequestID,$paymentId);
+        // $this->CustomerEmail($r->RequestID,$paymentId);
 
         return response()->json(['code'=>200]);
         

@@ -69,6 +69,15 @@
     color:black;
     display:none;
 }
+
+.professional-translation-document-option-selection{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+
 .special-price{
     background-color:#ddd;
     font-size:11px;
@@ -100,6 +109,37 @@
 }
 .file-type-container{
     display:none;
+}
+.container-pages{
+    display:none;
+}
+.container-words{
+    display:none;
+}
+.container-minutes{
+    display:none;
+}
+.translation-type-container{
+    display:none;
+}
+.order-summary{
+    display:none;
+}
+.dollar-one{
+    display:none;
+}
+.dollar-two{
+    display:none;
+}
+.row-text-estimated-delivery{
+    display:none;
+}
+.key-class{
+    font-size:14px;
+}
+.value-class{
+    font-weight:bold;
+    font-size:14px;
 }
 </style>
     <!-- Start Banner Area 
@@ -150,28 +190,33 @@
                        
                         <input type="hidden" name="request_reference" value="{{$randomString}}" />
 
-                        <div class="row">
+                        <input type="hidden" name="number_of_word_anount" class="number-of-word-amount" value="0" />
+
+                        <input type="hidden" name="number_of_minute_anount" class="number-of-minute-amount" value="0" />
+
+                        <!-- <div class="row">
 
                         <div class="col-md-12">
 
                         <div class="service-container">
-  <p class="question">What type of service do you need?</p>
-  <div class="service-options">
-    <div class="opt-cls option selected" data-id="1">
-      <h3>Certified Translation</h3>
-      <p>Certified, sworn, notarised and legalised translations, acceptable globally.</p>
-    </div>
-    <div class="opt-cls option" data-id="2">
-      <h3>Professional Translation</h3>
-      <p>Standard, regular translation for individual and business use.</p>
-    </div>
-  </div>
-</div>
+                            <p class="question">What type of service do you need?</p>
+                            <div class="service-options">
+                                <div class="opt-cls option selected" data-id="1">
+                                <h3>Certified Translation</h3>
+                                <p>Certified, sworn, notarised and legalised translations, acceptable globally.</p>
+                                </div>
+                                <div class="opt-cls option" data-id="2">
+                                <h3>Professional Translation</h3>
+                                <p>Standard, regular translation for individual and business use.</p>
+                                </div>
+                            </div>
+                        </div>
 
 
                         </div>
 
                         </div>
+                         -->
                         <div class="col-md-6" style="display:none;">
                                 <label>Who You Are: <span style="color:red;">*</span></label><br>
                                 <label class="radio-inline"><input type="radio" name="who_name" value="1" checked /> Individual</label>
@@ -187,12 +232,22 @@
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate  <span class="starting-from"></span> </span></label>
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe <span class="starting-from"></span> </span></label>
                             </div>
+                            <div class="col-md-6 translation-type-container">
+                                <label class="w-100">Translation Type: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certified <span class="starting-from"></span> </span></label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Professional <span class="starting-from"></span> </span></label>
+                            </div>
                             <div class="col-md-6 file-type-container">
                                 <label class="w-100">File Type: <span style="color:red;">*</span></label><br>
                                 <span class="doptintranscribe">
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Document   <span class="starting-from"></span> </span></label>
 </span>
+<span class="audioandvideocontainer">
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="2" required> <span class="">Audio / Video <span class="starting-from"></span> </span></label>
+</span>       
+                                
+
+                                <div class="professional-translation-document-option-selection">Please enter the number of words below you need to translate. Price Starting at $0.05 per word.                                </div>
                                 <div class="document-option-selection">Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20.</div>
                                 <div class="audiovideo-option-selection">Audio and video translations starting at just $2 per minute.</div>
                                 <div class="transcription-audiovideo-option-selection">Audio and video transcription starting at just $1 per minute.</div>
@@ -200,9 +255,9 @@
                         </div>
 
                         <div class="row mt-3">
-                            <div class="col-md-6">
+                            <div class="col-md-6 translate-from-container">
                                 <label>Translate From: <span style="color:red;">*</span></label>
-                                <select name="translate_from" class="form-control" required>
+                                <select name="translate_from" class="translate-from-select-class form-control" required>
                                     <option value="" selected>Select Language</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
@@ -224,15 +279,38 @@
                         </div>
 
                         <div class="row mt-3">
-                            <div class="col-md-6">
+                            <div class="col-md-6 container-pages">
                                 <label>Number of Pages: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20."><i class="fa fa-info-circle"></i></span></label>
                                 <div class="input-group">
-                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages" required>
+                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages">
                                 <span class="input-group-text">Pages</span>
                                 </div>
                                 <span>1 page = 250 words max</span>
                                 <div class="special-price">You're eligible for our special pricing! Simply request a quote, and our team will reach out to discuss the details with you.</div>
 
+                            </div>
+
+                            <div class="col-md-6 container-words">
+                                <label>Number of Words: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Starting at $0.05 per word."><i class="fa fa-info-circle"></i></span></label>
+                                <div class="input-group">
+                                <input type="number" name="number_of_words" class="words-number-clse form-control" placeholder="Enter number of words">
+                                <span class="input-group-text">Words</span>
+                                </div>
+                                <span>Starting at $0.05 per word.</span>
+                            </div>
+
+                            <div class="col-md-6 container-minutes">
+                                <label>Number of Minutes: <span style="color:red;">*</span> 
+                                <span data-toggle="tooltip" class="dollar-one" data-placement="top" title="Audio and video transcription starting at just $1 per minute."><i class="fa fa-info-circle"></i></span>
+                                <span data-toggle="tooltip" class="dollar-two" data-placement="top" title="Audio and video translation starting at just $2 per minute."><i class="fa fa-info-circle"></i></span>
+                            
+                            </label>
+                                <div class="input-group">
+                                <input type="number" name="number_of_minutes" class="minutes-number-clse form-control" placeholder="Enter number of minutes">
+                                <span class="input-group-text">Minutes</span>
+                                </div>
+                                <span class="dollar-one">Starting at $1 per minute.</span>
+                                <span class="dollar-two">Starting at $2 per minute.</span>
                             </div>
 
                             <div class="col-md-6">
@@ -295,13 +373,40 @@
                 </div>
                 <div class="col-md-4">
                     <div class="order-summary">
-                        <h4>Order Summary</h4>
-                        <p><strong>Service Type:</strong> <span class="service-type-container"></span></p>
-                        <p><strong>Number of Pages:</strong> <span class="pages-count">$0.00</span></p>
-                        <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
+                        <h4>Quote Summary</h4>
+                        <div class="form-invoice">
+                            
+                        <div class="row"><div class="col-md-6 key-class">Service Type : </div><div class="value-class col-md-6 main-service-text-class"></div></div>
+
+                        <div class="row row-text-translation-type"><div class="col-md-6 key-class">Translation Type : </div><div class="value-class col-md-6 service-type-text-class"></div></div>
+
+                        <div class="row row-text-page-count"><div class="col-md-6 key-class">Page Count : </div><div class="value-class col-md-6 page-count-text-class"></div></div>
+
+                        <div class="row row-text-word-count"><div class="col-md-6 key-class">Word Count : </div><div class="value-class col-md-6 word-count-text-class"></div></div>
+
+                        <div class="row row-text-minutes-count"><div class="col-md-6 key-class">Minutes Count : </div><div class="value-class col-md-6 minutes-count-text-class"></div></div>
+
+                        <div class="row row-text-estimated-delivery">
+                            <div class="col-md-6 key-class">Estimated Delivery : </div>
+                            <div class="col-md-6 value-class estimated-delivery-text-class"></div>
+                        </div>
+                        
+                        <div class="row row-text-total-count"><div class="col-md-6 key-class">Total Amount : </div><div class="value-class col-md-6 total-count-text-class">$0</div></div>
+
+                        <!-- <span class="service-type"><strong>Service Type:</strong> <span class="service-type-container" style="color:#246bfd;"></span></span><br />
+                        <span class="inv-translation-type-text-container" style="display:none;"><strong>Translation Type:</strong> <span class="inv-translation-type" style="color:#246bfd;"></span></span><br />
+                        <span><strong>Pages Count : </strong> <span class="pages-count">$0.00</span></span><br />
+                        <span><strong>Word Count : </strong> <span class="word-count">$0.00</span></span><br />
+                        <span><strong>Minutes Count : </strong> <span class="minutes-count">$0.00</span></span> -->
+
+                        </div>
+                        <hr />
+                        <button type="button" class="btn-form-submit btn btn-primary" style="">Place Order</button>
+                        
+                        <!-- <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
                         <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>
-                        <p><strong>Total Amount:</strong> <span class="total-amount">$0.00</span></p>       
-                        <button type="button" class="btn-form-submit btn btn-primary">Place Order</button>
+                        <p><strong>Total Amount:</strong> <span class="total-amount">$0.00</span></p>        -->
+                        
                         <!-- <div id="paypal-button-container" data-id="0"></div> -->
                         <div id="card-button-container"  data-id="0"></div>
                         <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.</div>
@@ -1113,6 +1218,74 @@ paypal.Buttons({
 */
    $(document).ready(function(){
 
+
+    function EstimatedDeliveryInitital()
+    {
+
+    }
+
+    function TranslationTypeInitial()
+    {
+        /** Page **/
+        $(".container-pages").hide();
+
+        $(".page-number-clse").removeAttr("required");
+
+        $(".page-number-clse").val('');
+
+        $(".row-text-page-count").hide();
+
+        /** Words **/
+        $(".container-words").hide();
+
+        $(".words-number-clse").removeAttr("required");
+
+        $(".words-number-clse").val('');
+
+        $(".row-text-word-count").hide();
+
+        /** Minutes **/
+        $(".container-minutes").hide();
+
+        $(".minutes-number-clse").removeAttr("required");
+
+        $(".minutes-number-clse").val('');
+
+        $(".row-text-minutes-count").hide();
+
+        $(".dollar-one").hide();
+
+        $(".dollar-two").hide();
+    }
+
+    function ServiceTypeInitial()
+    {
+        $(".translation-type-cls").prop("checked", false);
+
+        $(".row-text-translation-type").hide();
+
+        $(".translation-type-cls").attr("required",true);
+
+        $(".translate-from-container").show();
+
+        $(".translate-from-select-class").attr("required",true);
+
+        TranslationTypeInitial();
+    }
+
+    
+
+    function AppendContent(Element,Content)
+    {
+        $(Element).text(Content);
+        // $(document).find(Element).remove();
+        // var html = $(".form-invoice").html();
+        // html += Content;
+        // $(".form-invoice").html(html);
+    }
+
+
+
     $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -1123,13 +1296,17 @@ paypal.Buttons({
         {
             var servicetype = parseInt($(".service-type-amount").val());
             var pagecount = parseInt($(".number-of-pages-amount").val());
+            var wordcount = parseInt($(".number-of-word-amount").val());
+            var minutecount = parseInt($(".number-of-minute-amount").val());
+
             var estimateddelivery = parseInt($(".estimated-delivery-amount").val());
 
-            var sum = servicetype + pagecount + estimateddelivery;
+            var sum = servicetype + pagecount + wordcount + minutecount;
 
             $(".sum-of-all-amount").val(sum);
 
-            $(".total-amount").text("$"+sum);
+            $(".total-count-text-class").text("$"+sum.toFixed(2));
+            
         }
     
         $(document).on('click','.btn-form-submit',function(){
@@ -1149,20 +1326,41 @@ paypal.Buttons({
                     //     $("#uploadStatus").html("<p class='text-info'>Uploading...</p>");
                     // },
                     success: function(resp) {
+                       if(resp.request_submission > 0)
+                       {
+                        Swal.fire({
+  title: "Thank You!",
+  text: "Your quotation request has been successfully received! Thank you for reaching out to us. Our team will get back to you shortly with the details.",
+  icon: "success"
+});
+$("#QuoteForm")[0].reset();
+
+setTimeout(function(){
+
+location.reload();
+
+},5000);
+
+                       }
+                       else{
                        $("#card-button-container").attr("data-id",resp.request_id);
                        $("#card-button-container").show();
+                       }
                        $(".btn-form-submit").hide();
                        $(".btn-form-submit").text("Place Order");
                     },
                     error: function(xhr) {
                         $(".btn-form-submit").text("Place Order");
+                        if($(".translation-type-cls:checked").val() == 2 || $(".page-number-clse").val() > 10){$(".btn-form-submit").text("Request a Quote");}
                         //$("#uploadStatus").html("<p class='text-danger'>Error: " + xhr.responseText + "</p>");
                     }
                 });
 
 
                 } else {
+
                     $(".btn-form-submit").text("Place Order");
+                    if($(".translation-type-cls:checked").val() == 2 || $(".page-number-clse").val() > 10){$(".btn-form-submit").text("Request a Quote");}
                     $("#HiddenSubmit").trigger("click");
                 }
 
@@ -1212,10 +1410,70 @@ paypal.Buttons({
                 });
             });
 
+        $(".translation-type-cls").click(function(){
+
+            TranslationTypeInitial();
+
+            $(".row-text-translation-type").show();
+
+            // $(".container-pages").show();
+            $(".audioandvideocontainer").show();
+            $(".document-option-selection").hide();
+            $(".audiovideo-option-selection").hide();
+            $('.file-type-cls[value="1"]').prop('checked', false);
+            $(".professional-translation-document-option-selection").hide();
+            //$(".container-minutes").hide();
+
+            $(".file-type-container").show();
+
+
+
+            var id = $(this).val();
+
+            if(id == 1)
+        {
+
+            $(".container-pages").show();
+
+            $(".page-number-clse").attr("required",true);
+
+            
+
+            $(".audioandvideocontainer").hide();
+
+            $('.file-type-cls[value="1"]').prop('checked', true);
+
+            $(".document-option-selection").show();
+
+            AppendContent(".service-type-text-class","Certified");
+
+            $(".btn-form-submit").text("Place Order");
+            if($(".translation-type-cls:checked").val() == 2 || $(".page-number-clse").val() > 10){$(".btn-form-submit").text("Request a Quote");}
+        }
+
+            if(id == 2)
+            {
+                //$(".container-words").show();
+                // $(".container-pages").hide();
+               AppendContent(".service-type-text-class","Professional");
+
+               $(".btn-form-submit").text("Request a Quote");
+            }
+
+
+            
+
+        });  
+
         $(".service-type-cls").click(function(){
 
+            ServiceTypeInitial();
+
+            $(".order-summary").show();
+
             /* initialize */
-            $(".file-type-container").show();
+            
+            
 
             $(".document-option-selection").hide();
 
@@ -1223,7 +1481,17 @@ paypal.Buttons({
 
             $(".transcription-audiovideo-option-selection").hide();
 
+            $(".professional-translation-document-option-selection").hide();
+
             $(".file-type-cls").prop("checked", false);
+
+            
+
+            $(document).find(".translation-type-container").hide();
+
+            // $(".container-pages").show();
+
+            
 
              /* initialize */
 
@@ -1235,6 +1503,8 @@ paypal.Buttons({
                 text = "Translate";
                 serviceAmount = 0;
                 $(document).find(".doptintranscribe").show();
+                $(document).find(".translation-type-container").show();
+                
             }
             if(serviceType == 2)
             {
@@ -1243,43 +1513,39 @@ paypal.Buttons({
                 $(document).find(".doptintranscribe").hide();
                 $('.file-type-cls[value="2"]').prop('checked', true);
                 $(".transcription-audiovideo-option-selection").show();
+                //$(".container-minutes").show();
+                // $(".container-pages").hide();
+                $(".audioandvideocontainer").show();
+
+                $(".container-minutes").show();
+
+                $(".minutes-number-clse").attr("required",true);
+
+                $(".dollar-one").show();
+
+                $(".file-type-container").show();
+
+                $(".translation-type-cls").removeAttr("required");
+
+                $(".translate-from-container").hide();
+
+                $(document).find(".translate-from-select-class").removeAttr("required");
 
             }
 
             $(".service-type-amount").val(serviceAmount);
 
-            $(".service-type-container").text(text);
+            AppendContent(".main-service-text-class",text);
 
             Total();
 
         });
 
-        $(document).on('input','.page-number-clse',function(){
-           
-            var page = parseInt($(this).val());
-            var amount = 20;
-            $(".pages-count").text("");
-            $(".number-of-pages-amount").val('0');
-            if(page > 0)
-            {
-                var cls= page * amount;
-                $(".number-of-pages-amount").val(cls);
-                $(".pages-count").text(page + " ( $"+cls+" )");
-            }
-
-            if(page > 10)
-            {
-                $(".special-price").show();
-            }
-            else{
-                $(".special-price").hide();
-            }
-
-            Total();
-
-        });
+       
 
         $(".delivery-type-cls").click(function(){
+
+            EstimatedDeliveryInitital();
 
             $(".estimated-delivery-info").hide();
 
@@ -1292,23 +1558,36 @@ paypal.Buttons({
 
             if(type == 1)
             {
-                txt ="Standard (+$20)";
+                txt ="Standard (4-6 Days)";
                 txtx ="Estimated Delivery : Standard (+$20), 4 to 6 Days";
                 
                 amount = 20;
             }
             if(type == 2)
             {
-                txt ="Priority (+$25)";
-                txtx ="Estimated Delivery : Priority (+$25), 2 to 4 Days";
+                txt ="Priority (2-4 Days)";
+                txtx ="Estimated Delivery : Priority ($25), 2 to 4 Days";
                 amount = 25;
             }
             if(type == 3)
             {
-                txt ="Urgent (+$35)";
-                txtx ="Estimated Delivery : Urgent (+$35), 24 to 48 Hours";
+                txt ="Urgent (24-48 Hours)";
+                txtx ="Estimated Delivery : Urgent ($35), 24 to 48 Hours";
                 amount = 35;
             }
+
+            if(parseInt($(".page-number-clse").val()) > 0)
+            {
+                var page = parseInt($(".page-number-clse").val());
+                var cls= page * amount;
+                $(".number-of-pages-amount").val(cls);
+                AppendContent(".page-count-text-class",page+" ($"+cls.toFixed(2)+")");
+            }
+            
+
+            $(".estimated-delivery-text-class").text(txt);
+
+            $(".row-text-estimated-delivery").css("display","flex");
 
             $(".estimated-delivery-info").text(txtx);
 
@@ -1325,6 +1604,8 @@ paypal.Buttons({
 
         $(document).on('click','.opt-cls',function(){
 
+            // $(".container-pages").show();
+
             var id = $(this).attr("data-id");
 
             $(".option").removeClass("selected");
@@ -1332,30 +1613,219 @@ paypal.Buttons({
             $(this).addClass("selected");
 
             $(".main-service-type").val(id);
+
+            if(id == 2)
+            {
+                // $(".container-pages").hide();
+
+                //$(".container-words").show();
+            }
         });
 
         $(document).on('click','.file-type-cls',function(){
+
+            TranslationTypeInitial();
 
             var fileType = $(this).val();
 
             var ServiceType = $(".service-type-cls:checked").val();
 
-            $(".document-option-selection").hide();
+            var TranslationType = $(".translation-type-cls:checked").val();
+
+            $(".professional-translation-document-option-selection").hide();
+
+
+            //$(".document-option-selection").hide();
 
             $(".audiovideo-option-selection").hide();
 
-            if(ServiceType==1 && fileType==1)
+           
+
+            if(TranslationType==2 && fileType==1)
             {
-                $(".document-option-selection").show();
+                $(".professional-translation-document-option-selection").show();
+
+                $(".document-option-selection").hide();
+
+                $(".container-words").show();
+
+                $(".words-number-clse").attr("required",true);
+
+                //$(".container-minutes").hide();
+
             }
             
-            if(ServiceType==1 && fileType==2)
+            if(TranslationType==2 && fileType==2)
             {
                 $(".audiovideo-option-selection").show();
+
+                //$(".container-words").hide();
+
+                $(".container-minutes").show();
+
+                $(".minutes-number-clse").attr("required",true);
+
+                $(".dollar-two").show();
             }
 
 
         });
+
+
+
+        $(document).on('input','.page-number-clse',function(){
+
+/* change event fields mistake */
+
+$(".btn-form-submit").text("Place Order");
+
+    $(".words-number-clse").val('');
+
+    $(".number-of-word-amount").val('0');
+
+    $(".minutes-number-clse").val('');
+
+    $(".number-of-minute-amount").val('0');
+
+/* change event fields */
+
+
+
+var page = parseInt($(this).val());
+var amount = 20;
+$(".pages-count").text("");
+$(".number-of-pages-amount").val('0');
+if(page > 0)
+{
+    /*page counter here*/
+
+    var cls= page * amount;
+    $(".number-of-pages-amount").val(cls);
+
+    //$(".pages-count").text(page + " ( $"+cls+" )");
+
+    AppendContent(".page-count-text-class",page+" ($"+cls.toFixed(2)+")");
+
+    $(".row-text-page-count").show();
+}
+
+if(page > 10)
+{
+    $(".special-price").show();
+
+    $(".btn-form-submit").text("Request a Quote");
+}
+else{
+    $(".special-price").hide();
+}
+
+Total();
+
+});
+
+
+        $(document).on('input','.words-number-clse',function(){
+
+
+            /* change event fields */
+
+            // $(".words-number-clse").val('');
+
+            // $(".number-of-word-amount").val('');
+
+            $(".page-number-clse").val('');
+
+            $(".number-of-pages-amount").val('0');
+
+            $(".minutes-number-clse").val('');
+
+            $(".number-of-minute-amount").val('0');
+
+            /* change event fields */
+           
+           var page = parseInt($(this).val());
+           var amount = 0.05;
+           $(".word-count").text("");
+           $(".number-of-word-amount").val('0');
+           if(page > 0)
+           {
+               var cls= page * amount;
+               $(".number-of-word-amount").val(cls);
+               //$(".word-count").text(page + " ( $"+cls+" )");
+
+               AppendContent(".word-count-text-class",page+" ($"+cls.toFixed(2)+")");
+
+               $(".row-text-word-count").show();
+              
+           }
+
+           if(page > 10)
+           {
+               $(".special-price").show();
+           }
+           else{
+               $(".special-price").hide();
+           }
+
+           Total();
+
+       });
+
+
+
+       $(document).on('input','.minutes-number-clse',function(){
+
+        /* change event fields */
+
+            $(".words-number-clse").val('');
+
+            $(".number-of-word-amount").val('0');
+
+            $(".page-number-clse").val('');
+
+            $(".number-of-pages-amount").val('0');
+
+            // $(".minutes-number-clse").val('');
+
+            // $(".number-of-word-amount").val('0');
+
+            /* change event fields */
+           
+           var page = parseInt($(this).val());
+           var amount = 2;
+           if($(".service-type-cls:checked").val() == 2)
+           {
+            amount = 1;
+           }
+           $(".minutes-count").text("");
+           $(".number-of-minute-amount").val('0');
+           if(page > 0)
+           {
+               var cls= page * amount;
+               $(".number-of-minute-amount").val(cls);
+               //$(".minutes-count").text(page + " ( $"+cls+" )");
+
+                AppendContent(".minutes-count-text-class",page+" ($"+cls.toFixed(2)+")");
+
+                $(".row-text-minutes-count").show();
+           }
+
+           if(page > 10)
+           {
+               $(".special-price").show();
+           }
+           else{
+               $(".special-price").hide();
+           }
+
+           Total();
+
+       });
+
+
+
+
+
 
         
    });
