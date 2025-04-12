@@ -536,45 +536,7 @@
     </div>
     <!-- End Services -->
 
-<!-- CTA Starts -->
-<div class="cta-bg pt-30 pb-30">
-    <div class="container space-2">
-    <div class="row justify-content-md-center align-items-md-center">
-        <div class="col-md-4 col-lg-4 d-none d-md-inline-block">
-        <img class="img-fluid" src="{{ asset('/assets/img/cta-img.avif') }}" alt="">
-        </div>
-        <div class="col-md-8 col-lg-6 offset-lg-1">
-        <!-- Title -->
-        <div class="mb-5">
-            <h2 class="text-white mb-1">Start talking to us today</h2>
-            <p class="lead text-light">Contact for more information at <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(254) 271-4094">(254) 271-4094</a></p>
-        </div>
-        <!-- End Title -->
-        <!-- Button -->
-        <a class="btn btn-xs btn-light text-left mb-2 mb-md-0 mr-md-2" href="javascript:void(Tawk_API.toggle())">
-            <span class="media align-items-center">
-            <span class="fa fa-regular fa-headset fa-3x mr-3"></span>
-            <span class="d-block">
-                <span class="d-block">Start Chat Now</span>
-            </span>
-            </span>
-        </a>
-        <!-- End Button -->
-        <!-- Button -->
-        <a class="btn btn-xs btn-light text-left mb-2 mb-md-0" href="tel:(254) 271-4094">
-            <span class="media align-items-center">
-            <span class="far fa-phone fa-3x mr-3"></span>
-            <span class="d-block">
-                <span class="d-block">Call Now</span>
-            </span>
-            </span>
-        </a>
-        <!-- End Button -->
-        </div>
-    </div>
-    </div>
-</div>
-    <!-- End CTA Section -->
+
 <!-- Start Translation Services 
     ============================================= -->
     <div class="speciality-style-one-area">
