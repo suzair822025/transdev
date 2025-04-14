@@ -11742,3 +11742,11 @@ button.rbutton {
   button.popup-contactBtn{position: fixed;}
   .btn.notransform i { transform:none; line-height: normal;}
   .default-padding-footer {	padding-top: 120px;	padding-bottom: 80px;}
+  span.move-shake {	animation: tilt-n-move-shaking 0.25s infinite;  }
+  @keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}

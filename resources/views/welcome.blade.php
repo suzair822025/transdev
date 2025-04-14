@@ -155,7 +155,7 @@
                             <li><i class="fa fa-check-circle"></i> Supercharged by AI for Lightning-Fast Translations.</li>
                             <li><i class="fa fa-check-circle"></i> Expert Business & Legal Translations You Can Trust.</li>
                             <li><i class="fa fa-check-circle"></i> Worldwide Apostille & Notarisation, Handled for You.</li>
-                            <li><i class="fa fa-check-circle"></i> Clear, accurate translations that won’t break the <br>bank—starting at only $2.</li>
+                            <li><i class="fa fa-check-circle"></i> Clear, accurate translations that won’t break the <br>bank—starting at only <span class="move-shake">$2</span>.</li>
                             <li><i class="fa fa-check-circle"></i> Clear, reliable transcriptions that don’t cost a <br>fortune—just $1 per minute.</li>
                         </ul>
                         <div class="my-5"></div>
