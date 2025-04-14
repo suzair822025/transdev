@@ -155,8 +155,8 @@
                             <li><i class="fa fa-check-circle"></i> Supercharged by AI for Lightning-Fast Translations.</li>
                             <li><i class="fa fa-check-circle"></i> Expert Business & Legal Translations You Can Trust.</li>
                             <li><i class="fa fa-check-circle"></i> Worldwide Apostille & Notarisation, Handled for You.</li>
-                            <li><i class="fa fa-check-circle"></i> Clear, accurate translations that won’t break the <br>bank—starting at only <span class="move-shake">$2</span>.</li>
-                            <li><i class="fa fa-check-circle"></i> Clear, reliable transcriptions that don’t cost a <br>fortune—just $1 per minute.</li>
+                            <li><i class="fa fa-check-circle"></i> Clear, accurate translations that won’t break the <br>bank—starting at only <span class="move-shake text-warning">$2</span>.</li>
+                            <li><i class="fa fa-check-circle"></i> Clear, reliable transcriptions that don’t cost a <br>fortune—just <span class="move-shake text-warning">$1</span> per minute.</li>
                         </ul>
                         <div class="my-5"></div>
                         <button type="button" class="btn btn-primary" onclick="smoothScroll(event, 'getquoteForm')">Order Now <i class="fa fa-arrow-to-right hero-ordr-btn"></i></button>
@@ -989,6 +989,31 @@
             </div>
         </div>
     </div>
+
+
+
+    <div id="cookieBanner" class="position-fixed bottom-0 start-0 w-100 bg-dark text-white p-3 d-none zindex-tooltip" style="z-index: 1000 !important;">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <p class="mb-2 mb-md-0">
+        We use cookies to enhance your experience on our translation website. Do you accept cookies?
+      </p>
+      <div>
+        <button id="acceptBtn" class="btn btn-success me-2">Accept</button>
+        <button id="rejectBtn" class="btn btn-danger">Reject</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 @endsection
 @section('scripts')
 <script src ="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -1785,7 +1810,45 @@ Total();
        });
 
 
+/******************************************/
 
+if (!getCookie("cookieConsent")) {
+        $('#cookieBanner').removeClass('d-none');
+      }
+
+      $('#acceptBtn').click(function () {
+        setCookie("cookieConsent", "accepted", 30);
+        $('#cookieBanner').addClass('d-none');
+      });
+
+      $('#rejectBtn').click(function () {
+        setCookie("cookieConsent", "rejected", 30);
+        $('#cookieBanner').addClass('d-none');
+        // Optionally disable tracking, analytics, etc.
+      });
+
+      function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days*24*60*60*1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+      }
+
+      function getCookie(name) {
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        name = name + "=";
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i].trim();
+          if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+        }
+        return "";
+      }
+
+
+
+
+/*******************************************/
 
 
 
