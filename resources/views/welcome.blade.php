@@ -64,7 +64,7 @@
 }
 .document-option-selection{
     background-color:#ddd;
-    font-size:11px;
+    font-size:12px;
     padding:2px;
     color:black;
     display:none;
@@ -94,7 +94,7 @@
 }
 .transcription-audiovideo-option-selection{
     background-color:#ddd;
-    font-size:11px;
+    font-size:12px;
     padding:2px;
     color:black;
     display:none;
@@ -232,29 +232,31 @@
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate  <span class="starting-from"></span> </span></label>
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe <span class="starting-from"></span> </span></label>
                             </div>
-                            <div class="col-md-6 translation-type-container">
-                                <label class="w-100">Translation Type: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certified <span class="starting-from"></span> </span></label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Professional <span class="starting-from"></span> </span></label>
-                            </div>
-                            <div class="col-md-6 file-type-container">
-                                <label class="w-100">File Type: <span style="color:red;">*</span></label><br>
-                                <span class="doptintranscribe">
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Document   <span class="starting-from"></span> </span></label>
-</span>
-<span class="audioandvideocontainer">
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="2" required> <span class="">Audio / Video <span class="starting-from"></span> </span></label>
-</span>       
-                                
+                            <div class="col-md-6">
+                                <div class="col-md-12 translation-type-container px-0">
+                                    <label class="w-100">Translation Type: <span style="color:red;">*</span></label><br>
+                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certified <span class="starting-from"></span> </span></label>
+                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Professional <span class="starting-from"></span> </span></label>
+                                </div>
+                                <div class="col-md-12 file-type-container px-0 mt-3">
+                                    <label class="w-100">File Type: <span style="color:red;">*</span></label><br>
+                                    <span class="doptintranscribe">
+                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Document   <span class="starting-from"></span> </span></label>
+                                    </span>
+                                    <span class="audioandvideocontainer">
+                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="2" required> <span class="">Audio / Video <span class="starting-from"></span> </span></label>
+                                    </span>       
+                                    
 
-                                <div class="professional-translation-document-option-selection">Please enter the number of words below you need to translate. Price Starting at $0.05 per word.                                </div>
-                                <div class="document-option-selection">Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20.</div>
-                                <div class="audiovideo-option-selection">Audio and video translations starting at just $2 per minute.</div>
-                                <div class="transcription-audiovideo-option-selection">Audio and video transcription starting at just $1 per minute.</div>
+                                    <div class="professional-translation-document-option-selection bg-warning px-3 fw-bold">Please enter the number of words below you need to translate. Price Starting at $0.05 per word. </div>
+                                    <div class="document-option-selection bg-warning px-3 fw-bold">Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20.</div>
+                                    <div class="audiovideo-option-selection bg-warning px-3 fw-bold">Audio and video translations starting at just $2 per minute.</div>
+                                    <div class="transcription-audiovideo-option-selection bg-warning px-3 fw-bold">Audio and video transcription starting at just $1 per minute.</div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="row mt-3">
+                        <div class="row mt-2">
                             <div class="col-md-6 translate-from-container">
                                 <label>Translate From: <span style="color:red;">*</span></label>
                                 <select name="translate_from" class="translate-from-select-class form-control" required>
@@ -333,7 +335,7 @@
 
                             <div class="col-md-6">
                                 <label>&nbsp;</label>
-                                <div class="estimated-delivery-info"></div>
+                                <div class="estimated-delivery-info bg-warning px-3 fw-bold"></div>
 
                             </div>
 </div>
@@ -376,22 +378,22 @@
                         <h4>Quote Summary</h4>
                         <div class="form-invoice">
                             
-                        <div class="row"><div class="col-md-6 key-class">Service Type : </div><div class="value-class col-md-6 main-service-text-class"></div></div>
+                        <div class="row"><div class="col-md-6 key-class fw-bold text-primary">Service Type: </div><div class="value-class col-md-6 main-service-text-class"></div></div>
 
-                        <div class="row row-text-translation-type"><div class="col-md-6 key-class">Translation Type : </div><div class="value-class col-md-6 service-type-text-class"></div></div>
+                        <div class="row row-text-translation-type"><div class="col-md-6 key-class fw-bold text-primary">Translation Type: </div><div class="value-class col-md-6 service-type-text-class"></div></div>
 
-                        <div class="row row-text-page-count"><div class="col-md-6 key-class">Page Count : </div><div class="value-class col-md-6 page-count-text-class"></div></div>
+                        <div class="row row-text-page-count"><div class="col-md-6 key-class fw-bold text-primary">Page Count: </div><div class="value-class col-md-6 page-count-text-class"></div></div>
 
-                        <div class="row row-text-word-count"><div class="col-md-6 key-class">Word Count : </div><div class="value-class col-md-6 word-count-text-class"></div></div>
+                        <div class="row row-text-word-count"><div class="col-md-6 key-class fw-bold text-primary">Word Count: </div><div class="value-class col-md-6 word-count-text-class"></div></div>
 
-                        <div class="row row-text-minutes-count"><div class="col-md-6 key-class">Minutes Count : </div><div class="value-class col-md-6 minutes-count-text-class"></div></div>
+                        <div class="row row-text-minutes-count"><div class="col-md-6 key-class fw-bold text-primary">Minutes Count: </div><div class="value-class col-md-6 minutes-count-text-class"></div></div>
 
                         <div class="row row-text-estimated-delivery">
-                            <div class="col-md-6 key-class">Estimated Delivery : </div>
+                            <div class="col-md-6 key-class fw-bold text-primary">Estimated Delivery: </div>
                             <div class="col-md-6 value-class estimated-delivery-text-class"></div>
                         </div>
                         
-                        <div class="row row-text-total-count"><div class="col-md-6 key-class">Total Amount : </div><div class="value-class col-md-6 total-count-text-class">$0</div></div>
+                        <div class="row row-text-total-count border-bottom border-1 border-dark my-4"><div class="col-md-6 key-class fw-bold text-dark">Total Amount: </div><div class="value-class col-md-6 total-count-text-class">$0</div></div>
 
                         <!-- <span class="service-type"><strong>Service Type:</strong> <span class="service-type-container" style="color:#246bfd;"></span></span><br />
                         <span class="inv-translation-type-text-container" style="display:none;"><strong>Translation Type:</strong> <span class="inv-translation-type" style="color:#246bfd;"></span></span><br />
@@ -401,7 +403,7 @@
 
                         </div>
                         <hr />
-                        <button type="button" class="btn-form-submit btn btn-primary" style="">Place Order</button>
+                        <button type="button" class="btn-form-submit btn btn-primary w-100" style="">Place Order</button>
                         
                         <!-- <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
                         <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>

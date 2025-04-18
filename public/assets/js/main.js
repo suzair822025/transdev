@@ -147,7 +147,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 	var myModal = new bootstrap.Modal(document.getElementById('langModal'));
-	myModal.show();
+	//myModal.show();
 });
 function setLanguage(lang, url) {
 	//alert("Language selected: " + lang);

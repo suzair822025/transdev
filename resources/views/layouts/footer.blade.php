@@ -133,7 +133,7 @@
                             <div class="f-item link">
                             <ul>
                                 <li>
-                                    <a href="career.php">Career</a>
+                                    <a href="career">Career</a>
                                 </li>
                             </ul>
                         </div>

@@ -19,14 +19,14 @@
 
 <div class="section-seperator">
     <div class="content-lg container space20px">
-        <p><strong> Join Leebon</strong></p>
+        <p><strong> Join TranslationWindows</strong></p>
         <p>Whether you have years of translation/transcription services experience or are just starting your career, we’ll help you realize your full potential and achieve your career goals. We’ll help you become the best you can be, because a better you means a better us..</p>
         <p><strong>Our People</strong></p>
         <p>Our people are our biggest asset. We empower and develop our people and help them fulfill their potential by providing them with an enabling working environment and cutting edge learning opportunities. We believe that investing in our human capital will help us achieve and exceed our business goals.
             We not only offer job opportunities- we offer careers.
 		</p>
 		<p><strong>Diversity & Inclusion</strong></p>
-		<p>When you join Leebon, you’ll be part of a culture built on respect – one that recognizes the unique talents of everyone on the team.</p>
+		<p>When you join TranslationWindows, you’ll be part of a culture built on respect – one that recognizes the unique talents of everyone on the team.</p>
 		
         <div class="clearfix"></div>
 
