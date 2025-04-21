@@ -259,7 +259,7 @@
                         <div class="row mt-2">
                             <div class="col-md-6 translate-from-container">
                                 <label>Translate From: <span style="color:red;">*</span></label>
-                                <select name="translate_from" class="translate-from-select-class form-control" required>
+                                <select name="translate_from" class="translate-from-select-class form-control form-select" required>
                                     <option value="" selected>Select Language</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
@@ -270,7 +270,7 @@
 
                             <div class="col-md-6">
                                 <label>Translate To: <span style="color:red;">*</span></label>
-                                <select name="translate_to" class="form-control" required>
+                                <select name="translate_to" class="form-control form-select" required>
                                 <option value="" selected>Select Language</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
@@ -440,12 +440,12 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-1.webp') }}" alt="">
-                            <h4><a href="av-translation.php">Translation</a></h4>
+                            <h4><a href="{{ url('av-translation') }}">Translation</a></h4>
                             <p>
                             We, at Translationwindows, we completely understand that effective communication across languages goes beyond just translation.
                             </p>
                             <div class="d-flex mt-30">
-                                <a href="av-translation.php"><i class="fas fa-long-arrow-right"></i></a>
+                                <a href="{{ url('av-translation') }}"><i class="fas fa-long-arrow-right"></i></a>
                             </div>
                        </div>
                     </div>
@@ -456,12 +456,12 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-2.webp') }}" alt="">
-                            <h4><a href="av-transcription.php">Transcription</a></h4>
+                            <h4><a href="{{ url('av-transcription') }}">Transcription</a></h4>
                             <p>
                             Translationwindows excels in providing comprehensive transcription services across a multitude of languages, combining unparalleled accuracy.
                             </p>
                             <div class="d-flex mt-30">
-                                <a href="av-transcription.php"><i class="fas fa-long-arrow-right"></i></a>
+                                <a href="{{ url('av-transcription') }}"><i class="fas fa-long-arrow-right"></i></a>
                             </div>
                        </div>
                     </div>
@@ -472,12 +472,12 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-3.webp') }}" alt="">
-                            <h4><a href="subtitling.php">Subtitling</a></h4>
+                            <h4><a href="{{ url('subtitling') }}">Subtitling</a></h4>
                             <p>
                                 Translationwindows specializes in providing expert subtitling services for diverse audio and video content, ensuring precise translation in all languages.
                             </p>
                             <div class="d-flex mt-30">
-                                <a href="subtitling.php"><i class="fas fa-long-arrow-right"></i></a>
+                                <a href="{{ url('subtitling') }}"><i class="fas fa-long-arrow-right"></i></a>
                             </div>
                        </div>
                     </div>
@@ -490,12 +490,12 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-4.webp') }}" alt="">
-                            <h4><a href="proofreading-copy-editing.php">Proofreading & Copy-Editing</a></h4>
+                            <h4><a href="{{ url('prf-copyedit') }}">Proofreading & Copy-Editing</a></h4>
                             <p>
                                 To ensure your text is clear, accurate, and of a professional calibre, we Translationwindows.com provides professional proofreading and copy-editing services.
                             </p>
                             <div class="d-flex mt-30">
-                                <a href="proofreading-copy-editing.php"><i class="fas fa-long-arrow-right"></i></a>
+                                <a href="{{ url('prf-copyedit') }}"><i class="fas fa-long-arrow-right"></i></a>
                             </div>
                        </div>
                     </div>
@@ -506,12 +506,12 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-5.webp') }}" alt="">
-                            <h4><a href="proofreading-translation.php">Proofreading & Translation Of AI Content</a></h4>
+                            <h4><a href="{{ url('prftrans-ai') }}">Proofreading & Translation Of AI Content</a></h4>
                             <p>
                                 Our speciality at Translationwindows.com is editing and translating AI-generated content to make sure it is precise, well-written, and appropriate for the target culture.
                             </p>
                             <div class="d-flex mt-30">
-                                <a href="proofreading-translation.php"><i class="fas fa-long-arrow-right"></i></a>
+                                <a href="{{ url('prftrans-ai') }}"><i class="fas fa-long-arrow-right"></i></a>
                             </div>
                        </div>
                     </div>
@@ -522,12 +522,12 @@
                     <div class="services-style-three-item">
                        <div class="item-title">
                             <img src="{{ asset('/assets/img/icon/icon-6.webp') }}" alt="">
-                            <h4><a href="industry-specific-services.php">Industry-Specific Services</a></h4>
+                            <h4><a href="{{ url('ind-specservices') }}">Industry-Specific Services</a></h4>
                             <p>
                             Our expertise at Translationwindows.com lies in offering personalized translation and design services, ensuring they are tailored to meet the specific needs of your industry.
                             </p>
                             <div class="d-flex mt-30">
-                                <a href="industry-specific-services.php"><i class="fas fa-long-arrow-right"></i></a>
+                                <a href="{{ url('ind-specservices') }}"><i class="fas fa-long-arrow-right"></i></a>
                             </div>
                        </div>
                     </div>

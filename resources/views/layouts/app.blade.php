@@ -10,7 +10,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.php">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{ asset('/assets/img/logo-light.png') }}" class="logo logo-display" alt="TranslationWindows Logo">
                         <img src="{{ asset('assets/img/logo.png') }}" class="logo logo-scrolled" alt="TranslationWindows Logo">
                     </a>
@@ -26,27 +26,27 @@
                     </div>
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="dropdown">
-                            <a href="index.php" class="active">Home</a>
+                            <a href="{{ url('/') }}" class="active">Home</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
                             <ul class="dropdown-menu">
-                                <li><a href="av-transcription"><i class="fa fa-arrow-right"></i>Audio/Video Transcription</a></li>
-                                <li><a href="av-translation"><i class="fa fa-arrow-right"></i>Audio/Video Translation</a></li>
-                                <li><a href="doc-translation"><i class="fa fa-arrow-right"></i>Document Translation</a></li>
-                                <li><a href="subtitling"><i class="fa fa-arrow-right"></i>Subtitling</a></li>
-                                <li><a href="prf-copyedit"><i class="fa fa-arrow-right"></i>Proofreading & copy-editing</a></li>
-                                <li><a href="prftrans-ai"><i class="fa fa-arrow-right"></i>Proofreading and translation of AI content</a></li>
-                                <li><a href="ind-specservices"><i class="fa fa-arrow-right"></i>Industry-specific services</a></li>
+                                <li><a href="{{ url('av-transcription') }}"><i class="fa fa-arrow-right"></i>Audio/Video Transcription</a></li>
+                                <li><a href="{{ url('av-translation') }}"><i class="fa fa-arrow-right"></i>Audio/Video Translation</a></li>
+                                <li><a href="{{ url('doc-translation') }}"><i class="fa fa-arrow-right"></i>Document Translation</a></li>
+                                <li><a href="{{ url('subtitling') }}"><i class="fa fa-arrow-right"></i>Subtitling</a></li>
+                                <li><a href="{{ url('prf-copyedit') }}"><i class="fa fa-arrow-right"></i>Proofreading & copy-editing</a></li>
+                                <li><a href="{{ url('prftrans-ai') }}"><i class="fa fa-arrow-right"></i>Proofreading and translation of AI content</a></li>
+                                <li><a href="{{ url('ind-specservices') }}"><i class="fa fa-arrow-right"></i>Industry-specific services</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="how-it-works" class="">How It works</a>
+                            <a href="{{ url('how-it-works') }}" class="">How It works</a>
                         </li>
                         <li>
-                            <a href="career" class="">Career</a>
+                            <a href="{{ url('career') }}" class="">Career</a>
                         </li>
-                        <li><a href="contact-us">contact</a></li>
+                        <li><a href="{{ url('contact-us') }}">contact</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

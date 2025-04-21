@@ -15,23 +15,23 @@
 <div class="section-seperator">
     <div class="content-lg container space20px">
         <p>
-            The following privacy policy provides you with clear information about what data Leebon gathers and how it will be used. We believe that Leebon currently has policies in place which conform to privacy regulations in various regions outside the U.S. This policy is intended to supplement, not replace, those policies.</p>
+            The following privacy policy provides you with clear information about what data Translationwindows gathers and how it will be used. We believe that Translationwindows currently has policies in place which conform to privacy regulations in various regions outside the U.S. This policy is intended to supplement, not replace, those policies.</p>
 
          <p>Further investigation for specific regions outside the U.S. may be required. If you have entered into an agreement to use our services, the terms of that agreement govern the use and disclosure of the information and materials you submit to us through those services. The agreement prevails in the event of any inconsistencies between the agreement and the following policy.</p>
 
-        <p>The Leebon places privacy policy, located here, describes how Leebon uses your information when you use Leebon’s website, products, and services. This Leebon privacy policy describes practices specific to the Leebon website and service. </p>
+        <p>The Translationwindows places privacy policy, located here, describes how Translationwindows uses your information when you use Translationwindows’s website, products, and services. This Translationwindows privacy policy describes practices specific to the Translationwindows website and service. </p>
 
-        <p> We collect your information only when you use Leebon. </p>
+        <p> We collect your information only when you use Translationwindows. </p>
 
         <p> Personal information you provide:
-        Leebon will collect information required for creating an account to use the Leebon's services and payment information, such as your name, email address, mailing address, telephone number, credit card number etc.
+        Translationwindows will collect information required for creating an account to use the Translationwindows's services and payment information, such as your name, email address, mailing address, telephone number, credit card number etc.
         Personal Anonymous Information:
-        Google Analytics is a web analysis service provided by Google. Google utilizes the data collected to track and examine the use of <a href="http://www.Leebon.com">www.Leebon.com</a> to prepare reports on its activities and share them with other Google services.
+        Google Analytics is a web analysis service provided by Google. Google utilizes the data collected to track and examine the use of <a href="http://www.translationwindows.com">www.translationwindows.com</a> to prepare reports on its activities and share them with other Google services.
         Google may use the data collected to contextualize and personalize the ads of its own advertising network.
         Using the Ads Settings (<a href="https://www.google.com/settings/ads">https://www.google.com/settings/ads</a>), users can opt-out of Google Analytics for Display Advertising and customize Google Display Network ads.
         Personal Order content:
-        Leebon may also collect information submitted or generated as part of an order, such as source material, corresponding translations, or other similar information.
-        How Leebon may use the information.</p>
+        Translationwindows may also collect information submitted or generated as part of an order, such as source material, corresponding translations, or other similar information.
+        How Translationwindows may use the information.</p>
 
         <p> To personalize your experience.
         The personalization may include delivering content targeted to your interests, such as targeted banners, new services, and promotions.
@@ -39,14 +39,14 @@
         For contact and notification.
         This may include sending newsletters, marketing or other promotional materials.
         Auditing and conflict resolution.
-        This may include contacting users in connection with inappropriate use of Leebon products and services, non-compliance with any Terms and Conditions of use, or in connection with a complaint filed by another user.
-        For developing, operating and improving Leebon’s products and services.
-        If you wish to opt out of providing Leebon with information, please send your opt out request to <a href="http://www.Leebon.com">www.Leebon.com</a>. However, please remember that some information is required to participate in the available activities or benefit from the offered services.</p>
+        This may include contacting users in connection with inappropriate use of Translationwindows products and services, non-compliance with any Terms and Conditions of use, or in connection with a complaint filed by another user.
+        For developing, operating and improving Translationwindows’s products and services.
+        If you wish to opt out of providing Translationwindows with information, please send your opt out request to <a href="http://www.translationwindows.com">www.translationwindows.com</a>. However, please remember that some information is required to participate in the available activities or benefit from the offered services.</p>
 
         <p> <strong>Security</strong> </p>
 
-        <p> Leebon will take reasonable efforts to safeguard your information from unauthorized access.
-        Leebon may provide access to your information if Leebon has a good faith belief that disclosure is reasonably necessary to (1) comply with any applicable law, regulation, or legal process, (2) detect or prevent fraud, and (3) to address security or technical issues.
+        <p> Translationwindows will take reasonable efforts to safeguard your information from unauthorized access.
+        Translationwindows may provide access to your information if Translationwindows has a good faith belief that disclosure is reasonably necessary to (1) comply with any applicable law, regulation, or legal process, (2) detect or prevent fraud, and (3) to address security or technical issues.
         Our privacy policy may change over time. We will post any privacy policy changes on this page. Our privacy practices are described in the full privacy policy located here.</p>
 
     </div>

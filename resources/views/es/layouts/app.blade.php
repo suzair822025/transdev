@@ -26,7 +26,7 @@
                     </div>
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="dropdown">
-                            <a href="index.php" class="active">Home</a>
+                            <a href="{{ url('/') }}" class="active">Home</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
