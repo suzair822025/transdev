@@ -49,7 +49,7 @@
                         <div class="f-item address">
                             <img src="{{ asset ('/assets/img/logo.png') }}" alt="Image Not Found">
                             <p>
-                                Excellence decisively nay man twins impression maximum contrasted remarkably is perfect.
+                                We Don’t Just Translate Words — We Deliver What You Mean.
                             </p>
                             <ul>
                                 <li><i class="far fa-envelope fa-1x mr-5"></i><a href="mailto:sales@translationwindows.com" class="d-inline-block">sales@translationwindows.com</a></li>
@@ -85,16 +85,16 @@
                             <h4 class="widget-title">Quick Links</h4>
                             <ul>
                                 <li>
-                                    <a href="index.php">Home</a>
+                                    <a href="{{ url('/') }}">Home</a>
                                 </li>
                                 <li style="display: none">
                                     <a href="services.php">Services</a>
                                 </li>
                                 <li>
-                                    <a href="how-it-works.php">How It Works</a>
+                                    <a href="{{ url('how-it-works') }}">How It Works</a>
                                 </li>
                                 <li>
-                                    <a href="contact-us.php">Contact</a>
+                                    <a href="{{ url('contact-us') }}">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -104,25 +104,25 @@
                             <h4 class="widget-title">Our Services</h4>
                             <ul>
                                 <li>
-                                    <a href="av-transcription.php">Audio/Video Transcription</a>
+                                    <a href="{{ url('av-transcription') }}">Audio/Video Transcription</a>
                                 </li>
                                 <li>
-                                    <a href="av-translation.php">Audio/Video Translation</a>
+                                    <a href="{{ url('av-translation') }}">Audio/Video Translation</a>
                                 </li>
                                 <li>
-                                    <a href="doc-translation.php">Document Translation</a>
+                                    <a href="{{ url('doc-translation') }}">Document Translation</a>
                                 </li>
                                 <li>
-                                    <a href="subtitling.php">Subtitling</a>
+                                    <a href="{{ url('subtitling') }}">Subtitling</a>
                                 </li>
                                 <li>
-                                    <a href="#">Proofreading & Copy-Editing</a>
+                                    <a href="{{ url('prf-copyedit') }}">Proofreading & Copy-Editing</a>
                                 </li>
                                 <li>
-                                    <a href="#">Proofreading & Translation Of AI Content</a>
+                                    <a href="{{ url('prftrans-ai') }}">Proofreading & Translation Of AI Content</a>
                                 </li>
                                 <li>
-                                    <a href="#">Industry-Specific Services</a>
+                                    <a href="{{ url('ind-specservices') }}">Industry-Specific Services</a>
                                 </li>
                             </ul>
                         </div>
@@ -133,7 +133,7 @@
                             <div class="f-item link">
                             <ul>
                                 <li>
-                                    <a href="career.php">Career</a>
+                                    <a href="{{ url('career') }}">Career</a>
                                 </li>
                             </ul>
                         </div>
@@ -156,7 +156,7 @@
                     <div class="col-lg-3 text-end">
                         <ul class="link-list">
                             <li>
-                                <a href="privacy-policy.php">Privacy Policy</a>
+                                <a href="{{ url('privacy') }}">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>

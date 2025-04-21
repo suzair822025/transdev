@@ -48,16 +48,39 @@ class QuoteController extends Controller
 
         if($r->estimated_delivery == 1)
         {
-            $estimatedDelivery = "Standard";
+            $estimatedDelivery = "Standard - 4 to 6 Days";
         }
         elseif($r->estimated_delivery == 2)
         {
-            $estimatedDelivery = "Priority";
+            $estimatedDelivery = "Priority - 2 to 4 Days";
         }
         elseif($r->estimated_delivery == 3)
         {
-            $estimatedDelivery = "Urgent";
+            $estimatedDelivery = "Urgent - 24 to 48 Hours";
         }
+
+        $translationType = "";
+
+        if($r->translation_type == 1)
+        {
+            $translationType = "Certified";
+        }
+        elseif($r->translation_type == 2)
+        {
+            $translationType = "Professional";
+        }
+
+        $FileType = "";
+
+        if($r->file_type == 1)
+        {
+            $FileType = "Document";
+        }
+        elseif($r->file_type == 2)
+        {
+            $FileType = "Audio & Video";
+        }
+
 
         $data = [
             'name' => $r->name,
@@ -68,6 +91,10 @@ class QuoteController extends Controller
             'translate_to'=>$r->t_to,
             'number_of_pages'=>$r->number_of_pages,
             'number_of_pages_amount'=>$r->number_of_pages_amount,
+            'number_of_minutes'=>$r->number_of_minutes,
+            'number_of_minute_amount'=>$r->number_of_minute_amount,
+            'number_of_words'=>$r->number_of_words,
+            'number_of_word_amount'=>$r->number_of_word_amount,
             'estimated_delivery'=>$estimatedDelivery,
             'estimated_delivery_amount'=>$r->estimated_delivery_amount,
             'total_amount'=>$r->total_amount,
@@ -75,7 +102,12 @@ class QuoteController extends Controller
             'amount'=>$p->amount,
             'created_at'=>$p->created_at,
             'status'=>$p->status,
-            'currency'=>$p->currency
+            'currency'=>$p->currency,
+            'translation_type_id'=>$r->translation_type,
+            'translation_type'=>$translationType,
+            'file_type'=>$FileType,
+            'file_type_id'=>$r->file_type,
+            'comments'=>$r->comments
         ];
 
         // Specify the path to the attachment (e.g., from public directory)
@@ -86,6 +118,119 @@ class QuoteController extends Controller
         $view = "emails.adminnotification";
 
         Mail::to('faizannizami6@gmail.com')->send(new CustomMailer($subject, $view, $data, $attachmentPath));
+
+        return true;
+    }
+
+    public function AdminEmailQuoteRequest($translationId)
+    {
+        $r =  DB::table('translation_request as tr')
+        ->leftJoin('files_information as fi', function ($join) {
+            $join->on('fi.id', '=', 'tr.file_id')
+                 ->on('fi.request_reference', '=', 'tr.request_reference');
+        })
+        ->leftJoin('languages as lf', 'lf.id', '=', 'tr.translate_from')
+        ->leftJoin('languages as lt', 'lt.id', '=', 'tr.translate_to')
+        ->where('tr.id', $translationId)
+        ->select('tr.*', 'fi.file_name', 'lf.name as t_from', 'lt.name as t_to')
+        ->first();
+
+        
+
+        $serviceType = "";
+
+        if($r->service_type == 1)
+        {
+            $serviceType = "Translate";
+        }
+        elseif($r->service_type == 2)
+        {
+            $serviceType = "Transcribe";
+        }
+
+        $estimatedDelivery = "";
+
+        if($r->estimated_delivery == 1)
+        {
+            $estimatedDelivery = "Standard - 4 to 6 Days";
+        }
+        elseif($r->estimated_delivery == 2)
+        {
+            $estimatedDelivery = "Priority - 2 to 4 Days";
+        }
+        elseif($r->estimated_delivery == 3)
+        {
+            $estimatedDelivery = "Urgent - 24 to 48 Hours";
+        }
+
+        $translationType = "";
+
+        if($r->translation_type == 1)
+        {
+            $translationType = "Certified";
+        }
+        elseif($r->translation_type == 2)
+        {
+            $translationType = "Professional";
+        }
+
+        $FileType = "";
+
+        if($r->file_type == 1)
+        {
+            $FileType = "Document";
+        }
+        elseif($r->file_type == 2)
+        {
+            $FileType = "Audio & Video";
+        }
+
+
+        $data = [
+            'name' => $r->name,
+            'email'=> $r->email,
+            'phone'=> $r->phone,
+            'service_type'=>$serviceType,
+            'translate_from'=> $r->t_from,
+            'translate_to'=>$r->t_to,
+            'number_of_pages'=>$r->number_of_pages,
+            'number_of_pages_amount'=>$r->number_of_pages_amount,
+            'number_of_minutes'=>$r->number_of_minutes,
+            'number_of_minute_amount'=>$r->number_of_minute_amount,
+            'number_of_words'=>$r->number_of_words,
+            'number_of_word_amount'=>$r->number_of_word_amount,
+            'estimated_delivery'=>$estimatedDelivery,
+            'estimated_delivery_amount'=>$r->estimated_delivery_amount,
+            'total_amount'=>$r->total_amount,
+            'translation_type_id'=>$r->translation_type,
+            'translation_type'=>$translationType,
+            'file_type'=>$FileType,
+            'file_type_id'=>$r->file_type,
+            'comments'=>$r->comments
+
+        ];
+
+        // Specify the path to the attachment (e.g., from public directory)
+        $attachmentPath = storage_path('app/public/uploads/'.$r->file_name.'');
+
+        $subject = "New Quote Request Received On Your Website.";
+
+        $view = "emails.adminquoterequest";
+        //faizannizami6@gmail.com
+        Mail::to('faizannizami6@gmail.com')->send(new CustomMailer($subject, $view, $data, $attachmentPath));
+
+        return true;
+    }
+
+    public function CustomerQuoteRequest($email,$name)
+    {
+        $subject = "Translation Quote Request Confirmation";
+
+        $view = "emails.quoterequest";
+
+        $data['name'] = $name;
+
+        Mail::to($email)->send(new CustomMailer($subject, $view, $data, null));
 
         return true;
     }
@@ -119,19 +264,41 @@ class QuoteController extends Controller
             $serviceType = "Transcribe";
         }
 
+        $translationType = "";
+
+        if($r->translation_type == 1)
+        {
+            $translationType = "Certified";
+        }
+        elseif($r->translation_type == 2)
+        {
+            $translationType = "Professional";
+        }
+
         $estimatedDelivery = "";
 
         if($r->estimated_delivery == 1)
         {
-            $estimatedDelivery = "Standard";
+            $estimatedDelivery = "Standard - 4 to 6 Days";
         }
         elseif($r->estimated_delivery == 2)
         {
-            $estimatedDelivery = "Priority";
+            $estimatedDelivery = "Priority - 2 to 4 Days";
         }
         elseif($r->estimated_delivery == 3)
         {
-            $estimatedDelivery = "Urgent";
+            $estimatedDelivery = "Urgent - 24 to 48 Hours";
+        }
+
+        $FileType = "";
+
+        if($r->file_type == 1)
+        {
+            $FileType = "Document";
+        }
+        elseif($r->file_type == 2)
+        {
+            $FileType = "Audio & Video";
         }
 
         $data = [
@@ -143,6 +310,10 @@ class QuoteController extends Controller
             'translate_to'=>$r->t_to,
             'number_of_pages'=>$r->number_of_pages,
             'number_of_pages_amount'=>$r->number_of_pages_amount,
+            'number_of_minutes'=>$r->number_of_minutes,
+            'number_of_minute_amount'=>$r->number_of_minute_amount,
+            'number_of_words'=>$r->number_of_words,
+            'number_of_word_amount'=>$r->number_of_word_amount,
             'estimated_delivery'=>$estimatedDelivery,
             'estimated_delivery_amount'=>$r->estimated_delivery_amount,
             'total_amount'=>$r->total_amount,
@@ -150,7 +321,12 @@ class QuoteController extends Controller
             'amount'=>$p->amount,
             'created_at'=>$p->created_at,
             'status'=>$p->status,
-            'currency'=>$p->currency
+            'currency'=>$p->currency,
+            'translation_type_id'=>$r->translation_type,
+            'translation_type'=>$translationType,
+            'file_type'=>$FileType,
+            'file_type_id'=>$r->file_type
+
         ];
 
         // Specify the path to the attachment (e.g., from public directory)
@@ -293,7 +469,7 @@ class QuoteController extends Controller
 
         $isReqSub = 0;
 
-        if(!empty($r->translation_type) && $r->translation_type > 0)
+        if(!empty($r->translation_type) && $r->translation_type == 2)
         {
             $isReqSub = 1;
         }
@@ -301,6 +477,15 @@ class QuoteController extends Controller
         if(!empty($r->page_number) && $r->page_number > 10)
         {
             $isReqSub = 1;
+        }
+
+        if($isReqSub == 1)
+        {
+            $this->CustomerQuoteRequest($r->email,$r->customer_name);
+
+            $this->AdminEmailQuoteRequest($rid);
+
+            
         }
 
         return response()->json([
@@ -339,9 +524,9 @@ class QuoteController extends Controller
 
         DB::commit();
 
-        // $this->AdminEmail($r->RequestID,$paymentId);
+        $this->AdminEmail($r->RequestID,$paymentId);
 
-        // $this->CustomerEmail($r->RequestID,$paymentId);
+        $this->CustomerEmail($r->RequestID,$paymentId);
 
         return response()->json(['code'=>200]);
         
@@ -349,7 +534,10 @@ class QuoteController extends Controller
 
     public function EmailTest()
     {
-        $this->CustomerEmail(10,9);
+
+        $this->CustomerQuoteRequest("codewithar360@gmail.com","AR.Siddiqui");
+        
+        // $this->CustomerEmail(10,9);
     //     // $data = [
     //     //     'name' => 'John Doe'
     //     // ];

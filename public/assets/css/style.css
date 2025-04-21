@@ -144,7 +144,7 @@ input {
 	border-radius: inherit;
 	-webkit-box-shadow: inherit;
 	box-shadow: inherit;
-	min-height: 50px;
+	min-height: 40px;
 }
 
 input:focus {
@@ -11701,7 +11701,7 @@ button.rbutton {
 .flag-cont a.usflag {width: 100px; margin:0 0.5rem; }
 .flag-cont a.spflag {width: 100px; margin:0 0.5rem; }
 .rounded-5{border-radius: 1.5rem;}
-.cust-radios{max-width: 1.0rem;}
+.cust-radios{max-width: 1.0rem; min-height: auto;}
 .homebann-subtitle{margin-top: -0.5rem; display: block;}
 .swiper-slide .mt-n4{margin-top: -2.5rem; display: block;}
 .hero-cont{background-image: url(../img/hero_bg.avif); background-repeat: no-repeat; background-position: center; background-size: cover; margin-top: 87px; padding-bottom: 10%;}
@@ -11743,6 +11743,7 @@ button.rbutton {
   .btn.notransform i { transform:none; line-height: normal;}
   .default-padding-footer {	padding-top: 120px;	padding-bottom: 80px;}
   .move-shake {	animation: tilt-n-move-shaking 0.45s infinite;  display: inline-block;}
+  .file-upload-cls{line-height: 1.6;}
   @keyframes tilt-n-move-shaking {
   0% { transform: translate(0, 0) rotate(0deg); }
   25% { transform: translate(2px, -5px) rotate(5deg); }
