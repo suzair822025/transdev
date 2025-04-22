@@ -167,7 +167,7 @@
     </footer>
 
    <!-- Popup Contact Form -->
-<div id="popupcontactForm" class="popup-contactForm shadow-sm">
+<div id="popupcontactForm" class="popup-contactForm d-none">
     <h5 class="mb-3">Contact Us</h5>
     <form>
         <div class="mb-2">
@@ -185,7 +185,7 @@
         <button type="submit" class="btn btn-success w-100">Send</button>
     </form>
 </div>
-<button id="popup_contactBtn" class="popup-contactBtn btn btn-primary rounded-pill d-flex align-items-center gap-2 notransform">
+<button id="popup_contactBtn" class="popup-contactBtn btn btn-primary rounded-pill d-none align-items-center gap-2 notransform">
   <i id="contactIcon" class="fa fa-envelope"></i>
   <span id="contactText">Contact Us</span>
 </button>
