@@ -47,9 +47,27 @@
                             <a href="{{ url('career') }}" class="">Career</a>
                         </li>
                         <li><a href="{{ url('contact-us') }}">contact</a></li>
+                        <li>
+                            <div class="langdropdown-container">
+                                <div class="langdropdown-selected" id="langdropdown-selected">
+                                    <img id="selected-flag" src="https://flagcdn.com/us.svg" alt="US Flag" class="flags">
+                                    <span id="selected-text">English</span>
+                                    <div class="langdropdown-arrow"><i class="fa fa-chevron-down"></i></div>
+                                </div>
+                                <div class="langdropdown-options" id="langdropdown-options">
+                                    <div class="langdropdown-option" data-lang="en" data-flag="https://flagcdn.com/us.svg"> 
+                                        <img src="https://flagcdn.com/us.svg" alt="US Flag" class="flags"> English
+                                    </div>
+                                    <div class="langdropdown-option" data-lang="es" data-flag="https://flagcdn.com/es.svg">
+                                        <img src="https://flagcdn.com/es.svg" alt="Spanish Flag" class="flags"> Español
+                                    </div>
+                                </div>
+                            </div> <!-- ..dropdown-container -->
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
+
                 <div class="attr-right">
                     <!-- Start Atribute Navigation -->
                     <a class="btn circle btn-gradient animation" href="#" onclick="smoothScroll(event, 'getquoteForm')">Get A Quote</a>

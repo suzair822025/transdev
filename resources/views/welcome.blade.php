@@ -238,7 +238,7 @@
                                     <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certified <span class="starting-from"></span> </span></label>
                                     <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Professional <span class="starting-from"></span> </span></label>
                                 </div>
-                                <div class="col-md-12 file-type-container px-0 mt-3">
+                                <div class="col-md-12 file-type-container px-0 mt-3 mt-md-0">
                                     <label class="w-100">File Type: <span style="color:red;">*</span></label><br>
                                     <span class="doptintranscribe">
                                         <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Document   <span class="starting-from"></span> </span></label>
@@ -492,7 +492,7 @@
                             <img src="{{ asset('/assets/img/icon/icon-4.webp') }}" alt="">
                             <h4><a href="{{ url('prf-copyedit') }}">Proofreading & Copy-Editing</a></h4>
                             <p>
-                                To ensure your text is clear, accurate, and of a professional calibre, we Translationwindows.com provides professional proofreading and copy-editing services.
+                                Translationwindows.com ensures your text is clear, accurate, and professional with expert proofreading and copy-editing services.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="{{ url('prf-copyedit') }}"><i class="fas fa-long-arrow-right"></i></a>
@@ -508,7 +508,7 @@
                             <img src="{{ asset('/assets/img/icon/icon-5.webp') }}" alt="">
                             <h4><a href="{{ url('prftrans-ai') }}">Proofreading & Translation Of AI Content</a></h4>
                             <p>
-                                Our speciality at Translationwindows.com is editing and translating AI-generated content to make sure it is precise, well-written, and appropriate for the target culture.
+                                Translationwindows.com specializes in refining AI-generated content to ensure it’s accurate, polished, and appropriate.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="{{ url('prftrans-ai') }}"><i class="fas fa-long-arrow-right"></i></a>
