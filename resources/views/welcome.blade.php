@@ -1852,7 +1852,13 @@ if (!getCookie("cookieConsent")) {
 
 /*******************************************/
 
+$(document).on('click','.langdropdown-option',function(){
 
+    var lang = $(this).attr("data-lang");
+
+    window.location.href="{{url('langchange')}}/"+lang;
+
+});
 
         
    });

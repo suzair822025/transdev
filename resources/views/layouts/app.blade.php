@@ -24,6 +24,64 @@
                             <i class="fa fa-times"></i>
                         </button>
                     </div>
+                    @if(session('lang') === 'es')
+                    <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+    <li class="dropdown">
+        <a href="{{ url('/es') }}" class="active">
+            {{ session('lang') === 'es' ? 'Inicio' : 'Home' }}
+        </a>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            {{ session('lang') === 'es' ? 'Servicios' : 'Services' }}
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="{{ url('es/av-transcription') }}"><i class="fa fa-arrow-right"></i>{{ session('lang') === 'es' ? 'Transcripción de audio/video' : 'Audio/Video Transcription' }}</a></li>
+            <li><a href="{{ url('es/av-translation') }}"><i class="fa fa-arrow-right"></i>{{ session('lang') === 'es' ? 'Traducción de audio/video' : 'Audio/Video Translation' }}</a></li>
+            <li><a href="{{ url('es/doc-translation') }}"><i class="fa fa-arrow-right"></i>{{ session('lang') === 'es' ? 'Traducción de documentos' : 'Document Translation' }}</a></li>
+            <li><a href="{{ url('es/subtitling') }}"><i class="fa fa-arrow-right"></i>{{ session('lang') === 'es' ? 'Subtitulación' : 'Subtitling' }}</a></li>
+            <li><a href="{{ url('es/prf-copyedit') }}"><i class="fa fa-arrow-right"></i>{{ session('lang') === 'es' ? 'Corrección y edición' : 'Proofreading & copy-editing' }}</a></li>
+            <li><a href="{{ url('es/prftrans-ai') }}"><i class="fa fa-arrow-right"></i>{{ session('lang') === 'es' ? 'Corrección y traducción de contenido IA' : 'Proofreading and translation of AI content' }}</a></li>
+            <li><a href="{{ url('es/ind-specservices') }}"><i class="fa fa-arrow-right"></i>{{ session('lang') === 'es' ? 'Servicios específicos de la industria' : 'Industry-specific services' }}</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="{{ url('es/how-it-works') }}">
+            {{ session('lang') === 'es' ? 'Cómo funciona' : 'How It Works' }}
+        </a>
+    </li>
+    <li>
+        <a href="{{ url('es/career') }}">
+            {{ session('lang') === 'es' ? 'Carrera' : 'Career' }}
+        </a>
+    </li>
+    <li>
+        <a href="{{ url('es/contact-us') }}">
+            {{ session('lang') === 'es' ? 'Contacto' : 'Contact' }}
+        </a>
+    </li>
+    <li>
+        <div class="langdropdown-container">
+            <div class="langdropdown-selected" id="langdropdown-selected">
+                <img id="selected-flag" src="{{ session('lang') === 'es' ? 'https://flagcdn.com/es.svg' : 'https://flagcdn.com/us.svg' }}" alt="Flag" class="flags">
+                <span id="selected-text">
+                    {{ session('lang') === 'es' ? 'Español' : 'English' }}
+                </span>
+                <div class="langdropdown-arrow"><i class="fa fa-chevron-down"></i></div>
+            </div>
+            <div class="langdropdown-options" id="langdropdown-options">
+                <div class="langdropdown-option" data-lang="en" data-flag="https://flagcdn.com/us.svg"> 
+                    <img src="https://flagcdn.com/us.svg" alt="US Flag" class="flags"> English
+                </div>
+                <div class="langdropdown-option" data-lang="es" data-flag="https://flagcdn.com/es.svg">
+                    <img src="https://flagcdn.com/es.svg" alt="Spanish Flag" class="flags"> Español
+                </div>
+            </div>
+        </div> <!-- ..dropdown-container -->
+    </li>
+</ul>
+
+                    @else
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="dropdown">
                             <a href="{{ url('/') }}" class="active">Home</a>
@@ -65,6 +123,10 @@
                             </div> <!-- ..dropdown-container -->
                         </li>
                     </ul>
+                    @endif
+
+
+
                 </div>
                 <!-- /.navbar-collapse -->
 

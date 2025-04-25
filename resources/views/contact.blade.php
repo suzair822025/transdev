@@ -98,7 +98,7 @@
 <!-- Start Map 
 ============================================= -->
 <div class="maps-area bg-gray overflow-hidden">
-    <img src="{{ asset('assets/img/gmap.avif') }}" alt="">
+    <img src="{{ asset('assets/img/gmap.avif') }}" alt="" class="img-fluid">
 </div>
 <!-- End Map -->
 
