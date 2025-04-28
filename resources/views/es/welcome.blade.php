@@ -185,9 +185,6 @@
                 <div class="col-md-8">
                     <!-- <h2>Get a Quote & Place Your Order</h2> -->
                     <form id="QuoteForm">
-                        <input type="hidden" name="lang_type" class="lang-type-class" value="{{ session('lang') === 'es' ? 'es' : 'en' }}" />
-
-
                         <input type="hidden" name="service_type_amount" class="service-type-amount" value="0" />
                         <input type="hidden" name="number_of_pages_anount" class="number-of-pages-amount" value="0" />
                         <input type="hidden" name="estimated_delivery_amount" class="estimated-delivery-amount" value="0" />

@@ -293,7 +293,6 @@
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
 
-
 $(document).ready(function(){
 
 $(document).find('.langdropdown-option').click(function(){
@@ -305,6 +304,7 @@ window.location.href="https://translationwindows.com/langchange/"+lang;
 });
 
 });
+
     // var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     // (function(){
     // var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -325,10 +325,6 @@ window.location.href="https://translationwindows.com/langchange/"+lang;
         s1.setAttribute("crossorigin", "*");
         s0.parentNode.insertBefore(s1, s0);
     })();
-
-
-    
-
     </script>
     <!--End of Tawk.to Script-->
 @yield('scripts')

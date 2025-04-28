@@ -11775,6 +11775,7 @@ nav.navbar.validnavs .navbar-collapse.collapse img.flags{display: flex; margin-b
  @media only screen and (max-width: 767px) {
 	
 	.hero-cont{margin-top: 0;}
+
 }
 
 .word-container {
@@ -11827,3 +11828,5 @@ nav.navbar.validnavs .navbar-collapse.collapse img.flags{display: flex; margin-b
 	  text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
 	}
   }
+}
+
