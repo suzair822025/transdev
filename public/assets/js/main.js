@@ -147,7 +147,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 	var myModal = new bootstrap.Modal(document.getElementById('langModal'));
-	myModal.show();
+	//myModal.show();
 });
 function setLanguage(lang, url) {
 	//alert("Language selected: " + lang);
@@ -180,6 +180,53 @@ function smoothScroll(event, targetId) {
       contactIcon.className = 'fa fa-envelope';
     }
   });  /// script for contact form in a popup ends here
+
+
+ ////	langauge selector TopBar Starts	////
+ const dropdownSelected = document.getElementById('langdropdown-selected');
+ const dropdownOptions = document.getElementById('langdropdown-options');
+ const selectedText = document.getElementById('selected-text');
+ const selectedFlag = document.getElementById('selected-flag');
+
+ // Toggle dropdown visibility
+ dropdownSelected.addEventListener('click', () => {
+    dropdownOptions.classList.toggle('active');
+  	dropdownSelected.classList.toggle('active');
+ });
+
+ // Handle selection
+ document.querySelectorAll('.langdropdown-option').forEach(option => {
+   option.addEventListener('click', () => {
+	 const lang = option.getAttribute('data-lang');
+	 const flag = option.getAttribute('data-flag');
+	 const label = option.textContent.trim();
+
+	 selectedText.textContent = label;
+	 selectedFlag.src = flag;
+
+	 sessionStorage.setItem('chosenLanguage', lang);
+	 sessionStorage.setItem('selectedFlag', flag);
+
+	 dropdownOptions.classList.remove('active');
+   });
+ });
+
+ // Load saved language
+ const savedLang = sessionStorage.getItem('chosenLanguage');
+ const savedFlag = sessionStorage.getItem('selectedFlag');
+ if (savedLang && savedFlag) {
+   selectedText.textContent = savedLang === 'en' ? 'English' : 'Spanish';
+   selectedFlag.src = savedFlag;
+ }
+
+ // Close on outside click
+ document.addEventListener('click', (e) => {
+   if (!e.target.closest('.langdropdown-container')) {
+	 dropdownOptions.classList.remove('active');
+   }
+ });
+////	langauge selector TopBar Ends	////
+
 window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());

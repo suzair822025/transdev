@@ -149,7 +149,7 @@
             <div class="row align-text-top">
                 <div class="col-xl-5 col-lg-5">
                     <div class="content mt-5">
-                        <h2 class="slider-title1"><span class="sm-sl-title">Expert linguisic</span><br></bnr><strong>Services Tailored</strong> To Your Needs.</h2>
+                        <h2 class="slider-title1 word-container"><span class="sm-sl-title">Expert linguistic</span><br><strong class="word" data-text="Services">Services</strong> <strong class="word" data-text="Tailored">Tailored</strong> <strong class="word" data-text="To">To</strong> <strong class="word" data-text="Your">Your</strong> <br><strong class="word" data-text="Needs">Needs.</strong></h2>
                         <span class="mt-n4">We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
                         <ul class="my-2">
                             <li><i class="fa fa-check-circle"></i> Supercharged by AI for Lightning-Fast Translations.</li>
@@ -182,6 +182,9 @@
                 <div class="col-md-8">
                     <!-- <h2>Get a Quote & Place Your Order</h2> -->
                     <form id="QuoteForm">
+                        <input type="hidden" name="lang_type" class="lang-type-class" value="{{ session('lang') === 'es' ? 'es' : 'en' }}" />
+
+
                         <input type="hidden" name="service_type_amount" class="service-type-amount" value="0" />
                         <input type="hidden" name="number_of_pages_anount" class="number-of-pages-amount" value="0" />
                         <input type="hidden" name="estimated_delivery_amount" class="estimated-delivery-amount" value="0" />
@@ -238,7 +241,7 @@
                                     <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certified <span class="starting-from"></span> </span></label>
                                     <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Professional <span class="starting-from"></span> </span></label>
                                 </div>
-                                <div class="col-md-12 file-type-container px-0 mt-3">
+                                <div class="col-md-12 file-type-container px-0 mt-3 mt-md-0">
                                     <label class="w-100">File Type: <span style="color:red;">*</span></label><br>
                                     <span class="doptintranscribe">
                                         <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Document   <span class="starting-from"></span> </span></label>
@@ -492,7 +495,7 @@
                             <img src="{{ asset('/assets/img/icon/icon-4.webp') }}" alt="">
                             <h4><a href="{{ url('prf-copyedit') }}">Proofreading & Copy-Editing</a></h4>
                             <p>
-                                To ensure your text is clear, accurate, and of a professional calibre, we Translationwindows.com provides professional proofreading and copy-editing services.
+                                Translationwindows.com ensures your text is clear, accurate, and professional with expert proofreading and copy-editing services.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="{{ url('prf-copyedit') }}"><i class="fas fa-long-arrow-right"></i></a>
@@ -508,7 +511,7 @@
                             <img src="{{ asset('/assets/img/icon/icon-5.webp') }}" alt="">
                             <h4><a href="{{ url('prftrans-ai') }}">Proofreading & Translation Of AI Content</a></h4>
                             <p>
-                                Our speciality at Translationwindows.com is editing and translating AI-generated content to make sure it is precise, well-written, and appropriate for the target culture.
+                                Translationwindows.com specializes in refining AI-generated content to ensure it’s accurate, polished, and appropriate.
                             </p>
                             <div class="d-flex mt-30">
                                 <a href="{{ url('prftrans-ai') }}"><i class="fas fa-long-arrow-right"></i></a>
@@ -1852,7 +1855,13 @@ if (!getCookie("cookieConsent")) {
 
 /*******************************************/
 
+$(document).on('click','.langdropdown-option',function(){
 
+    var lang = $(this).attr("data-lang");
+
+    window.location.href="{{url('langchange')}}/"+lang;
+
+});
 
         
    });

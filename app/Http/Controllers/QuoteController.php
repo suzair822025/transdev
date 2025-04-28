@@ -12,6 +12,8 @@ use Mail;
 
 use App\Mail\CustomMailer;
 
+use Illuminate\Support\Facades\Session;
+
 class QuoteController extends Controller
 {
 
@@ -117,7 +119,7 @@ class QuoteController extends Controller
 
         $view = "emails.adminnotification";
 
-        Mail::to('faizannizami6@gmail.com')->send(new CustomMailer($subject, $view, $data, $attachmentPath));
+        Mail::to('sales@translationwindows.com')->send(new CustomMailer($subject, $view, $data, $attachmentPath));
 
         return true;
     }
@@ -216,17 +218,25 @@ class QuoteController extends Controller
         $subject = "New Quote Request Received On Your Website.";
 
         $view = "emails.adminquoterequest";
-        //faizannizami6@gmail.com
-        Mail::to('faizannizami6@gmail.com')->send(new CustomMailer($subject, $view, $data, $attachmentPath));
+        //sales@translationwindows.com
+        Mail::to('sales@translationwindows.com')->send(new CustomMailer($subject, $view, $data, $attachmentPath));
 
         return true;
     }
 
-    public function CustomerQuoteRequest($email,$name)
+    public function CustomerQuoteRequest($email,$name,$lang)
     {
+
         $subject = "Translation Quote Request Confirmation";
 
         $view = "emails.quoterequest";
+
+        if(isset($lang) && $lang=="es")
+        {
+            $subject = "Confirmación de Solicitud de Cotización de Traducción";
+
+            $view = "emails.esquoterequest";
+        }
 
         $data['name'] = $name;
 
@@ -335,6 +345,13 @@ class QuoteController extends Controller
         $subject = "Your Order Has Been Successfully Placed!";
 
         $view = "emails.customernotification";
+
+        if(isset($r->lang_type) && $r->lang_type=="es")
+        {
+            $subject = "¡Su pedido ha sido realizado con éxito!";
+
+            $view = "emails.escustomernotification";
+        }
 
         Mail::to($r->email)->send(new CustomMailer($subject, $view, $data, null));
 
@@ -447,7 +464,8 @@ class QuoteController extends Controller
             'number_of_minute_amount' => !empty($r->number_of_minute_anount) ? $r->number_of_minute_anount : 0,
             'estimated_delivery_amount' => $r->estimated_delivery_amount,
             'total_amount' => $r->sum_of_all_amount,
-            'created_at' => now() 
+            'created_at' => now(),
+            'lang_type'=>$r->lang_type
         ];
 
         DB::beginTransaction();
@@ -481,7 +499,7 @@ class QuoteController extends Controller
 
         if($isReqSub == 1)
         {
-            $this->CustomerQuoteRequest($r->email,$r->customer_name);
+            $this->CustomerQuoteRequest($r->email,$r->customer_name,$r->lang_type);
 
             $this->AdminEmailQuoteRequest($rid);
 
@@ -532,10 +550,62 @@ class QuoteController extends Controller
         
     }
 
+    public function ContactUsActionS(Request $r)
+    {
+        DB::table('contacts')->insert([
+            'name' => $r->name,
+            'email' => $r->email,
+            'phone' => $r->phone,
+            'message' => $r->message,
+        ]);
+
+        $subject = "New Contact Request Received On Your Website.";
+
+        $view = "emails.contactrequest";
+
+        $AdminEmail = '<p>Dear Admin</p>';
+
+        $AdminEmail.= '<p>You have received a new contact request on your website!</p>';
+
+        $AdminEmail.= '<p><u>Contact Information</u></p>';
+
+        $AdminEmail.= '<p>Name: '.$r->name.'</p>';
+
+        $AdminEmail.= '<p>Email: '.$r->email.'</p>';
+
+        $AdminEmail.= '<p>Phone: '.$r->phone.'</p>';
+
+        $AdminEmail.= '<p>Message: '.$r->message.'</p>';
+
+        $AdminEmail.= '<p>Thanks</p>';
+
+        $data=['content'=>$AdminEmail];
+
+        Mail::to('sales@translationwindows.com')->send(new CustomMailer($subject, $view, $data, null));
+
+        $subjectCustomer = "Thank you for your inquiry.";
+
+        $CustomerEmail ='<p>Dear '.$r->name.'</p>';
+
+        $CustomerEmail.='<p>We\'ve received your contact request. Our translation specialist will reach out to you soon.</p>';
+
+        $CustomerEmail.='<p>Thanks</p>';
+
+        $CustomerEmail.='<p>Best Regards,<br />Team www.translationwindows.com</p>';
+
+        $dataCustomer=['content'=>$CustomerEmail];
+
+        Mail::to($r->email)->send(new CustomMailer($subjectCustomer, $view, $dataCustomer, null));
+
+        return back()->with('success', 'Thanks for reaching out! We’ll get back to you soon.');
+
+
+    }
+
     public function EmailTest()
     {
 
-        $this->CustomerQuoteRequest("codewithar360@gmail.com","AR.Siddiqui");
+        $this->CustomerQuoteRequest("sales@translationwindows.com","AR.Siddiqui");
         
         // $this->CustomerEmail(10,9);
     //     // $data = [
@@ -545,7 +615,7 @@ class QuoteController extends Controller
     //     // // Specify the path to the attachment (e.g., from public directory)
     //     // $attachmentPath = storage_path('app/public/uploads/1742148188_sample-word-02.pdf');
 
-    //     // Mail::to('codewithar360@gmail.com')->send(new CustomMailer($data, $attachmentPath));
+    //     // Mail::to('sales@translationwindows.com')->send(new CustomMailer($data, $attachmentPath));
 
     //    return "Email with attachment sent successfully!";
     }

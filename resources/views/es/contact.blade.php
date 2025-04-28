@@ -48,7 +48,13 @@
             <div class="contact-stye-one col-lg-7 pl-60 pl-md-15 pl-xs-15">
                 <div class="contact-form-style-one">
                     <h2 class="heading">Send us a Massage</h2>
-                    <form id="hero-reg-form" action="sendEmail.php" method="POST">
+                    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+                    <form id="hero-reg-form" action="{{route('svcontact')}}" method="POST">
+                    @csrf
                         <div class="row tp-gx-10">
                             <div class="col-md-12">
                                 <div class="form-group">
