@@ -44,7 +44,7 @@
     <!-- End CTA Section -->
         <div class="container">
             <div class="f-items default-padding-footer">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-4 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
                         <div class="f-item address">
                             <img src="{{ asset ('/assets/img/logo.png') }}" alt="Image Not Found">
@@ -94,6 +94,9 @@
                                     <a href="{{ url('how-it-works') }}">How It Works</a>
                                 </li>
                                 <li>
+                                    <a href="{{ url('faqs') }}">FAQs</a>
+                                </li>
+                                <li>
                                     <a href="{{ url('contact-us') }}">Contact</a>
                                 </li>
                             </ul>
@@ -139,7 +142,84 @@
                         </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <div class="row">
+    <div class="col-lg-4 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
+        <div class="f-item address">
+            <img src="{{ asset ('/assets/img/logo.png') }}" alt="Image Not Found">
+            <p>
+                {{ session('lang') === 'es' ? 'No solo traducimos palabras, entregamos lo que quieres decir.' : 'We Don’t Just Translate Words — We Deliver What You Mean.' }}
+            </p>
+            <ul>
+                <li><i class="far fa-envelope fa-1x mr-5"></i><a href="mailto:sales@translationwindows.com" class="d-inline-block">sales@translationwindows.com</a></li>
+                <li><i class="far fa-phone fa-1x mr-5"></i><span class="d-inline-block"><a href="tel:(281) 205-3932">(281) 205-3932</a></span></li>
+            </ul>
+            <ul class="footer-social">
+                <li>
+                    <a href="https://www.facebook.com/translationwindows/">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/translationwindows/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="contact-address d-none">
+                <li>
+                    <p>{{ session('lang') === 'es' ? 'Nuestra ubicación' : 'Our Location' }}</p>
+                    <h4>175 10h Street, Office 375 Berlin, Devolina 21562</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-2 col-md-6 footer-item">
+        <div class="f-item link">
+            <h4 class="widget-title">{{ session('lang') === 'es' ? 'Enlaces rápidos' : 'Quick Links' }}</h4>
+            <ul>
+                <li><a href="{{ session('lang') === 'es' ? url('/es') : url('/') }}">{{ session('lang') === 'es' ? 'Inicio' : 'Home' }}</a></li>
+                <li style="display: none"><a href="services.php">Services</a></li>
+                <li><a href="{{ session('lang') === 'es' ? url('es/how-it-works') : url('how-it-works') }}">{{ session('lang') === 'es' ? 'Cómo funciona' : 'How It Works' }}</a></li>
+                <li><a href="{{ session('lang') === 'es' ? url('es/faqs') : url('faqs') }}">FAQs</a></li>
+                <li><a href="{{ session('lang') === 'es' ? url('es/contact-us') : url('contact-us') }}">{{ session('lang') === 'es' ? 'Contacto' : 'Contact' }}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 footer-item">
+        <div class="f-item link">
+            <h4 class="widget-title">{{ session('lang') === 'es' ? 'Nuestros servicios' : 'Our Services' }}</h4>
+            <ul>
+                <li><a href="{{ session('lang') === 'es' ? url('es/av-transcription') : url('av-transcription') }}">{{ session('lang') === 'es' ? 'Transcripción de audio/video' : 'Audio/Video Transcription' }}</a></li>
+                <li><a href="{{ session('lang') === 'es' ? url('es/av-translation') : url('av-translation') }}">{{ session('lang') === 'es' ? 'Traducción de audio/video' : 'Audio/Video Translation' }}</a></li>
+                <li><a href="{{ session('lang') === 'es' ? url('es/doc-translation') : url('doc-translation') }}">{{ session('lang') === 'es' ? 'Traducción de documentos' : 'Document Translation' }}</a></li>
+                <li><a href="{{ session('lang') === 'es' ? url('es/subtitling') : url('subtitling') }}">{{ session('lang') === 'es' ? 'Subtitulación' : 'Subtitling' }}</a></li>
+                <li><a href="{{ session('lang') === 'es' ? url('es/prf-copyedit') : url('prf-copyedit') }}">{{ session('lang') === 'es' ? 'Corrección y edición' : 'Proofreading & Copy-Editing' }}</a></li>
+                <li><a href="{{ session('lang') === 'es' ? url('es/prftrans-ai') : url('prftrans-ai') }}">{{ session('lang') === 'es' ? 'Corrección y traducción de contenido IA' : 'Proofreading & Translation Of AI Content' }}</a></li>
+                <li><a href="{{ session('lang') === 'es' ? url('es/ind-specservices') : url('ind-specservices') }}">{{ session('lang') === 'es' ? 'Servicios específicos de la industria' : 'Industry-Specific Services' }}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-2 col-md-6 footer-item">
+        <div class="f-item newsletter">
+            <h4 class="widget-title">{{ session('lang') === 'es' ? 'Noticias y medios' : 'News & Media' }}</h4>
+            <div class="f-item link">
+                <ul>
+                    <li><a href="{{ session('lang') === 'es' ? url('es/career') : url('career') }}">{{ session('lang') === 'es' ? 'Carrera' : 'Career' }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
             </div>
         </div>
         <!-- Start Footer Bottom -->

@@ -4,7 +4,7 @@
     <header>
         <!-- Start Navigation -->
         <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed white sticked">
-            <div class="container d-flex justify-content-between align-items-center">            
+            <div class="container d-flex align-items-center">            
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -25,7 +25,7 @@
                         </button>
                     </div>
                     @if(session('lang') === 'es')
-                    <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav navbar-center d-inline-block" data-in="fadeInDown" data-out="fadeOutUp">
     <li class="dropdown">
         <a href="{{ url('/es') }}" class="active">
             {{ session('lang') === 'es' ? 'Inicio' : 'Home' }}
@@ -60,29 +60,11 @@
             {{ session('lang') === 'es' ? 'Contacto' : 'Contact' }}
         </a>
     </li>
-    <li>
-        <div class="langdropdown-container">
-            <div class="langdropdown-selected" id="langdropdown-selected">
-                <img id="selected-flag" src="{{ session('lang') === 'es' ? 'https://flagcdn.com/es.svg' : 'https://flagcdn.com/us.svg' }}" alt="Flag" class="flags">
-                <span id="selected-text">
-                    {{ session('lang') === 'es' ? 'Español' : 'English' }}
-                </span>
-                <div class="langdropdown-arrow"><i class="fa fa-chevron-down"></i></div>
-            </div>
-            <div class="langdropdown-options" id="langdropdown-options">
-                <div class="langdropdown-option" data-lang="en" data-flag="https://flagcdn.com/us.svg"> 
-                    <img src="https://flagcdn.com/us.svg" alt="US Flag" class="flags"> English
-                </div>
-                <div class="langdropdown-option" data-lang="es" data-flag="https://flagcdn.com/es.svg">
-                    <img src="https://flagcdn.com/es.svg" alt="Spanish Flag" class="flags"> Español
-                </div>
-            </div>
-        </div> <!-- ..dropdown-container -->
-    </li>
+    
 </ul>
 
                     @else
-                    <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav navbar-center d-inline-block" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="dropdown">
                             <a href="{{ url('/') }}" class="active">Home</a>
                         </li>
@@ -105,36 +87,34 @@
                             <a href="{{ url('career') }}" class="">Career</a>
                         </li>
                         <li><a href="{{ url('contact-us') }}">contact</a></li>
-                        <li>
-                            <div class="langdropdown-container">
-                                <div class="langdropdown-selected" id="langdropdown-selected">
-                                    <img id="selected-flag" src="https://flagcdn.com/us.svg" alt="US Flag" class="flags">
-                                    <span id="selected-text">English</span>
-                                    <div class="langdropdown-arrow"><i class="fa fa-chevron-down"></i></div>
-                                </div>
-                                <div class="langdropdown-options" id="langdropdown-options">
-                                    <div class="langdropdown-option" data-lang="en" data-flag="https://flagcdn.com/us.svg"> 
-                                        <img src="https://flagcdn.com/us.svg" alt="US Flag" class="flags"> English
-                                    </div>
-                                    <div class="langdropdown-option" data-lang="es" data-flag="https://flagcdn.com/es.svg">
-                                        <img src="https://flagcdn.com/es.svg" alt="Spanish Flag" class="flags"> Español
-                                    </div>
-                                </div>
-                            </div> <!-- ..dropdown-container -->
-                        </li>
                     </ul>
                     @endif
 
 
-
+                    <div class="d-inline-block justify-content-end ms-lg-5 mt-lg-0 mt-sm-3">
+                        <!-- Start Atribute Navigation -->
+                        <a class="btn circle btn-gradient animation" href="#" onclick="smoothScroll(event, 'getquoteForm')">Get A Quote</a>
+                        <!-- End Atribute Navigation -->
+                        <div class="langdropdown-container">
+                            <div class="langdropdown-selected" id="langdropdown-selected">
+                                <img id="selected-flag" src="https://flagcdn.com/us.svg" alt="US Flag" class="flags">
+                                <span id="selected-text">English</span>
+                                <div class="langdropdown-arrow"><i class="fa fa-chevron-down"></i></div>
+                            </div>
+                            <div class="langdropdown-options" id="langdropdown-options">
+                                <div class="langdropdown-option" data-lang="en" data-flag="https://flagcdn.com/us.svg"> 
+                                    <img src="https://flagcdn.com/us.svg" alt="US Flag" class="flags"> English
+                                </div>
+                                <div class="langdropdown-option" data-lang="es" data-flag="https://flagcdn.com/es.svg">
+                                    <img src="https://flagcdn.com/es.svg" alt="Spanish Flag" class="flags"> Español
+                                </div>
+                            </div>
+                        </div> <!-- ..dropdown-container -->
+                    </div>
                 </div>
+                <div class="empty d-inline-block">&nbsp;</div>
                 <!-- /.navbar-collapse -->
 
-                <div class="attr-right">
-                    <!-- Start Atribute Navigation -->
-                    <a class="btn circle btn-gradient animation" href="#" onclick="smoothScroll(event, 'getquoteForm')">Get A Quote</a>
-                    <!-- End Atribute Navigation -->
-                </div>
             </div>   
             <!-- Overlay screen for menu -->
             <div class="overlay-screen"></div>
