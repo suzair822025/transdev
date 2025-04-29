@@ -11,8 +11,8 @@
           <div class="col-md-8 col-lg-6 offset-lg-1">
             <!-- Title -->
             <div class="mb-5">
-              <h2 class="text-white mb-1">Start talking to us today</h2>
-              <p class="lead text-light">Contact for more information at <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(281) 205-3932">(281) 205-3932</a></p>
+              <h2 class="text-white mb-1">{{ session('lang') === 'es' ? 'Empieza a hablar con nosotras hoy' : 'Start talking to us today' }}</h2>
+              <p class="lead text-light">{{ session('lang') === 'es' ? 'Contacto para más información en' : 'Contact for more information at' }} <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(281) 205-3932">(281) 205-3932</a></p>
             </div>
             <!-- End Title -->
 
@@ -21,7 +21,7 @@
               <span class="media align-items-center">
                 <span class="fa fa-regular fa-headset fa-3x mr-3"></span>
                 <span class="d-block">
-                  <span class="d-block">Start Chat Now</span>
+                  <span class="d-block">{{ session('lang') === 'es' ? 'Empiece a chatear ahora' : 'Start Chat Now' }}</span>
                 </span>
               </span>
             </a>
@@ -32,7 +32,7 @@
               <span class="media align-items-center">
                 <span class="far fa-phone fa-3x mr-3"></span>
                 <span class="d-block">
-                  <span class="d-block">Call Now</span>
+                  <span class="d-block">{{ session('lang') === 'es' ? 'Llamar ahora' : 'Call Now' }}</span>
                 </span>
               </span>
             </a>
@@ -293,6 +293,7 @@
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
 
+
 $(document).ready(function(){
 
 $(document).find('.langdropdown-option').click(function(){
@@ -304,7 +305,6 @@ window.location.href="https://translationwindows.com/langchange/"+lang;
 });
 
 });
-
     // var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     // (function(){
     // var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -325,6 +325,10 @@ window.location.href="https://translationwindows.com/langchange/"+lang;
         s1.setAttribute("crossorigin", "*");
         s0.parentNode.insertBefore(s1, s0);
     })();
+
+
+    
+
     </script>
     <!--End of Tawk.to Script-->
 @yield('scripts')
