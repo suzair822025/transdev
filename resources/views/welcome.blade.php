@@ -171,7 +171,7 @@
     </div>
     <!-- End banner-area -->
 
-    <div class="services-content bg-gray-secondary default-padding d-md-block">
+    <div class="services-content bg-gray-secondary default-padding home d-md-block">
         <div class="container" id="getquoteForm">
             <div class="d-flex flex-column align-items-center justify-content-center">
                 <h4 class="sub-title mb-1">Simple Procedure for Online Orders</h4>

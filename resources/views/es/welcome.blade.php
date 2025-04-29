@@ -149,7 +149,7 @@
             <div class="row align-text-top">
                 <div class="col-xl-5 col-lg-5">
                     <div class="content mt-5">
-                        <h2 class="slider-title1"><span class="sm-sl-title">Experto lingüístico</span><br></bnr><strong>Servicios adaptados</strong> a sus necesidades.</h2>
+                        <h2 class="slider-title1"><span class="sm-sl-title">Experto lingüístico</span><br></bnr><strong class="word" data-text="Servicios">Servicios</strong> <strong class="word" data-text="adaptados">adaptados</strong> <strong class="word" data-text="a">a</strong> <strong class="word" data-text="sus">sus</strong><br> <strong class="word" data-text="necesidades">necesidades.</strong></h2>
                         <span class="mt-n4">Ofrecemos servicios de traducción certificados y comerciales que son confiables, asequibles y fáciles de solicitar, garantizando precisión y una entrega rápida.</span>
                         <ul class="my-2">
                             <li><i class="fa fa-check-circle"></i> Sobrealimentada por AI para traducciones rápidas.</li>
@@ -174,10 +174,10 @@
     <!-- Start Get Quote 
 ============================================= -->
 
-<div class="services-content bg-gray-secondary default-padding d-md-block">
+<div class="services-content bg-gray-secondary default-padding home d-md-block">
         <div class="container" id="getquoteForm">
             <div class="d-flex flex-column align-items-center justify-content-center">
-                <h4 class="sub-title mb-1">Simple Procedure for Online Orders</h4>
+                <h4 class="sub-title mb-1">Procedimiento sencillo para pedidos en línea</h4>
             </div>
             <div class="about-style-one-items">
                 <div class="row my-5">
@@ -627,7 +627,7 @@
                 <div class="col-lg-6">
                     <div class="about-style-three-info">
                         <h4 class="sub-title">Sobre nosotras</h4>
-                        <h1 class="title">Providing solutions for translation services</h1>
+                        <h1 class="title">Ofreciendo soluciones para servicios de traducción</h1>
                         <p>Nuestro negocio se especializa en proporcionar soluciones de traducción exhaustivas que sean adecuadas para sus requisitos únicos.Nuestros lingüistas altamente calificados y tecnología de vanguardia garantizan traducciones precisas que son culturalmente apropiadas para una variedad de empresas.Ya sea que necesite localización, soporte multilingüe o traducción de documentos, podemos ayudarlo a cerrar las brechas de comunicación y llegar a una audiencia mundial con nuestros servicios confiables y efectivos..</p>
                         <div class="info-grid mt-50">
                             <div class="left-info">
