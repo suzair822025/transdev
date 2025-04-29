@@ -236,7 +236,7 @@
                     <div class="col-lg-3 text-end">
                         <ul class="link-list">
                             <li>
-                                <a href="{{ url('privacy') }}">Privacy Policy</a>
+                                <a href="{{ session('lang') === 'es' ? url('es/privacy') : url('privacy') }}">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>
@@ -274,7 +274,9 @@
 
     <!-- jQuery Frameworks
     ============================================= -->
-    <script defer src="{{ asset ('/assets/js/jquery-3.6.0.min.js') }}"></script>
+    <!-- <script defer src="{{ asset ('/assets/js/jquery-3.6.0.min.js') }}"></script> -->
+    <script src ="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <script defer src="{{ asset ('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script defer src="{{ asset ('assets/js/jquery.appear.js') }}"></script>
     <script defer src="{{ asset ('assets/js/progress-bar.min.js') }}"></script>
@@ -290,6 +292,19 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-893KJ2R715"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
+
+$(document).ready(function(){
+
+$(document).find('.langdropdown-option').click(function(){
+
+var lang = $(this).attr("data-lang");
+
+window.location.href="https://translationwindows.com/langchange/"+lang;
+
+});
+
+});
+
     // var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     // (function(){
     // var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];

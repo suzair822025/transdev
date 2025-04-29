@@ -46,6 +46,7 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('/translation-landing', 'translationLanding')->name('translation-landing');
     Route::get('/pricestable', 'pricestable')->name('pricestable');
     Route::get('/es/welcome', 'welcome')->name('welcome');
+    Route::get('/langchange/{lang}','languageSession')->name('langchange');
 });
 
 Route::controller(SpanishcommonController::class)->group(function () {
@@ -75,5 +76,6 @@ Route::controller(QuoteController::class)->group(function () {
     Route::post('/upload-file', 'UploadRequestFile')->name('uploadfile');
     Route::post('/save-request', 'SaveRequest')->name('saverequest');
     Route::post('/save-payment-info', 'SavePaymentInfo')->name('savepaymentinfo');
+    Route::post('/svcontact', 'ContactUsActionS')->name('svcontact');
     Route::get('/test', 'EmailTest')->name('test');
 });

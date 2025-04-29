@@ -6,6 +6,9 @@ use App\Languages;
 use DB;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Session;
+
+
 class CommonController extends Controller
 {
     /**
@@ -16,6 +19,18 @@ class CommonController extends Controller
     public function index()
     {
         //
+    }
+
+    public function languageSession($lang)
+    {
+        $lang = $lang;
+    
+    if (in_array($lang, ['en', 'es'])) {
+        Session::put('lang', $lang);
+    }
+    $url = $lang == "en" ? url('/') : url('/es');
+    return redirect($url);
+
     }
 
     public function services()
