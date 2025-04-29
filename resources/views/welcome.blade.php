@@ -149,7 +149,7 @@
             <div class="row align-text-top">
                 <div class="col-xl-5 col-lg-5">
                     <div class="content mt-5">
-                        <h2 class="slider-title1"><span class="sm-sl-title">Expert linguisic</span><br></bnr><strong>Services Tailored</strong> To Your Needs.</h2>
+                        <h2 class="slider-title1 word-container"><span class="sm-sl-title">Expert linguistic</span><br><strong class="word" data-text="Services">Services</strong> <strong class="word" data-text="Tailored">Tailored</strong> <strong class="word" data-text="To">To</strong> <strong class="word" data-text="Your">Your</strong> <br><strong class="word" data-text="Needs">Needs.</strong></h2>
                         <span class="mt-n4">We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
                         <ul class="my-2">
                             <li><i class="fa fa-check-circle"></i> Supercharged by AI for Lightning-Fast Translations.</li>

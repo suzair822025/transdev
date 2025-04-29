@@ -12,7 +12,7 @@
 
 <!--========== PAGE LAYOUT ==========-->
 
-<div class="section-seperator">
+<div class="section-seperator my-5">
     <div class="content-lg container space20px">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
