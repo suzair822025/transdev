@@ -147,7 +147,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
-                        <p>&copy; Copyright 2025. All Rights Reserved by <a href="https://translationwindows.com">Translationwindows</a></p>
+                        <p>&copy; Copyright 2024. All Rights Reserved by <a href="https://translationwindows.com">Translationwindows</a></p>
                     </div>
                     <div class="col-lg-4">
                         <a href="http://www.dmca.com/Protection/Status.aspx?ID=d8b9c6e6-a313-4c64-bc57-de07e82e7319" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=d8b9c6e6-a313-4c64-bc57-de07e82e7319"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
