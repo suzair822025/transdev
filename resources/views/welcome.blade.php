@@ -141,6 +141,9 @@
     font-weight:bold;
     font-size:14px;
 }
+.row-text-total-count{
+    display:none;
+}
 </style>
     <!-- Start Banner Area 
     ============================================= -->
@@ -262,7 +265,7 @@
                         <div class="row mt-2">
                             <div class="col-md-6 translate-from-container">
                                 <label>Translate From: <span style="color:red;">*</span></label>
-                                <select name="translate_from" class="translate-from-select-class form-control form-select" required>
+                                <select name="translate_from" class="translate-from-select-class form-control form-select" required disabled>
                                     <option value="" selected>Select Language</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
@@ -273,7 +276,7 @@
 
                             <div class="col-md-6">
                                 <label>Translate To: <span style="color:red;">*</span></label>
-                                <select name="translate_to" class="form-control form-select" required>
+                                <select name="translate_to" class="translate--select-class form-control form-select" required disabled>
                                 <option value="" selected>Select Language</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
@@ -287,7 +290,7 @@
                             <div class="col-md-6 container-pages">
                                 <label>Number of Pages: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20."><i class="fa fa-info-circle"></i></span></label>
                                 <div class="input-group">
-                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages">
+                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages" required disabled>
                                 <span class="input-group-text">Pages</span>
                                 </div>
                                 <span>1 page = 250 words max</span>
@@ -298,7 +301,7 @@
                             <div class="col-md-6 container-words">
                                 <label>Number of Words: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Starting at $0.05 per word."><i class="fa fa-info-circle"></i></span></label>
                                 <div class="input-group">
-                                <input type="number" name="number_of_words" class="words-number-clse form-control" placeholder="Enter number of words">
+                                <input type="number" name="number_of_words" class="words-number-clse form-control" placeholder="Enter number of words" required disabled>
                                 <span class="input-group-text">Words</span>
                                 </div>
                                 <span>Starting at $0.05 per word.</span>
@@ -311,7 +314,7 @@
                             
                             </label>
                                 <div class="input-group">
-                                <input type="number" name="number_of_minutes" class="minutes-number-clse form-control" placeholder="Enter number of minutes">
+                                <input type="number" name="number_of_minutes" class="minutes-number-clse form-control" placeholder="Enter number of minutes" required disabled>
                                 <span class="input-group-text">Minutes</span>
                                 </div>
                                 <span class="dollar-one">Starting at $1 per minute.</span>
@@ -320,7 +323,7 @@
 
                             <div class="col-md-6">
                                 <label>Upload File: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span></label>
-                                <input type="file" name="file_name" class="file-upload-cls form-control"  required>
+                                <input type="file" name="file_name" class="file-upload-cls form-control"  required disabled>
                                 <div id="uploadStatus" class="mt-3"></div>
                                 <!-- <span>File Upload info </span> -->
                                 
@@ -331,9 +334,9 @@
                         <div class="row mt-3">
                             <div class="col-md-6">
                                 <label class="w-100">Estimated Delivery: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required> Standard</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required> Priority</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required> Urgent</label>
+                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required disabled> Standard</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required disabled> Priority</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required disabled> Urgent</label>
                             </div>
 
                             <div class="col-md-6">
@@ -346,26 +349,32 @@
                             <div class="row mt-3">
                             <div class="col-md-6">
                                 <label>Name: <span style="color:red;">*</span></label>
-                                <input type="text" class="form-control" name="customer_name" placeholder="Enter your name" required>
+                                <input type="text" class="form-control" name="customer_name" placeholder="Enter your name" required disabled>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-6">
                                 <label>Email: <span style="color:red;">*</span></label>
-                                <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                                <input type="email" class="form-control" name="email" placeholder="Enter your email" required disabled>
                             </div>
 
                             <div class="col-md-6">
                                 <label>Phone: <span style="color:red;">*</span></label>
-                                <input type="tel" class="form-control" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required>
+                                <input type="tel" class="form-control" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required disabled>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-12">
                                 <label>Comments:</label>
-                                <textarea class="form-control" name="comments" rows="3" placeholder="Enter your comments"></textarea>
+                                <textarea class="form-control" name="comments" rows="3" placeholder="Enter your comments" disabled></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <button type="button" class="btn-form-submit btn btn-primary w-100" style="" disabled>Place Order</button>
                             </div>
                         </div>
 
@@ -406,7 +415,7 @@
 
                         </div>
                         <hr />
-                        <button type="button" class="btn-form-submit btn btn-primary w-100" style="">Place Order</button>
+                        <button type="button" class="btn-form-submit btn btn-primary w-100" style="" disabled>Place Order</button>
                         
                         <!-- <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
                         <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>
@@ -1417,7 +1426,7 @@ location.reload();
             //$(".container-minutes").hide();
 
             $(".file-type-container").show();
-
+            //file type hide 1
 
 
             var id = $(this).val();
@@ -1496,6 +1505,8 @@ location.reload();
                 serviceAmount = 0;
                 $(document).find(".doptintranscribe").show();
                 $(document).find(".translation-type-container").show();
+                $(".file-type-container").hide();
+                //file type hide 3
                 
             }
             if(serviceType == 2)
@@ -1516,6 +1527,7 @@ location.reload();
                 $(".dollar-one").show();
 
                 $(".file-type-container").show();
+                //file type hide 2
 
                 $(".translation-type-cls").removeAttr("required");
 
