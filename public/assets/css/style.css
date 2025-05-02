@@ -11833,56 +11833,48 @@ nav.navbar.validnavs .navbar-collapse.collapse img.flags{display: flex; margin-b
 	padding-bottom: 80px;
 }
 
-.err-msg {
-  width: 400px;
-  height: 300px;
-  border-radius: 10px;
-  padding: 2rem;
-  margin: auto;
 
-  display: grid;
-  place-content: center;
-  text-align: center;
-
-  font-size: 1.5em;
-
-  --border-size: 0.3rem;
-  border: var(--border-size) solid transparent;
-
-  /* Paint an image in the border */
-  border-image: conic-gradient(
-      from var(--angle),
-      #d53e33 0deg 90deg,
-      #fb0000 90deg 180deg
-    )
-    1 stretch;
-  background: rgb(255 255 255 / var(--opacity));
-}
-
-@property --opacity {
-  syntax: "<number>";
-  initial-value: 0.5;
-  inherits: false;
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes opacityChange {
-  to {
-    --opacity: 1;
-  }
-}
-
-@keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
-}
 
 .err-msg {
-  animation: rotate 4s linear infinite, opacityChange 3s infinite alternate;
-}
+	
+	border-radius: 2px;
+	--border-size: 0.1rem;
+	border: var(--border-size) solid transparent;
+  
+	/* Paint an image in the border */
+	border-image: conic-gradient(
+		from var(--angle),
+		#ee1809 0deg 90deg,
+		#ffcfcf 90deg 180deg
+	  )
+	  1 stretch;
+  }
+  
+  @property --opacity {
+	syntax: "<number>";
+	initial-value: 0.5;
+	inherits: false;
+  }
+  
+  @property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+  }
+  
+  @keyframes opacityChange {
+	to {
+	  --opacity: 1;
+	}
+  }
+  
+  @keyframes rotate {
+	to {
+	  --angle: 360deg;
+	}
+  }
+  
+  .err-msg {
+	animation: rotate 3.5s linear infinite, opacityChange 3s infinite alternate;
+  }
+  .succ-msg{border:solid 0.1rem #18861db9; }
