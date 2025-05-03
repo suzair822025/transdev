@@ -141,6 +141,9 @@
     font-weight:bold;
     font-size:14px;
 }
+.row-text-total-count{
+    display:none;
+}
 </style>
     <!-- Start Banner Area 
     ============================================= -->
@@ -262,7 +265,7 @@
                         <div class="row mt-2">
                             <div class="col-md-6 translate-from-container">
                                 <label>Translate From: <span style="color:red;">*</span></label>
-                                <select name="translate_from" class="translate-from-select-class form-control form-select" required>
+                                <select name="translate_from" class="translate-from-select-class form-control form-select" required disabled>
                                     <option value="" selected>Select Language</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
@@ -273,7 +276,7 @@
 
                             <div class="col-md-6">
                                 <label>Translate To: <span style="color:red;">*</span></label>
-                                <select name="translate_to" class="form-control form-select" required>
+                                <select name="translate_to" class="translate-to-select-class form-control form-select" required disabled>
                                 <option value="" selected>Select Language</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
@@ -287,7 +290,7 @@
                             <div class="col-md-6 container-pages">
                                 <label>Number of Pages: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20."><i class="fa fa-info-circle"></i></span></label>
                                 <div class="input-group">
-                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages">
+                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages" required disabled>
                                 <span class="input-group-text">Pages</span>
                                 </div>
                                 <span>1 page = 250 words max</span>
@@ -298,7 +301,7 @@
                             <div class="col-md-6 container-words">
                                 <label>Number of Words: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Starting at $0.05 per word."><i class="fa fa-info-circle"></i></span></label>
                                 <div class="input-group">
-                                <input type="number" name="number_of_words" class="words-number-clse form-control" placeholder="Enter number of words">
+                                <input type="number" name="number_of_words" class="words-number-clse form-control" placeholder="Enter number of words" required disabled>
                                 <span class="input-group-text">Words</span>
                                 </div>
                                 <span>Starting at $0.05 per word.</span>
@@ -311,7 +314,7 @@
                             
                             </label>
                                 <div class="input-group">
-                                <input type="number" name="number_of_minutes" class="minutes-number-clse form-control" placeholder="Enter number of minutes">
+                                <input type="number" name="number_of_minutes" class="minutes-number-clse form-control" placeholder="Enter number of minutes" required disabled>
                                 <span class="input-group-text">Minutes</span>
                                 </div>
                                 <span class="dollar-one">Starting at $1 per minute.</span>
@@ -320,10 +323,10 @@
 
                             <div class="col-md-6">
                                 <label>Upload File: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span></label>
-                                <input type="file" name="file_name" class="file-upload-cls form-control"  required>
+                                <input type="file" name="file_name" class="file-upload-cls form-control"  required disabled>
                                 <div id="uploadStatus" class="mt-3"></div>
                                 <!-- <span>File Upload info </span> -->
-                                
+                                <div class="download-container"></div>
                                 <input type="hidden" name="file_id" class="record-file-id" value="0" />
                             </div>
                         </div>
@@ -331,9 +334,9 @@
                         <div class="row mt-3">
                             <div class="col-md-6">
                                 <label class="w-100">Estimated Delivery: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required> Standard</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required> Priority</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required> Urgent</label>
+                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required disabled> Standard</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required disabled> Priority</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required disabled> Urgent</label>
                             </div>
 
                             <div class="col-md-6">
@@ -346,26 +349,37 @@
                             <div class="row mt-3">
                             <div class="col-md-6">
                                 <label>Name: <span style="color:red;">*</span></label>
-                                <input type="text" class="form-control" name="customer_name" placeholder="Enter your name" required>
+                                <input type="text" class="form-control customer-name-class" name="customer_name" placeholder="Enter your name" required disabled>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-6">
                                 <label>Email: <span style="color:red;">*</span></label>
-                                <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                                <input type="email" class="form-control email-address-class" name="email" placeholder="Enter your email" required disabled>
                             </div>
 
                             <div class="col-md-6">
                                 <label>Phone: <span style="color:red;">*</span></label>
-                                <input type="tel" class="form-control" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required>
+                                <input type="tel" class="form-control phone-number-class" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required disabled>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-12">
                                 <label>Comments:</label>
-                                <textarea class="form-control" name="comments" rows="3" placeholder="Enter your comments"></textarea>
+                                <textarea class="form-control comments-class" name="comments" rows="3" placeholder="Enter your comments" disabled></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <button type="button" class="btn-form-submit btn btn-primary w-100" style="" disabled>Place Order</button>
+                            
+                                <div id="card-button-container"  data-id="0"></div>
+                        <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.</div>
+                            
+                            
                             </div>
                         </div>
 
@@ -406,15 +420,15 @@
 
                         </div>
                         <hr />
-                        <button type="button" class="btn-form-submit btn btn-primary w-100" style="">Place Order</button>
+                        <!-- <button type="button" class="btn-form-submit btn btn-primary w-100" style="" disabled>Place Order</button> -->
                         
                         <!-- <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
                         <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>
                         <p><strong>Total Amount:</strong> <span class="total-amount">$0.00</span></p>        -->
                         
                         <!-- <div id="paypal-button-container" data-id="0"></div> -->
-                        <div id="card-button-container"  data-id="0"></div>
-                        <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.</div>
+                        <!-- <div id="card-button-container"  data-id="0"></div>
+                        <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.</div> -->
                     </div>
                 </div>
             </div>
@@ -1248,6 +1262,15 @@ paypal.Buttons({
         $(".dollar-one").hide();
 
         $(".dollar-two").hide();
+
+
+        $(".translate-from-select-class").attr("disabled",true);
+
+        $(".translate-to-select-class").attr("disabled",true);
+
+        $(".translate-from-container").show();
+
+        
     }
 
     function ServiceTypeInitial()
@@ -1261,6 +1284,8 @@ paypal.Buttons({
         $(".translate-from-container").show();
 
         $(".translate-from-select-class").attr("required",true);
+
+        
 
         TranslationTypeInitial();
     }
@@ -1383,13 +1408,17 @@ location.reload();
                     },
                     success: function(response) {
                         if (response.success) {
-                            $(".uploaded-file-url").attr("href",response.file_path);
-                            $(".uploaded-file-url").show();
+                            // $(".uploaded-file-url").attr("href",response.file_path);
+                            // $(".uploaded-file-url").show();
                             $(".record-file-id").val(response.file_id);
+                            var html =`<p><a href="${response.file_path}" class="attached-file-${response.file_id}" target="_blank">Attached File</a>&nbsp;&nbsp;<a href="javascript:;" data-id="${response.file_id}" class="remove-attached-file" style="color:red;font-weight:bolder;">X</a></p>`;
+                            $(".download-container").append(html);
                             if(response.file_id > 0)
                         {
                             $(".file-upload-cls").removeAttr("required");
-                            $(".file-upload-cls").attr("disabled",true);
+                            // $(".file-upload-cls").attr("disabled",true);
+                            $(".file-upload-cls").val('');
+                            $(".delivery-type-cls").removeAttr("disabled");
                         }
                             $("#uploadStatus").html("<p class='text-success'>" + response.message + "</p>");
                         } else {
@@ -1417,7 +1446,7 @@ location.reload();
             //$(".container-minutes").hide();
 
             $(".file-type-container").show();
-
+            //file type hide 1
 
 
             var id = $(this).val();
@@ -1441,6 +1470,12 @@ location.reload();
 
             $(".btn-form-submit").text("Place Order");
             if($(".translation-type-cls:checked").val() == 2 || $(".page-number-clse").val() > 10){$(".btn-form-submit").text("Request a Quote");}
+
+            $(".translate-from-select-class").removeAttr("disabled");
+
+            // $(".translate-to-select-class").removeAttr("disabled");
+
+
         }
 
             if(id == 2)
@@ -1450,6 +1485,8 @@ location.reload();
                AppendContent(".service-type-text-class","Professional");
 
                $(".btn-form-submit").text("Request a Quote");
+
+               
             }
 
 
@@ -1496,6 +1533,8 @@ location.reload();
                 serviceAmount = 0;
                 $(document).find(".doptintranscribe").show();
                 $(document).find(".translation-type-container").show();
+                $(".file-type-container").hide();
+                //file type hide 3
                 
             }
             if(serviceType == 2)
@@ -1516,12 +1555,15 @@ location.reload();
                 $(".dollar-one").show();
 
                 $(".file-type-container").show();
+                //file type hide 2
 
                 $(".translation-type-cls").removeAttr("required");
 
                 $(".translate-from-container").hide();
 
                 $(document).find(".translate-from-select-class").removeAttr("required");
+
+                $(".translate-to-select-class").removeAttr("disabled");
 
             }
 
@@ -1541,6 +1583,14 @@ location.reload();
 
             $(".estimated-delivery-info").hide();
 
+            var ServiceType = $(".service-type-cls:checked").val();
+
+            var TranslationType = $(".translation-type-cls:checked").val();
+
+            var FilesType = $(".file-type-cls:checked").val();
+
+            var TranslationFrom = $(".translate-from-select-class option:selected").val();
+
             var type = $(this).val();
 
             var txt ="";
@@ -1550,22 +1600,83 @@ location.reload();
 
             if(type == 1)
             {
+                if(ServiceType == 1)
+                {
+                    amount = 20;
+                }
+
+                if(ServiceType == 2)
+                {
+                    amount = 1;
+                }
+
+                if(ServiceType == 1 && TranslationType==2 && FilesType==1)
+                {
+                    amount = 0.05;
+                }
+
+                if(ServiceType == 1 && TranslationType==1 && FilesType==1 && TranslationFrom!=1)
+                {
+                    amount = 30;
+                }
+
                 txt ="Standard (4-6 Days)";
-                txtx ="Estimated Delivery : Standard (+$20), 4 to 6 Days";
+
+                txtx ="Estimated Delivery : Standard (+$"+amount+"), 4 to 6 Days";
                 
-                amount = 20;
+                
             }
             if(type == 2)
             {
+                if(ServiceType == 1)
+                {
+                    amount = 25;
+                }
+
+                if(ServiceType == 2)
+                {
+                    amount = 2;
+                }
+
+                if(ServiceType == 1 && TranslationType==2 && FilesType==1)
+                {
+                    amount = 0.08;
+                }
+
+                if(ServiceType == 1 && TranslationType==1 && FilesType==1 && TranslationFrom!=1)
+                {
+                    amount = 35;
+                }
+
                 txt ="Priority (2-4 Days)";
-                txtx ="Estimated Delivery : Priority ($25), 2 to 4 Days";
-                amount = 25;
+                txtx ="Estimated Delivery : Priority ($"+amount+"), 2 to 4 Days";
+                
             }
             if(type == 3)
             {
+                if(ServiceType == 1)
+                {
+                    amount = 35;
+                }
+
+                if(ServiceType == 2)
+                {
+                    amount = 3;
+                }
+                if(ServiceType == 1 && TranslationType==2 && FilesType==1)
+                {
+                    amount = 0.12;
+                }
+
+                if(ServiceType == 1 && TranslationType==1 && FilesType==1 && TranslationFrom!=1)
+                {
+                    amount = 40;
+                }
+
+
                 txt ="Urgent (24-48 Hours)";
-                txtx ="Estimated Delivery : Urgent ($35), 24 to 48 Hours";
-                amount = 35;
+                txtx ="Estimated Delivery : Urgent ($"+amount+"), 24 to 48 Hours";
+                
             }
 
             if(parseInt($(".page-number-clse").val()) > 0)
@@ -1574,6 +1685,22 @@ location.reload();
                 var cls= page * amount;
                 $(".number-of-pages-amount").val(cls);
                 AppendContent(".page-count-text-class",page+" ($"+cls.toFixed(2)+")");
+            }
+
+            if(parseInt($(".minutes-number-clse").val()) > 0)
+            {
+                var minute = parseInt($(".minutes-number-clse").val());
+                var clsx= minute * amount;
+                $(".number-of-minute-amount").val(clsx);
+                AppendContent(".minutes-count-text-class",minute+" ($"+clsx.toFixed(2)+")");
+            }
+
+            if(parseInt($(".words-number-clse").val()) > 0)
+            {
+                var words = parseInt($(".words-number-clse").val());
+                var clsxy= words * amount;
+                $(".number-of-word-amount").val(clsxy);
+                AppendContent(".word-count-text-class",words+" ($"+clsxy.toFixed(2)+")");
             }
             
 
@@ -1590,6 +1717,10 @@ location.reload();
             $(".delivery-time").text(txt);
 
             Total();
+
+            $("input[name=customer_name]").removeAttr("disabled");
+
+            $(".row-text-total-count").show();
 
         });
 
@@ -1645,6 +1776,10 @@ location.reload();
 
                 //$(".container-minutes").hide();
 
+                $(".translate-from-select-class").removeAttr("disabled");
+
+                //$(".translate-to-select-class").removeAttr("disabled");
+
             }
             
             if(TranslationType==2 && fileType==2)
@@ -1658,7 +1793,13 @@ location.reload();
                 $(".minutes-number-clse").attr("required",true);
 
                 $(".dollar-two").show();
+
+                $(".translate-from-container").hide();
+
+                $(".translate-to-select-class").removeAttr("disabled");
             }
+
+           
 
 
         });
@@ -1681,10 +1822,26 @@ $(".btn-form-submit").text("Place Order");
 
 /* change event fields */
 
+var NewServiceType = $(".service-type-cls:checked").val();
+
+var NewTranslationType = $(".translation-type-cls:checked").val();
+
+var NewFilesType = $(".file-type-cls:checked").val();
+
+var NewTranslationFrom = $(".translate-from-select-class option:selected").val();
 
 
 var page = parseInt($(this).val());
+
 var amount = 20;
+
+if(NewServiceType == 1 && NewTranslationType==1 && NewFilesType==1 && NewTranslationFrom!=1)
+{
+    amount = 30;
+}
+
+
+
 $(".pages-count").text("");
 $(".number-of-pages-amount").val('0');
 if(page > 0)
@@ -1712,6 +1869,8 @@ else{
 }
 
 Total();
+
+$(".file-upload-cls").removeAttr("disabled");
 
 });
 
@@ -1760,6 +1919,8 @@ Total();
            }
 
            Total();
+
+           $(".file-upload-cls").removeAttr("disabled");
 
        });
 
@@ -1812,6 +1973,8 @@ Total();
 
            Total();
 
+           $(".file-upload-cls").removeAttr("disabled");
+
        });
 
 
@@ -1860,6 +2023,113 @@ $(document).on('click','.langdropdown-option',function(){
     var lang = $(this).attr("data-lang");
 
     window.location.href="{{url('langchange')}}/"+lang;
+
+});
+
+/******************************************* */
+
+$(document).on('change','.translate-from-select-class',function(){
+
+    $(".translate-to-select-class").removeAttr("disabled");
+
+    $(".page-number-clse").val('');
+
+    $(".number-of-pages-amount").val('0');
+
+    var pageN = 0;
+
+    var clsN = 0;
+
+    AppendContent(".page-count-text-class",pageN+" ($"+clsN.toFixed(2)+")");
+
+    $(".estimated-delivery-amount").val('0');
+
+    $(".delivery-type-cls").prop("checked", false);
+
+    Total();
+
+    // var pageValue = $(".page-number-clse").val();
+
+    // $(".page-number-clse").val(pageValue).change();
+
+    //$(".page-number-clse").trigger("input");
+
+});
+
+$(document).on('change','.translate-to-select-class',function(){
+
+    if($(".translation-type-cls:checked").val() == 1 && $(".file-type-cls:checked").val()==1)
+{
+    $(".page-number-clse").removeAttr("disabled");
+}
+
+if($(".translation-type-cls:checked").val() == 2 && $(".file-type-cls:checked").val()==1)
+{
+    $(".words-number-clse").removeAttr("disabled");
+}
+
+if($(".translation-type-cls:checked").val() == 2 && $(".file-type-cls:checked").val()==2)
+{
+    $(".minutes-number-clse").removeAttr("disabled");
+}
+
+if($(".service-type-cls:checked").val() == 2 && $(".file-type-cls:checked").val()==2)
+{
+    $(".minutes-number-clse").removeAttr("disabled");
+}
+
+
+});
+
+
+$(document).on('input','.customer-name-class',function(){
+
+    $(".email-address-class").removeAttr("disabled");
+
+});
+
+$(document).on('input','.email-address-class',function(){
+
+    $(".phone-number-class").removeAttr("disabled");
+
+});
+
+$(document).on('input', '.phone-number-class', function () {
+    let input = $(this);
+    let numbers = input.val().replace(/\D/g, ''); // Strip non-digits
+
+    if (numbers.length > 0) {
+        let formatted = '';
+        if (numbers.length <= 3) {
+            formatted = `(${numbers}`;
+        } else if (numbers.length <= 6) {
+            formatted = `(${numbers.slice(0, 3)}) ${numbers.slice(3)}`;
+        } else {
+            formatted = `(${numbers.slice(0, 3)}) ${numbers.slice(3, 6)}-${numbers.slice(6, 10)}`;
+        }
+        input.val(formatted);
+    }
+
+    // Enable comments field
+    $(".comments-class").removeAttr("disabled");
+});
+
+
+$(document).on('input','.comments-class',function(){
+
+    $(".btn-form-submit").removeAttr("disabled");
+
+});
+
+$(document).on('click','.remove-attached-file',function(){
+
+    var id = $(this).attr("data-id");
+
+
+
+    $(".attached-file-"+id).remove();
+
+    $(this).remove();
 
 });
 
