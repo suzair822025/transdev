@@ -180,9 +180,9 @@
                 <h4 class="sub-title mb-1">Procedimiento sencillo para pedidos en línea</h4>
             </div>
             <div class="about-style-one-items">
-                <div class="row my-5">
                 <div class="row">
-                <div class="col-md-8">
+                <div class="row d-flex justify-content-center">
+                <div class="col-md-7">
                     <!-- <h2>Get a Quote & Place Your Order</h2> -->
                     <form id="QuoteForm">
                         <input type="hidden" name="service_type_amount" class="service-type-amount" value="0" />
@@ -225,7 +225,7 @@
                                 <label class="radio-inline"><input type="radio" name="who_name" value="1" checked /> Individual</label>
                                 <label class="radio-inline"><input type="radio" name="who_name" value="2" /> Business Customer</label>
                                 <label class="radio-inline"><input type="radio" name="who_name" value="3" /> Translator</label>
-                            </div>
+                        </div>
                         <div class="row">
                             
 
@@ -235,27 +235,29 @@
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Traducir  <span class="starting-from"></span> </span></label>
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribir <span class="starting-from"></span> </span></label>
                             </div>
-                            <div class="col-md-6">
-                                <div class="col-md-12 translation-type-container px-0">
-                                    <label class="w-100">Tipo de traducción: <span style="color:red;">*</span></label><br>
-                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certificado <span class="starting-from"></span> </span></label>
-                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Profesional <span class="starting-from"></span> </span></label>
-                                </div>
-                                <div class="col-md-12 file-type-container px-0 mt-3">
-                                    <label class="w-100">Tipo de archivo: <span style="color:red;">*</span></label><br>
-                                    <span class="doptintranscribe">
-                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Documento   <span class="starting-from"></span> </span></label>
-                                    </span>
-                                    <span class="audioandvideocontainer">
-                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="2" required> <span class="">Audio / Video <span class="starting-from"></span> </span></label>
-                                    </span>       
-                                    
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-md-12 translation-type-container">
+                                <label class="w-100">Tipo de traducción: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certificado <span class="starting-from"></span> </span></label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Profesional <span class="starting-from"></span> </span></label>
+                            </div>
+                        </div>  
+                        <div class="row my-2"> 
+                            <div class="col-md-12 file-type-container">
+                                <label class="w-100">Tipo de archivo: <span style="color:red;">*</span></label><br>
+                                <span class="doptintranscribe">
+                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Documento   <span class="starting-from"></span> </span></label>
+                                </span>
+                                <span class="audioandvideocontainer">
+                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="2" required> <span class="">Audio / Video <span class="starting-from"></span> </span></label>
+                                </span>       
+                                
 
-                                    <div class="professional-translation-document-option-selection bg-warning px-3 fw-bold">Ingrese a continuación el número de palabras que necesita traducir. Precio desde $0.05 por palabra.. </div>
-                                    <div class="document-option-selection bg-warning px-3 fw-bold">Ingrese a continuación el número de páginas que necesita traducir. Cada página contiene aproximadamente 250 palabras y el precio comienza desde $20..</div>
-                                    <div class="audiovideo-option-selection bg-warning px-3 fw-bold">Traducciones de audio y video desde solo $2 por minuto.</div>
-                                    <div class="transcription-audiovideo-option-selection bg-warning px-3 fw-bold">Transcripción de audio y video desde solo $1 por minuto.</div>
-                                </div>
+                                <div class="professional-translation-document-option-selection bg-warning p-2">Su traducción se completa en nuestro membrete y se acompaña de una declaración de precisión, nuestro sello, firma y datos de contacto.Esta es la opción más popular para todas las traducciones certificadas.<br><br>Ingrese a continuación el número de palabras que necesita traducir. Precio desde $0.05 por palabra.. </div>
+                                <div class="document-option-selection bg-warning p-2"><strong>Traducción certificada estándar:</strong><br>Ingrese a continuación el número de páginas que necesita traducir. Cada página contiene aproximadamente 250 palabras y el precio comienza desde <strong>$20</strong>.<br><br><strong>Tipos de archivos compatibles:</strong> docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff & gif</div>
+                                <div class="audiovideo-option-selection bg-warning p-2"><strong>Trae tu voz al mundo</strong><strong>Formatos de audio/video compatibles</strong><br>Audio: MP3, WAV, M4A, AAC, OGG<br>Video: MP4, MOV, AVI, WMV, MKV, FLV<br><br>Traducciones de audio y video desde solo $2 por minuto.</div>
+                                <div class="transcription-audiovideo-option-selection bg-warning p-2"><strong>Transcripciones confiables en las que puede confiar</strong><br>Transcripción de audio y video desde solo <strong>$1</strong> por minuto.</div>
                             </div>
                         </div>
 
@@ -323,7 +325,7 @@
                                 <input type="file" name="file_name" class="file-upload-cls form-control"  required>
                                 <div id="uploadStatus" class="mt-3"></div>
                                 <!-- <span>File Upload info </span> -->
-                                
+                                <div class="download-container"></div>
                                 <input type="hidden" name="file_id" class="record-file-id" value="0" />
                             </div>
                         </div>
@@ -335,15 +337,16 @@
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required> Prioridad</label>
                                 <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required> Urgente</label>
                             </div>
-
-                            <div class="col-md-6">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
                                 <label>&nbsp;</label>
                                 <div class="estimated-delivery-info bg-warning px-3 fw-bold"></div>
 
                             </div>
                         </div>
 
-                            <div class="row mt-3">
+                        <div class="row mt-3">
                             <div class="col-md-6">
                                 <label>Nombre: <span style="color:red;">*</span></label>
                                 <input type="text" class="form-control" name="customer_name" placeholder="Enter your name" required>
@@ -369,59 +372,68 @@
                             </div>
                         </div>
 
+                        <div class="col mt-3">
+                            <div class="order-summary p-3 bg-light">
+                                <h4>Resumen de pedido</h4>
+                                <div class="form-invoice">
+                                    
+                                <div class="row"><div class="col-md-6 key-class fw-bold text-primary">Tipo de servicio: </div><div class="value-class col-md-6 main-service-text-class"></div></div>
+
+                                <div class="row row-text-translation-type"><div class="col-md-6 key-class fw-bold text-primary">Tipo de traducción: </div><div class="value-class col-md-6 service-type-text-class"></div></div>
+
+                                <div class="row row-text-page-count"><div class="col-md-6 key-class fw-bold text-primary">Número de páginas: </div><div class="value-class col-md-6 page-count-text-class"></div></div>
+
+                                <div class="row row-text-word-count"><div class="col-md-6 key-class fw-bold text-primary">Recuento de palabras: </div><div class="value-class col-md-6 word-count-text-class"></div></div>
+
+                                <div class="row row-text-minutes-count"><div class="col-md-6 key-class fw-bold text-primary">Los minutos cuentan: </div><div class="value-class col-md-6 minutes-count-text-class"></div></div>
+
+                                <div class="row row-text-estimated-delivery">
+                                    <div class="col-md-6 key-class fw-bold text-primary">Entrega estimada: </div>
+                                    <div class="col-md-6 value-class estimated-delivery-text-class"></div>
+                                </div>
+                                
+                                <div class="row row-text-total-count border-bottom border-1 border-dark my-4"><div class="col-md-6 key-class fw-bold text-dark">Importe total: </div><div class="value-class col-md-6 total-count-text-class">$0</div></div>
+
+                                <!-- <span class="service-type"><strong>Service Type:</strong> <span class="service-type-container" style="color:#246bfd;"></span></span><br />
+                                <span class="inv-translation-type-text-container" style="display:none;"><strong>Translation Type:</strong> <span class="inv-translation-type" style="color:#246bfd;"></span></span><br />
+                                <span><strong>Pages Count : </strong> <span class="pages-count">$0.00</span></span><br />
+                                <span><strong>Word Count : </strong> <span class="word-count">$0.00</span></span><br />
+                                <span><strong>Minutes Count : </strong> <span class="minutes-count">$0.00</span></span> -->
+
+                                </div>
+                                <hr />
+                            </div>
+
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <button type="button" class="btn-form-submit btn btn-primary w-100" style="">Realizar pedido</button>
+                                
+                                <!-- <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
+                                <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>
+                                <p><strong>Total Amount:</strong> <span class="total-amount">$0.00</span></p>        -->
+                                
+                                <!-- <div id="paypal-button-container" data-id="0"></div> -->
+                                <div id="card-button-container"  data-id="0"></div>
+                                <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Gracias</h3>¡Su pedido ha sido realizado con éxito!Gracias por elegirnos.Nuestro agente de traducción se comunicará con usted en breve.</div>
+
+                            </div>
+                        </div>
+
                         <input type="submit" id="HiddenSubmit" style="display:none;" /> 
                         <div class="text-center mt-4">
                         </div>
                     </form>
-                    
-                   
+                </div>        
+                <div class="col-md-4 d-none">
+
                 </div>
-                <div class="col-md-4">
-                    <div class="order-summary">
-                        <h4>Resumen de pedido</h4>
-                        <div class="form-invoice">
-                            
-                        <div class="row"><div class="col-md-6 key-class fw-bold text-primary">Tipo de servicio: </div><div class="value-class col-md-6 main-service-text-class"></div></div>
-
-                        <div class="row row-text-translation-type"><div class="col-md-6 key-class fw-bold text-primary">Tipo de traducción: </div><div class="value-class col-md-6 service-type-text-class"></div></div>
-
-                        <div class="row row-text-page-count"><div class="col-md-6 key-class fw-bold text-primary">Número de páginas: </div><div class="value-class col-md-6 page-count-text-class"></div></div>
-
-                        <div class="row row-text-word-count"><div class="col-md-6 key-class fw-bold text-primary">Recuento de palabras: </div><div class="value-class col-md-6 word-count-text-class"></div></div>
-
-                        <div class="row row-text-minutes-count"><div class="col-md-6 key-class fw-bold text-primary">Los minutos cuentan: </div><div class="value-class col-md-6 minutes-count-text-class"></div></div>
-
-                        <div class="row row-text-estimated-delivery">
-                            <div class="col-md-6 key-class fw-bold text-primary">Entrega estimada: </div>
-                            <div class="col-md-6 value-class estimated-delivery-text-class"></div>
-                        </div>
-                        
-                        <div class="row row-text-total-count border-bottom border-1 border-dark my-4"><div class="col-md-6 key-class fw-bold text-dark">Importe total: </div><div class="value-class col-md-6 total-count-text-class">$0</div></div>
-
-                        <!-- <span class="service-type"><strong>Service Type:</strong> <span class="service-type-container" style="color:#246bfd;"></span></span><br />
-                        <span class="inv-translation-type-text-container" style="display:none;"><strong>Translation Type:</strong> <span class="inv-translation-type" style="color:#246bfd;"></span></span><br />
-                        <span><strong>Pages Count : </strong> <span class="pages-count">$0.00</span></span><br />
-                        <span><strong>Word Count : </strong> <span class="word-count">$0.00</span></span><br />
-                        <span><strong>Minutes Count : </strong> <span class="minutes-count">$0.00</span></span> -->
-
-                        </div>
-                        <hr />
-                        <button type="button" class="btn-form-submit btn btn-primary w-100" style="">Realizar pedido</button>
-                        
-                        <!-- <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
-                        <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>
-                        <p><strong>Total Amount:</strong> <span class="total-amount">$0.00</span></p>        -->
-                        
-                        <!-- <div id="paypal-button-container" data-id="0"></div> -->
-                        <div id="card-button-container"  data-id="0"></div>
-                        <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Gracias</h3>¡Su pedido ha sido realizado con éxito!Gracias por elegirnos.Nuestro agente de traducción se comunicará con usted en breve.</div>
-                    </div>
-                </div>
-            </div>
+            
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
+</div> 
     <!-- End Get Quote -->    
 
     <!-- Start Services 
