@@ -11878,3 +11878,30 @@ nav.navbar.validnavs .navbar-collapse.collapse img.flags{display: flex; margin-b
 	animation: rotate 3.5s linear infinite, opacityChange 3s infinite alternate;
   }
   .succ-msg{border:solid 0.1rem #18861db9; }
+  .upl-filename {
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	resize: horizontal;
+	display: inline-block;
+	vertical-align: middle;
+  }
+
+  .trash-icon {
+	font-size: 60px;
+	color: #e74c3c;
+	cursor: pointer;
+  }
+
+  .trash-icon:hover {
+	animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes shake {
+	0% { transform: rotate(0); }
+	25% { transform: rotate(-10deg); }
+	50% { transform: rotate(10deg); }
+	75% { transform: rotate(-10deg); }
+	100% { transform: rotate(0); }
+  }
