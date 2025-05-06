@@ -77,7 +77,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" placeholder="Ingrese su mensaje aquí" class="form-control"></textarea>
+                                    <textarea name="message" placeholder="Ingrese su mensaje aquí" class="form-control" required></textarea>
                                 </div>
                             </div>
                         </div>

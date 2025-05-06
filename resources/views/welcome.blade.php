@@ -367,7 +367,7 @@
 
                             <div class="col-md-6">
                                 <label>Phone: <span style="color:red;">*</span></label>
-                                <input type="tel" class="form-control phone-number-class" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required disabled>
+                                <input type="text" class="form-control phone-number-class" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required disabled>
                             </div>
                         </div>
 
@@ -1045,7 +1045,8 @@
 @section('scripts')
 <script src ="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://sandbox.paypal.com/sdk/js?client-id=AcHr6j-cjCKAsuABcrFWm1i1HGstx6cKl_GfNie-Peskv3QVzmxAEjqr1g6rvgoj6LI-RaH5Hmmvc8A5&currency=USD"></script>
+<!-- <script src="https://sandbox.paypal.com/sdk/js?client-id=AcHr6j-cjCKAsuABcrFWm1i1HGstx6cKl_GfNie-Peskv3QVzmxAEjqr1g6rvgoj6LI-RaH5Hmmvc8A5&currency=USD"></script> -->
+<script src="https://www.paypal.com/sdk/js?client-id=AQxI5F0BCYKClrnjgsOWSaeTq2PKCxsf8YtwWrYgSrE9MB2eeVJR1lY1EanXfK06LmO9qhAZI5gB6qNj&currency=USD"></script>
 
 <script>
 
@@ -1124,7 +1125,7 @@ paypal.Buttons({
 
                         location.reload();
 
-                    },10000);
+                    },3000);
 
                     // $("#QuoteForm input[type='file']").val('');
                     // $("#uploadStatus").hide();
@@ -1364,7 +1365,7 @@ setTimeout(function(){
 
 location.reload();
 
-},5000);
+},3000);
 
                        }
                        else{
@@ -1419,7 +1420,7 @@ location.reload();
                             // $(".uploaded-file-url").attr("href",response.file_path);
                             // $(".uploaded-file-url").show();
                             $(".record-file-id").val(response.file_id);
-                            var html =`<p><a href="${response.file_path}" class="attached-file-${response.file_id} upl-filename" target="_blank">Attached File</a>&nbsp;&nbsp;<a href="javascript:;" data-id="${response.file_id}" class="remove-attached-file" style="color:red;font-weight:bolder;"><i class="far fa-trash"></i></a></p>`;
+                            var html =`<p><a href="${response.file_path}" class="attached-file-${response.file_id} upl-filename" target="_blank">${response.displayname}</a>&nbsp;&nbsp;<a href="javascript:;" data-id="${response.file_id}" class="remove-attached-file" style="color:red;font-weight:bolder;"><i class="far fa-trash"></i></a></p>`;
                             $(".download-container").append(html);
                             if(response.file_id > 0)
                         {
@@ -1434,7 +1435,8 @@ location.reload();
                         }
                     },
                     error: function(xhr) {
-                        $("#uploadStatus").html("<p class='text-danger'>Error: " + xhr.responseText + "</p>");
+                        //$("#uploadStatus").html("<p class='text-danger'>Error: " + xhr.responseText + "</p>");
+                        $("#uploadStatus").html("<p class='text-danger'>The uploaded file type is not supported. Supported file types are: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff.</p>");
                     }
                 });
             });
@@ -2104,10 +2106,17 @@ $(document).on('input','.email-address-class',function(){
 
 $(document).on('input', '.phone-number-class', function () {
     let input = $(this);
-    let numbers = input.val().replace(/\D/g, ''); // Strip non-digits
+    let raw = input.val();
+    let numbers = raw.replace(/\D/g, ''); // Strip non-digits
 
+    // Prevent any non-numeric character from being displayed
+    if (raw !== numbers) {
+        input.val(numbers); // Optional: to prevent flicker before formatting
+    }
+
+    // Format the number
+    let formatted = '';
     if (numbers.length > 0) {
-        let formatted = '';
         if (numbers.length <= 3) {
             formatted = `(${numbers}`;
         } else if (numbers.length <= 6) {
@@ -2115,8 +2124,9 @@ $(document).on('input', '.phone-number-class', function () {
         } else {
             formatted = `(${numbers.slice(0, 3)}) ${numbers.slice(3, 6)}-${numbers.slice(6, 10)}`;
         }
-        input.val(formatted);
     }
+
+    input.val(formatted);
 
     // Enable comments field
     $(".comments-class").removeAttr("disabled");

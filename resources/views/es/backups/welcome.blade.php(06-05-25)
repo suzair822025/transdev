@@ -180,7 +180,7 @@
 <div class="services-content bg-gray-secondary default-padding home d-md-block">
         <div class="container" id="getquoteForm">
             <div class="d-flex flex-column align-items-center justify-content-center">
-                <h4 class="sub-title mb-1">Procedimiento simple para pedidos en línea</h4>
+                <h4 class="sub-title mb-1">Simple Procedure for Online Orders</h4>
             </div>
             <div class="about-style-one-items">
                 <div class="row">
@@ -237,43 +237,43 @@
 
 
                             <div class="col-md-6">
-                                <label class="w-100">Tipo de servicio: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Traducir  <span class="starting-from"></span> </span></label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribir <span class="starting-from"></span> </span></label>
+                                <label class="w-100">Service Type: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate  <span class="starting-from"></span> </span></label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe <span class="starting-from"></span> </span></label>
                             </div>
                         </div>
                         <div class="row my-2">
                             <div class="col-md-12 translation-type-container">
-                                    <label class="w-100">Tipo de traducción: <span style="color:red;">*</span></label><br>
-                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certificada <span class="starting-from"></span> </span></label>
-                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Profesional <span class="starting-from"></span> </span></label>
+                                    <label class="w-100">Translation Type: <span style="color:red;">*</span></label><br>
+                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certified <span class="starting-from"></span> </span></label>
+                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Professional <span class="starting-from"></span> </span></label>
                             </div>
                         </div>
                         <div class="row my-2">
                                 
                                 <div class="col-md-12 file-type-container">
-                                    <label class="w-100">Tipo de archivo: <span style="color:red;">*</span></label><br>
+                                    <label class="w-100">File Type: <span style="color:red;">*</span></label><br>
                                     <span class="doptintranscribe">
-                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Documento   <span class="starting-from"></span> </span></label>
+                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Document   <span class="starting-from"></span> </span></label>
                                     </span>
                                     <span class="audioandvideocontainer">
-                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="2" required> <span class="">Audio / video <span class="starting-from"></span> </span></label>
+                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="2" required> <span class="">Audio / Video <span class="starting-from"></span> </span></label>
                                     </span>       
                                     
 
-                                    <div class="professional-translation-document-option-selection bg-warning p-2">Su traducción se completa en nuestro membrete y se acompaña de una declaración de precisión, nuestro sello, firma y datos de contacto.Esta es la opción más popular para todas las traducciones certificadas..<br><br>Ingrese el número de palabras a continuación que necesita traducir.Precio que comienza en <strong>$0.05</strong> por palabra. </div>
-                                    <div class="document-option-selection bg-warning p-2"><strong>Traducción certificada estándar:</strong><br>Su traducción se completa en nuestro membrete y se acompaña de una declaración de precisión, nuestro sello, firma y datos de contacto.Esta es la opción más popular para todas las traducciones certificadas..<br><br>Ingrese el número de páginas a continuación que necesita traducir.Cada página contiene aproximadamente 250 palabras, y el precio comienza en <strong>$20</strong>.<br><br><strong>Tipos de archivos compatibles:</strong> docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff & gif.</div>
-                                    <div class="audiovideo-option-selection bg-warning p-2"><strong>Trae tu voz al mundo</strong><br>Ya sea un podcast, una entrevista o una presentación de video, traducimos su contenido de audio y video para que se conecta con el público en todas partes.Nuestro equipo combina precisión con información cultural para asegurarse de que su mensaje se sienta bien, sin importar el idioma.<br><br><strong>Formatos de audio/video compatibles</strong><br>Audio: MP3, WAV, M4A, AAC, OGG<br>Video: MP4, MOV, AVI, WMV, MKV, FLV<br><br>Traducciones de audio y videos que comienzan solo en <strong>$2</strong> per minute.</div>
-                                    <div class="transcription-audiovideo-option-selection bg-warning px-3d p-2"><strong>Transcripciones confiables en las que puede confiar</strong><br>Convirtimos su audio y video en un texto claro y preciso, rápido y manejado por personas reales que se preocupan por hacer correctamente cada palabra.<br><br>Audio and video transcription starting at just <strong>$1</strong> por minuto.</div>
+                                    <div class="professional-translation-document-option-selection bg-warning p-2">Your translation is completed on our letterhead, and accompanied by a Statement of Accuracy, our stamp, signature and contact details. This is the most popular option for all certified translations.<br><br>Please enter the number of words below you need to translate. Price Starting at <strong>$0.05</strong> per word. </div>
+                                    <div class="document-option-selection bg-warning p-2"><strong>Standard Certified Translation:</strong><br>Your translation is completed on our letterhead, and accompanied by a Statement of Accuracy, our stamp, signature and contact details. This is the most popular option for all certified translations.<br><br>Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at <strong>$20</strong>.<br><br><strong>Supported file types:</strong> docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff & gif.</div>
+                                    <div class="audiovideo-option-selection bg-warning p-2"><strong>Bring Your Voice to the World</strong><br>Whether it’s a podcast, interview, or video presentation, we translate your audio and video content so it connects with audiences everywhere. Our team blends accuracy with cultural insight to make sure your message feels just right—no matter the language.<br><br><strong>Supported Audio/Video Formats</strong><br>Audio: MP3, WAV, M4A, AAC, OGG<br>Video: MP4, MOV, AVI, WMV, MKV, FLV<br><br>Audio and video translations starting at just <strong>$2</strong> per minute.</div>
+                                    <div class="transcription-audiovideo-option-selection bg-warning px-3d p-2"><strong>Reliable Transcriptions You Can Trust</strong><br>We turn your audio and video into clear, accurate text—fast and handled by real people who care about getting every word right.<br><br>Audio and video transcription starting at just <strong>$1</strong> per minute.</div>
                                 </div>
                         </div>
                         
 
                         <div class="row mt-2">
                             <div class="col-md-6 translate-from-container">
-                                <label>Traducir de: <span style="color:red;">*</span></label>
+                                <label>Translate From: <span style="color:red;">*</span></label>
                                 <select name="translate_from" class="translate-from-select-class form-control form-select" required disabled>
-                                    <option value="" selected>Lenguaje seleccionado</option>
+                                    <option value="" selected>Select Language</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
                                     @empty
@@ -282,9 +282,9 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label>Traducirse a: <span style="color:red;">*</span></label>
+                                <label>Translate To: <span style="color:red;">*</span></label>
                                 <select name="translate_to" class="translate-to-select-class form-control form-select" required disabled>
-                                <option value="" selected>Lenguaje seleccionado</option>
+                                <option value="" selected>Select Language</option>
                                     @forelse($languages as $l)
                                      <option value="{{$l->id}}">{{$l->name}}</option>
                                     @empty
@@ -295,41 +295,41 @@
 
                         <div class="row mt-3">
                             <div class="col-md-6 container-pages">
-                                <label>Número de páginas: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20."><i class="fa fa-info-circle"></i></span></label>
+                                <label>Number of Pages: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20."><i class="fa fa-info-circle"></i></span></label>
                                 <div class="input-group">
                                 <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages" required disabled>
-                                <span class="input-group-text">Páginas</span>
+                                <span class="input-group-text">Pages</span>
                                 </div>
-                                <span>1 página = 250 palabras max</span>
-                                <div class="special-price">¡Eres elegible para nuestro precio especial!Simplemente solicite una cotización, y nuestro equipo se comunicará para discutir los detalles con usted.</div>
+                                <span>1 page = 250 words max</span>
+                                <div class="special-price">You're eligible for our special pricing! Simply request a quote, and our team will reach out to discuss the details with you.</div>
 
                             </div>
 
                             <div class="col-md-6 container-words">
-                                <label>Número de palabras: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Starting at $0.05 per word."><i class="fa fa-info-circle"></i></span></label>
+                                <label>Number of Words: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Starting at $0.05 per word."><i class="fa fa-info-circle"></i></span></label>
                                 <div class="input-group">
                                 <input type="number" name="number_of_words" class="words-number-clse form-control" placeholder="Enter number of words" required disabled>
-                                <span class="input-group-text">Palabras</span>
+                                <span class="input-group-text">Words</span>
                                 </div>
                                 <span>Starting at $0.05 per word.</span>
                             </div>
 
                             <div class="col-md-6 container-minutes">
-                                <label>Número de minutos: <span style="color:red;">*</span> 
+                                <label>Number of Minutes: <span style="color:red;">*</span> 
                                 <span data-toggle="tooltip" class="dollar-one" data-placement="top" title="Audio and video transcription starting at just $1 per minute."><i class="fa fa-info-circle"></i></span>
                                 <span data-toggle="tooltip" class="dollar-two" data-placement="top" title="Audio and video translation starting at just $2 per minute."><i class="fa fa-info-circle"></i></span>
                             
                             </label>
                                 <div class="input-group">
                                 <input type="number" name="number_of_minutes" class="minutes-number-clse form-control" placeholder="Enter number of minutes" required disabled>
-                                <span class="input-group-text">Minutos</span>
+                                <span class="input-group-text">Minutes</span>
                                 </div>
-                                <span class="dollar-one">A partir de $ 1 por minuto.</span>
-                                <span class="dollar-two">A partir de $ 2 por minuto.</span>
+                                <span class="dollar-one">Starting at $1 per minute.</span>
+                                <span class="dollar-two">Starting at $2 per minute.</span>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Archivo de carga: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span></label>
+                                <label>Upload File: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span></label>
                                 <input type="file" name="file_name" class="file-upload-cls form-control"  required disabled>
                                 <div id="uploadStatus" class="mt-3"></div>
                                 <!-- <span>File Upload info </span> -->
@@ -340,10 +340,10 @@
 
                         <div class="row mt-3">
                             <div class="col-md-6">
-                                <label class="w-100">Entrega estimada: <span style="color:red;">*</span></label><br>
-                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required disabled> Estándar</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required disabled> Prioridad</label>
-                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required disabled> Urgente</label>
+                                <label class="w-100">Estimated Delivery: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required disabled> Standard</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required disabled> Priority</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required disabled> Urgent</label>
                             </div>
 
 </div>
@@ -357,51 +357,51 @@
 
                             <div class="row mt-3">
                             <div class="col-md-6">
-                                <label>Nombre: <span style="color:red;">*</span></label>
+                                <label>Name: <span style="color:red;">*</span></label>
                                 <input type="text" class="form-control customer-name-class" name="customer_name" placeholder="Enter your name" required disabled>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-6">
-                                <label>Correo electrónico: <span style="color:red;">*</span></label>
+                                <label>Email: <span style="color:red;">*</span></label>
                                 <input type="email" class="form-control email-address-class" name="email" placeholder="Enter your email" required disabled>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Teléfono: <span style="color:red;">*</span></label>
+                                <label>Phone: <span style="color:red;">*</span></label>
                                 <input type="text" class="form-control phone-number-class" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required disabled>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-md-12">
-                                <label>Comentario:</label>
+                                <label>Comments:</label>
                                 <textarea class="form-control comments-class" name="comments" rows="3" placeholder="Enter your comments" disabled></textarea>
                             </div>
                         </div>
 
                         <div class="col mt-3">
                             <div class="order-summary p-3 bg-light">
-                                <h4>Resumen de cotización</h4>
+                                <h4>Quote Summary</h4>
                                 <div class="form-invoice">
                                     
-                                <div class="row"><div class="col-md-6 key-class fw-bold text-primary">Tipo de servicio: </div><div class="value-class col-md-6 main-service-text-class"></div></div>
+                                <div class="row"><div class="col-md-6 key-class fw-bold text-primary">Service Type: </div><div class="value-class col-md-6 main-service-text-class"></div></div>
 
-                                <div class="row row-text-translation-type"><div class="col-md-6 key-class fw-bold text-primary">Tipo de traducción: </div><div class="value-class col-md-6 service-type-text-class"></div></div>
+                                <div class="row row-text-translation-type"><div class="col-md-6 key-class fw-bold text-primary">Translation Type: </div><div class="value-class col-md-6 service-type-text-class"></div></div>
 
-                                <div class="row row-text-page-count"><div class="col-md-6 key-class fw-bold text-primary">Recuento de páginas: </div><div class="value-class col-md-6 page-count-text-class"></div></div>
+                                <div class="row row-text-page-count"><div class="col-md-6 key-class fw-bold text-primary">Page Count: </div><div class="value-class col-md-6 page-count-text-class"></div></div>
 
-                                <div class="row row-text-word-count"><div class="col-md-6 key-class fw-bold text-primary">Recuento de palabras: </div><div class="value-class col-md-6 word-count-text-class"></div></div>
+                                <div class="row row-text-word-count"><div class="col-md-6 key-class fw-bold text-primary">Word Count: </div><div class="value-class col-md-6 word-count-text-class"></div></div>
 
-                                <div class="row row-text-minutes-count"><div class="col-md-6 key-class fw-bold text-primary">Conteo de minutos: </div><div class="value-class col-md-6 minutes-count-text-class"></div></div>
+                                <div class="row row-text-minutes-count"><div class="col-md-6 key-class fw-bold text-primary">Minutes Count: </div><div class="value-class col-md-6 minutes-count-text-class"></div></div>
 
                                 <div class="row row-text-estimated-delivery">
-                                    <div class="col-md-6 key-class fw-bold text-primary">Entrega estimada</div>
+                                    <div class="col-md-6 key-class fw-bold text-primary">Estimated Delivery: </div>
                                     <div class="col-md-6 value-class estimated-delivery-text-class"></div>
                                 </div>
                                 
-                                <div class="row row-text-total-count border-bottom border-1 border-dark my-4"><div class="col-md-6 key-class fw-bold text-dark">Cantidad total: </div><div class="value-class col-md-6 total-count-text-class">$0</div></div>
+                                <div class="row row-text-total-count border-bottom border-1 border-dark my-4"><div class="col-md-6 key-class fw-bold text-dark">Total Amount: </div><div class="value-class col-md-6 total-count-text-class">$0</div></div>
 
                                 <!-- <span class="service-type"><strong>Service Type:</strong> <span class="service-type-container" style="color:#246bfd;"></span></span><br />
                                 <span class="inv-translation-type-text-container" style="display:none;"><strong>Translation Type:</strong> <span class="inv-translation-type" style="color:#246bfd;"></span></span><br />
@@ -424,10 +424,10 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-12">
-                                <button type="button" class="btn-form-submit btn btn-primary w-100" style="" disabled>Orden</button>
+                                <button type="button" class="btn-form-submit btn btn-primary w-100" style="" disabled>Place Order</button>
                             
                                 <div id="card-button-container"  data-id="0"></div>
-                                <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Gracias</h3>¡Su pedido ha sido realizado con éxito!Gracias por elegirnos.Nuestro agente de traducción se comunicará con usted en breve.</div>
+                                <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.</div>
                             
                             </div>
                         </div>
@@ -806,13 +806,13 @@
                                 <img src="{{ asset('/assets/img/projects/5.jpg') }}" alt="Image Not Found">
                                 <div class="overlay">
                                     <div class="info">
-                                        <h4><a href="project-details.html">Seguridad cibernética</a></h4>
-                                        <span>Tecnología,</span>
+                                        <h4><a href="project-details.html">Cyber Security</a></h4>
+                                        <span>Technology, IT</span>
                                         <p>
-                                            Continuó hasta el desayuno celosamente necesario.Rodeado Sir Motionless She Final Literature.
+                                            Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature.
                                         </p>
                                     </div>
-                                    <a href="project-details.html">Explorar <i class="fas fa-long-arrow-right"></i></a>
+                                    <a href="project-details.html">Explore <i class="fas fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -823,13 +823,13 @@
                                 <img src="{{ asset('/assets/img/projects/6.jpg') }}" alt="Image Not Found">
                                 <div class="overlay">
                                     <div class="info">
-                                        <h4><a href="project-details.html">Es consultoría</a></h4>
-                                        <span>Seguridad, firewall</span>
+                                        <h4><a href="project-details.html">IT Counsultancy</a></h4>
+                                        <span>Security, Firewall</span>
                                         <p>
-                                            Continuó hasta el desayuno celosamente necesario.Rodeado Sir Motionless She Final Literature.
+                                            Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature.
                                         </p>
                                     </div>
-                                    <a href="project-details.html">Explorar <i class="fas fa-long-arrow-right"></i></a>
+                                    <a href="project-details.html">Explore <i class="fas fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
