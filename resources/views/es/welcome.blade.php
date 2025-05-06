@@ -1602,9 +1602,9 @@ location.reload();
                     amount = 30;
                 }
 
-                txt ="Standard (4-6 Days)";
+                txt ="Estándar (4-6 días)";
 
-                txtx ="We know your time is valuable, so we work fast—most translations are ready within 48 hours for documents up to 8 pages. Got more pages? No problem! Just add a day for every additional 8 pages, and we’ll take care of the rest. \nEstimated Delivery : Standard (+$"+amount+"), 4 to 6 Days";
+                txtx ="Sabemos que su tiempo es valioso, por lo que trabajamos rápido: la mayoría de las traducciones están listas dentro de las 48 horas para documentos de hasta 8 páginas.¿Tienes más páginas?¡Ningún problema!Simplemente agregue un día por cada 8 páginas adicionales, y nos encargaremos del resto. \nEntrega estimada : Estándar (+$"+amount+"), 4 a 6 días";
                 
                 
             }
@@ -1630,8 +1630,8 @@ location.reload();
                     amount = 35;
                 }
 
-                txt ="Priority (2-4 Days)";
-                txtx ="We know your time is valuable, so we work fast—most translations are ready within 48 hours for documents up to 8 pages. Got more pages? No problem! Just add a day for every additional 8 pages, and we’ll take care of the rest. \nEstimated Delivery : Priority ($"+amount+"), 2 to 4 Days";
+                txt ="Prioridad (2-4 días)";
+                txtx ="Sabemos que su tiempo es valioso, por lo que trabajamos rápido: la mayoría de las traducciones están listas dentro de las 48 horas para documentos de hasta 8 páginas.¿Tienes más páginas?¡Ningún problema!Simplemente agregue un día por cada 8 páginas adicionales, y nos encargaremos del resto. \nEntrega estimada : Prioridad ($"+amount+"), 2 a 4 días";
                 
             }
             if(type == 3)
@@ -1656,8 +1656,8 @@ location.reload();
                 }
 
 
-                txt ="Urgent (24-48 Hours)";
-                txtx ="We know your time is valuable, so we work fast—most translations are ready within 48 hours for documents up to 8 pages. Got more pages? No problem! Just add a day for every additional 8 pages, and we’ll take care of the rest. \nEstimated Delivery : Urgent ($"+amount+"), 24 to 48 Hours";
+                txt ="Urgente (24-48 horas)";
+                txtx ="Sabemos que su tiempo es valioso, por lo que trabajamos rápido: la mayoría de las traducciones están listas dentro de las 48 horas para documentos de hasta 8 páginas.¿Tienes más páginas?¡Ningún problema!Simplemente agregue un día por cada 8 páginas adicionales, y nos encargaremos del resto. \nEntrega estimada : Urgente ($"+amount+"), 24 a 48 horas";
                 
             }
 
