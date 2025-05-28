@@ -367,7 +367,7 @@ class QuoteController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'success' => false,
-                'message' => $validator->errors()->first(), // Return first validation error
+                'message' =>'Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff.', // Return first validation error
             ], 422);
         }
 
@@ -378,6 +378,8 @@ class QuoteController extends Controller
             $file = $request->file('file_name');
 
             // Generate a unique name for the file
+
+            $displayName = $file->getClientOriginalName();
             
             $fileName = time() . '_' . $file->getClientOriginalName();
 
@@ -405,7 +407,8 @@ class QuoteController extends Controller
                 'message' => 'File uploaded successfully!',
                 'file_id'=>$FileInsertId,
                 'file_path' => url('storage/'.$filePath.''), 
-                'file_extension'=>$extension
+                'file_extension'=>$extension,
+                'displayname'=>$displayName
             ]);
         }
 

@@ -8,6 +8,8 @@ use App\Http\Controllers\QuoteController;
 
 use App\Http\Controllers\SpanishcommonController;
 
+use App\Http\Controllers\SignupController;
+
 
 use DB;
 
@@ -47,6 +49,7 @@ Route::controller(CommonController::class)->group(function () {
     Route::get('/pricestable', 'pricestable')->name('pricestable');
     Route::get('/es/welcome', 'welcome')->name('welcome');
     Route::get('/langchange/{lang}','languageSession')->name('langchange');
+    Route::get('/landing', 'landing')->name('landing');
 });
 
 Route::controller(SpanishcommonController::class)->group(function () {
@@ -79,3 +82,5 @@ Route::controller(QuoteController::class)->group(function () {
     Route::post('/svcontact', 'ContactUsActionS')->name('svcontact');
     Route::get('/test', 'EmailTest')->name('test');
 });
+Route::get('/landing', [SignupController::class, 'showForm'])->name('signup.form');
+Route::post('/signup', [SignupController::class, 'submitForm'])->name('signup.submit');

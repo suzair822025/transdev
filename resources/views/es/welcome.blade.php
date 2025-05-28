@@ -158,7 +158,7 @@
                             <li><i class="fa fa-check-circle"></i> Sobrealimentada por AI para traducciones rápidas.</li>
                             <li><i class="fa fa-check-circle"></i> Traducciones comerciales y legales expertas en las que puede confiar.</li>
                             <li><i class="fa fa-check-circle"></i> Apostilla y notarización internacional, gestionadas por usted.</li>
-                            <li><i class="fa fa-check-circle"></i> Traducciones claras y precisas que no te <br>arruinarán, desde solo <span class="move-shake text-warning">$2</span>.</li>
+                            <li><i class="fa fa-check-circle"></i> Traducciones claras y precisas que no te <br>arruinarán, desde solo <span class="move-shake text-warning">$0.05</span>.</li>
                             <li><i class="fa fa-check-circle"></i> Transcripciones claras y confiables que <br>no cuestan una fortuna: solo <span class="move-shake text-warning">$1</span> por minuto.</li>
                         </ul>
                         <div class="my-5"></div>

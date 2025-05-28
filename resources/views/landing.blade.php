@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Translation Windows offers professional translation services with high accuracy and fast delivery. Get quality translations for documents, websites, and more." />
+    <meta name="keywords" content="translation services, document translation, professional translators, language translation, website translation, fast translation, accurate translation" />
+    <meta name="author" content="Translation Windows" />
+    <meta name="robots" content="index, follow" />
+    <!-- ========== Page Title ========== -->
+    <title>Translation Windows</title>
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" defer>
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" defer>
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" defer>
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet" defer>
+    <link href="assets/css/animate.min.css" rel="stylesheet" defer>
+    <link href="assets/css/validnavs.css" rel="stylesheet" defer>
+    <link href="assets/css/helper.css" rel="stylesheet" defer>
+    <link href="assets/css/unit-test.css" rel="stylesheet" defer>
+    <link href="assets/css/style.css" rel="stylesheet" defer>
+    
+    <!-- ========== End Stylesheet ========== -->
+</head>
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+<!-- Header 
+    ============================================= -->
+    <header>
+        <!-- Start Navigation -->
+        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed white sticked">
+            <div class="container d-flex align-items-center">            
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="{{ asset('/assets/img/logo-light.png') }}" class="logo logo-display" alt="TranslationWindows Logo">
+                        <img src="{{ asset('assets/img/logo.png') }}" class="logo logo-scrolled" alt="TranslationWindows Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="collapse-header">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="TranslationWindows Logo">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-center d-inline-block" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="dropdown">
+                            <a href="{{ url('/') }}" class="active">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ url('av-transcription') }}"><i class="fa fa-arrow-right"></i>Audio/Video Transcription</a></li>
+                                <li><a href="{{ url('av-translation') }}"><i class="fa fa-arrow-right"></i>Audio/Video Translation</a></li>
+                                <li><a href="{{ url('doc-translation') }}"><i class="fa fa-arrow-right"></i>Document Translation</a></li>
+                                <li><a href="{{ url('subtitling') }}"><i class="fa fa-arrow-right"></i>Subtitling</a></li>
+                                <li><a href="{{ url('prf-copyedit') }}"><i class="fa fa-arrow-right"></i>Proofreading & copy-editing</a></li>
+                                <li><a href="{{ url('prftrans-ai') }}"><i class="fa fa-arrow-right"></i>Proofreading and translation of AI content</a></li>
+                                <li><a href="{{ url('ind-specservices') }}"><i class="fa fa-arrow-right"></i>Industry-specific services</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{{ url('how-it-works') }}" class="">How It works</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('career') }}" class="">Career</a>
+                        </li>
+                        <li><a href="{{ url('contact-us') }}">contact</a></li>
+                    </ul>
+                </div>
+                <div class="d-inline-block justify-content-end ms-lg-5 mt-lg-0 mt-sm-3">
+                    <a href="tel:(281) 205-3932"><span class="phone-header">(281) 205-3932</span></a>
+                </div>
+                <!-- /.navbar-collapse -->
+
+            </div>   
+            <!-- Overlay screen for menu -->
+            <div class="overlay-screen"></div>
+            <!-- End Overlay screen for menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Start Banner Area 
+    ============================================= -->
+
+
+ <div class="hero-cont text-light">
+        <div class="container">
+            <div class="row align-text-top">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="content mt-5">
+                        <h2 class="slider-title1 word-container"><span class="sm-sl-title">Expert linguistic</span><br><strong class="word" data-text="Services">Services</strong> <strong class="word" data-text="Tailored">Tailored</strong> <strong class="word" data-text="To">To</strong> <strong class="word" data-text="Your">Your</strong> <br><strong class="word" data-text="Needs">Needs.</strong></h2>
+                        <span class="mt-n4">We offer certified and business translation services that are reliable, affordable, and easy to order, ensuring accuracy and fast delivery.</span>
+                        <ul class="my-2">
+                            <li><i class="fa fa-check-circle"></i> Supercharged by AI for Lightning-Fast Translations.</li>
+                            <li><i class="fa fa-check-circle"></i> Expert Business & Legal Translations You Can Trust.</li>
+                            <li><i class="fa fa-check-circle"></i> Worldwide Apostille & Notarisation, Handled for You.</li>
+                            <li><i class="fa fa-check-circle"></i> Clear, accurate translations that won’t break the <br>bank—starting at only <span class="move-shake text-warning">$0.05</span> per word.</li>
+                            <li><i class="fa fa-check-circle"></i> Clear, reliable transcriptions that don’t cost a <br>fortune—just <span class="move-shake text-warning">$1</span> per minute.</li>
+                        </ul>
+                        <div class="my-5"></div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-3 ms-auto">
+                    <div id="signup-form" class="col-lg-12 my-lg-5 mb-30">
+                        <div class="mt-20">&nbsp;</div>
+                        @if(session('success'))
+                            <div class="alert alert-success" style="color: green;">{{ session('success') }}</div>
+                        @endif
+
+                        @if ($errors->any())
+                            <div style="color: red;">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <form method="POST" action="{{ route('signup.submit') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="row tp-gx-10">
+                                <div class="col-md-6">
+                                    <div class="tp-contact-input">
+                                        <input name="name" type="text" placeholder="Your Name*" id="validationCustom02" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tp-contact-input">
+                                        <input name="email" type="email" placeholder="Email Address*" id="validationCustom02" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tp-contact-input" style="display: block;">
+                                        <select name="service_type" class="wide">
+                                        <option disabled selected value> -- Choose a service -- </option>
+                                        <option value="Audio/Video Transcription">Audio/Video Transcription</option>
+                                        <option value="Audio/Video Translation">Audio/Video Translation</option>
+                                        <option value="Document Translation">Dcument Translation</option>
+                                        <option value="Subtitling">Subtitling</option>
+                                        <option value="Content Writing">Proofreading & copy-editing</option>
+                                        <option value="Content Writing">Proofreading and translation of AI content</option>
+                                        <option value="Content Writing">Industry-specific services</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tp-contact-input">
+                                        <input name="phone" type="text" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="tp-contact-input">
+                                        <input class="form-control form-control-sm" id="formFileSm" type="file" name="document" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                                        <small>Max file size: 5MB</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="tp-contact-input">
+                                        <textarea name="message" placeholder="Enter Your Message here"></textarea>
+                                    </div>
+                                </div>
+                                <div class="tp-contact-btn mt-10 text-center">
+                                    <button type="submit" class="btn btn-primary reg-tp-btn rbutton w-100" name="submitHeroReg">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="ajax-response"></p> 
+                    </div> <!-- ##signup-form -->
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!-- End banner-area -->
+
+
+    <!-- Start Services 
+    ============================================= -->
+    <div class="services-style-three-area default-padding bottom-less bg-gray-primary bg-cover" style="background-image: url({{ asset('/assets/img/shape/24.png)') }};">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                    <div class="site-heading text-center">
+                        <h4 class="sub-title">Our Services</h4>
+                        <h2 class="title">Empower your business with our services.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Single Item -->
+                <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-1.webp') }}" alt="">
+                            <h4><a href="{{ url('av-translation') }}">Translation</a></h4>
+                            <p>
+                            We, at Translationwindows, we completely understand that effective communication across languages goes beyond just translation.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="{{ url('av-translation') }}"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                <!-- End Single Item -->
+                 <!-- Single Item -->
+                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-2.webp') }}" alt="">
+                            <h4><a href="{{ url('av-transcription') }}">Transcription</a></h4>
+                            <p>
+                            Translationwindows excels in providing comprehensive transcription services across a multitude of languages, combining unparalleled accuracy.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="{{ url('av-transcription') }}"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                <!-- End Single Item -->
+                 <!-- Single Item -->
+                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-3.webp') }}" alt="">
+                            <h4><a href="{{ url('subtitling') }}">Subtitling</a></h4>
+                            <p>
+                                Translationwindows specializes in providing expert subtitling services for diverse audio and video content, ensuring precise translation in all languages.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="{{ url('subtitling') }}"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                <!-- End Single Item -->
+            </div>
+            <div class="row">
+                <!-- Single Item -->
+                <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-4.webp') }}" alt="">
+                            <h4><a href="{{ url('prf-copyedit') }}">Proofreading & Copy-Editing</a></h4>
+                            <p>
+                                Translationwindows.com ensures your text is clear, accurate, and professional with expert proofreading and copy-editing services.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="{{ url('prf-copyedit') }}"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                <!-- End Single Item -->
+                 <!-- Single Item -->
+                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-5.webp') }}" alt="">
+                            <h4><a href="{{ url('prftrans-ai') }}">Proofreading & Translation Of AI Content</a></h4>
+                            <p>
+                                Translationwindows.com specializes in refining AI-generated content to ensure it’s accurate, polished, and appropriate.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="{{ url('prftrans-ai') }}"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                <!-- End Single Item -->
+                 <!-- Single Item -->
+                 <div class="col-xl-4 col-lg-6 col-md-6 mb-30">
+                    <div class="services-style-three-item">
+                       <div class="item-title">
+                            <img src="{{ asset('/assets/img/icon/icon-6.webp') }}" alt="">
+                            <h4><a href="{{ url('ind-specservices') }}">Industry-Specific Services</a></h4>
+                            <p>
+                            Our expertise at Translationwindows.com lies in offering personalized translation and design services, ensuring they are tailored to meet the specific needs of your industry.
+                            </p>
+                            <div class="d-flex mt-30">
+                                <a href="{{ url('ind-specservices') }}"><i class="fas fa-long-arrow-right"></i></a>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                <!-- End Single Item -->
+            </div>
+        </div>
+    </div>
+    <!-- End Services -->
+
+
+<!-- Start Translation Services 
+    ============================================= -->
+    <div class="speciality-style-one-area">
+        <div class="container">
+            <div class="row align-center mb-5">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <h4 class="sub-title">Translation Services</h4>
+                    <h5>We provide comprehensive services in translation, and legalization for individuals and businesses.</h5>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-5"><img src="{{ asset('/assets/img/ct.webp') }}" alt=""></div>
+                <div class="col-lg-7 px-5"><h2 class="title">Certified Translations </h2>
+                    <p class="card-text lead">Get certified, notarised, sworn, and legalised translations—trusted and accepted worldwide!</p>
+                    <ul class="list-style-one">
+                        <li>Documents Translated and Certified with Precision.</li>   
+                        <li>Secure Digital PDF delivery with the option for worldwide shipping.</li>
+                        <li>Expert Apostille and Notarisation Services, Trusted Worldwide.</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-lg-5"><img src="{{ asset('/assets/img/pt.webp') }}" alt=""></div>
+                <div class="col-lg-7 px-5"><h2 class="title">Professional Translations </h2>
+                    <p class="card-text lead">Fast and reliable standard translations tailored for individuals and businesses!</p>
+                    <ul class="list-style-one">
+                        <li>Expert Translators with Specialized Subject Matter Knowledge.</li>
+                        <li>Expert Assistance for Business, Technical, and Legal Documents.</li>
+                        <li>Accelerate your translations with AI—faster, smarter, and more cost-effective!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Translation Services -->    
+         
+    <!-- Start About
+    ============================================= -->
+    <div class="about-style-three-area default-padding">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6">
+                    <div class="about-style-three-info">
+                        <h4 class="sub-title">About Us</h4>
+                        <h1 class="title">Providing solutions for translation services</h1>
+                        <p>Our business specializes in providing thorough translation solutions that are suited to your unique requirements. Our highly skilled linguists and cutting-edge technology guarantee accurate translations that are culturally appropriate for a variety of businesses. Whether you need localization, multilingual support, or document translation, we can help you close communication gaps and reach a worldwide audience with our dependable and effective services.</p>
+                        <div class="info-grid mt-50">
+                            <div class="left-info">
+                                <div class="fun-fact-card-two">
+                                    <h4 class="sub-title">Our Expertise</h4>
+                                    <div class="counter-title">
+                                        <div class="counter">
+                                            <div class="timer" data-to="10" data-speed="2000">10</div>
+                                            <div class="operator">+</div>
+                                        </div>
+                                    </div>
+                                    <span class="medium">Years of experience</span>
+                                </div>
+                            </div>
+                            <div class="right-info bg-gradient text-light">
+                                <ul class="list-style-three">
+                                    <li>Audio/Video Translation</li>
+                                    <li>Document Translation</li>
+                                    <li>Audio/Video Transcription</li>
+                                    <li>Subtitling</li>
+                                    <li>Proofreading & Copy-Editing</li>
+                                    <li>Proofreading & AI Translation</li>
+                                    <li>Industry-Specific Services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="thumb-style-two">
+                        <img src="{{ asset('/assets/img/about/4.avif') }}" alt="Providing solutions for translation services
+">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+    <!-- Start Partner 
+    ============================================= -->
+    <div class="partner-style-one-area default-padding bg-dark text-light d-none" style="background-image: url({{ asset('/assets/img/shape/25.png') }});">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-xl-4">
+                    <h2 class="title">Thrusted brands work with us</h2>
+                </div>
+                <div class="col-xl-8 pl-60 pl-md-15 pl-xs-15 brand-one-contents">
+                    <div class="brand-style-one-items">
+                        <div class="brand-style-one-carousel swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Single Item -->
+                                <div class="swiper-slide">
+                                    <div class="brand-one">
+                                        <img src="{{ asset('/assets/img/brand/11.png') }}" alt="Image Not Found">
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                 <!-- Single Item -->
+                                <div class="swiper-slide">
+                                    <div class="brand-one">
+                                        <img src="{{ asset('/assets/img/brand/22.png') }}" alt="Image Not Found">
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                 <!-- Single Item -->
+                                <div class="swiper-slide">
+                                    <div class="brand-one">
+                                        <img src="{{ asset('/assets/img/brand/55.png') }}" alt="Image Not Found">
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                 <!-- Single Item -->
+                                <div class="swiper-slide">
+                                    <div class="brand-one">
+                                        <img src="{{ asset('/assets/img/brand/66.png') }}" alt="Image Not Found">
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Partner -->
+    <!-- Start Why Choose Us 
+    ============================================= -->
+    <div class="choose-us-style-two-area relative bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 order-xl-last pl-80 pl-md-15 pl-xs-15 choose-us-style-two-content mt-5">
+                    <div class="info-style-one">
+                        <h4 class="sub-title">Why Choose Us</h4>
+                        <h2 class="title">Empowering success in technology since 2014 </h2>
+                        <p>
+                        At Translationwindows, we understand that every project and client has different requirements. The main causes of this are the variations in project size, industry, and language. We therefore approach each order with a unique technique. Our translators have experience in a variety of fields, such as education and medical. This enables us to match you with a thoroughly qualified and screened translator in your particular industry, ensuring accurate and quick professional translation services.
+                        </p>
+                        <a class="btn btn-md circle btn-gradient animation mt-20" href="javascript::">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="thumb-style-three">
+                        <img src="{{ asset('/assets/img/illustration/7.avif') }}" alt="Translation windows empowering success in technology since 2014
+" width="539">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Why Choose Us -->
+
+  
+    <!-- Start Speciality 
+    ============================================= -->
+    <div class="speciality-style-one-area default-padding">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-4">
+                    <img src="{{ asset('/assets/img/comit.avif') }}" alt="">
+                </div>
+                <div class="col-xl-7 offset-xl-1 col-lg-8">
+                    <div class="speciality-items">
+                        <h4 class="sub-title">Our expertise</h4>
+                        <h2 class="title">Our commitment <br> is client satisfaction </h2>
+                        <div class="d-grid mt-40">
+                            <ul class="list-style-two">
+                                <li>Translation </li>
+                                <li>Transcription</li>
+                                <li>Subtitling</li>
+                            </ul>
+                            <div class="progress-items">
+                                <div class="progress-box">
+                                    <h5>Translation</h5>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" data-width="70">
+                                            <span>70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress-box">
+                                    <h5>Transcription</h5>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" data-width="95">
+                                            <span>95%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress-box">
+                                    <h5>Subtitling</h5>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" data-width="95">
+                                            <span>75%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Speciality -->
+    <!-- Start Gallery 
+    ============================================= -->
+    <div class="gallery-style-one-area bg-gray default-padding d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-9">
+                    <div class="site-heading">
+                        <h4 class="sub-title">Case Studies</h4>
+                        <h2 class="title">Have a view of our amazing projects with our clients</h2>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-3">
+                    <div class="project-navigation-items">
+                        <!-- Navigation -->
+                        <div class="project-swiper-nav">
+                            <!-- Pagination -->
+                            <div class="project-pagination"></div>
+                            <div class="project-button-prev"></div>
+                            <div class="project-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fill">
+            <div class="row">
+                <div class="gallery-style-one-carousel swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="gallery-style-one">
+                                <img src="{{ asset('/assets/img/projects/5.jpg') }}" alt="Image Not Found">
+                                <div class="overlay">
+                                    <div class="info">
+                                        <h4><a href="project-details.html">Cyber Security</a></h4>
+                                        <span>Technology, IT</span>
+                                        <p>
+                                            Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature.
+                                        </p>
+                                    </div>
+                                    <a href="project-details.html">Explore <i class="fas fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="gallery-style-one">
+                                <img src="{{ asset('/assets/img/projects/6.jpg') }}" alt="Image Not Found">
+                                <div class="overlay">
+                                    <div class="info">
+                                        <h4><a href="project-details.html">IT Counsultancy</a></h4>
+                                        <span>Security, Firewall</span>
+                                        <p>
+                                            Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature.
+                                        </p>
+                                    </div>
+                                    <a href="project-details.html">Explore <i class="fas fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="gallery-style-one">
+                                <img src="{{ asset('/assets/img/projects/7.jpg') }}" alt="Image Not Found">
+                                <div class="overlay">
+                                    <div class="info">
+                                        <h4><a href="project-details.html">Analysis of Security</a></h4>
+                                        <span>Support, Tech</span>
+                                        <p>
+                                            Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature.
+                                        </p>
+                                    </div>
+                                    <a href="project-details.html">Explore <i class="fas fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                         <!-- Single Item -->
+                        <div class="swiper-slide">
+                            <div class="gallery-style-one">
+                                <img src="{{ asset('/assets/img/projects/8.jpg') }}" alt="Image Not Found">
+                                <div class="overlay">
+                                    <div class="info">
+                                        <h4><a href="project-details.html">Business Analysis</a></h4>
+                                        <span>Network, Error</span>
+                                        <p>
+                                            Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature.
+                                        </p>
+                                    </div>
+                                    <a href="project-details.html">Explore <i class="fas fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Gallery -->
+    <div class="services-content bg-white default-padding-bottom d-none d-md-block">
+        <div class="container">
+            <div class="about-style-one-items">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="thumb-style-one">
+                            <img src="{{ asset('/assets/img/about/1.avif') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 pl-50 pl-md-15 pl-xs-15">
+                        <div class="about-style-one-info">
+                            <div class="content">
+                                <h2 class="title">With a team of 200+ experts, we're fluent in over 100 languages and ready to help.</h2>
+                                <p>
+                                Increase the ease and effectiveness of your communication. Semantix offers linguistic solutions that are tailored to meet all of your company's needs.
+                                </p>
+                            </div>
+                            <ul class="card-list">
+                                <li>
+                                    <img src="{{ asset('/assets/img/icon/4.png') }}" alt="Image Not Found">
+                                    <h5>Award Winning Company</h5>
+                                </li>
+                                <li>
+                                    <h2>3.8 X</h2>
+                                    <h5>Economical growth </h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Start Testimonials 
+    ============================================= -->
+    <div class="testimonial-style-two-area bg-dark default-padding text-light bg-cover d-none" style="background-image: url({{ asset('/assets/img/shape/5.jpg') }});">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="testimonial-two-info">
+                        <div class="icon">
+                            <img src="{{ asset('/assets/img/quote.png') }}" alt="Image Not Found">
+                        </div>
+                        <h2>Over 50K clients and 5,000 projects across the globe.</h2>
+                        <div class="review-card">
+                            <h6>Excellent 10,260+ Reviews</h6>
+                            <div class="d-flex">
+                                <div class="icon">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8/5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 pl-60 pl-md-15 pl-xs-15">
+                    <div class="testimonial-style-two-carousel swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Single item -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-style-two">
+                                    <div class="item">
+                                        <div class="text-info">
+                                            <p>
+                                                “The accuracy and expertise of Translationwindows' medical translation service far above our expectations. The group ensured uniformity and clarity in all documents by precisely translating difficult medical content.
+                                            </p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="thumb">
+                                                <img src="{{ asset('/assets/img/team/v1.webp') }}" alt="Image Not Found">
+                                            </div>
+                                            <div class="info">
+                                                <h4>Matthew J. Wyman</h4>
+                                                <span>Office Manager</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single item -->
+                            <!-- Single item -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-style-two">
+                                    <div class="item">
+                                        <div class="text-info">
+                                            <p>
+                                                “Translationwindows offered quick and precise transcribing services to Mitchell, Sanders Law Firm. They are our first choice for legal transcriptions due to their dependability and meticulous attention to detail and professionalism.
+                                            </p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="thumb">
+                                                <img src="{{ asset('/assets/img/team/v2.webp') }}" alt="Image Not Found">
+                                            </div>
+                                            <div class="info">
+                                                <h4>Isabella Bu Spar</h4>
+                                                <span>Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+    
+    <div class="modal fade" id="langModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content rounded-5 overflow-hidden">
+                <div class="modal-body">
+                    <div class="row text-center">
+                        <div class="col">
+                            <h5>Your journey starts here—what’s your first language?</h5>
+                            <div class="flag-cont">
+                                <a href="javascript:;" class="usflag" onclick="setLanguage('english', '/')">
+                                    <img src="{{ asset('/assets/img/flag_us.avif') }}" alt="Translation windows empowering success in technology since 2014">English
+                                </a>
+                                <a class="spflag" onclick="setLanguage('español', '/es')" href="javascript:;">
+                                    <img src="{{ asset('/assets/img/flag_sp.avif') }}" alt="Translation windows empowering success in technology since 2014">Española
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Start Footer 
+    ============================================= -->
+<!--========== FOOTER ==========-->
+<footer class="bg-gray overflow-hidden">
+    <!-- CTA Starts -->
+    <div class="cta-bg pt-30 pb-30">
+      <div class="container space-2">
+        <div class="row justify-content-md-center align-items-md-center">
+          <div class="col-md-4 col-lg-4 d-none d-md-inline-block">
+            <img class="img-fluid" src="{{ asset ('/assets/img/cta-img.avif') }}" alt="">
+          </div>
+
+          <div class="col-md-8 col-lg-6 offset-lg-1">
+            <!-- Title -->
+            <div class="mb-5">
+              <h2 class="text-white mb-1">Start talking to us today</h2>
+              <p class="lead text-light">Contact for more information at <a href="mailto:sales@translationwindows.com">sales@translationwindows.com</a>.<br><a href="tel:(281) 205-3932">(281) 205-3932</a></p>
+            </div>
+            <!-- End Title -->
+
+            <!-- Button -->
+            <a class="btn btn-xs btn-light text-left mb-2 mb-md-0 mr-md-2" href="javascript:void(Tawk_API.toggle())">
+              <span class="media align-items-center">
+                <span class="fa fa-regular fa-headset fa-3x mr-3"></span>
+                <span class="d-block">
+                  <span class="d-block">Start Chat Now</span>
+                </span>
+              </span>
+            </a>
+            <!-- End Button -->
+
+            <!-- Button -->
+            <a class="btn btn-xs btn-light text-left mb-2 mb-md-0" href="tel:(281) 205-3932">
+              <span class="media align-items-center">
+                <span class="far fa-phone fa-3x mr-3"></span>
+                <span class="d-block">
+                  <span class="d-block">Call Now</span>
+                </span>
+              </span>
+            </a>
+            <!-- End Button -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End CTA Section -->
+        <div class="container">
+            <div class="f-items default-padding-footer">
+                <div class="row">
+    <div class="col-lg-4 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
+        <div class="f-item address">
+            <img src="{{ asset ('/assets/img/logo.png') }}" alt="Translationwindows">
+            <p>
+                We Don’t Just Translate Words — We Deliver What You Mean.
+            </p>
+            <ul>
+                <li><i class="far fa-map fa-1x mr-5"></i>19255 Park Row #205, Houston, TX 77084</li>
+                <li><i class="far fa-envelope fa-1x mr-5"></i><a href="mailto:sales@translationwindows.com" class="d-inline-block">sales@translationwindows.com</a></li>
+                <li><i class="far fa-phone fa-1x mr-5"></i><span class="d-inline-block"><a href="tel:(281) 205-3932">(281) 205-3932</a></span></li>
+            </ul>
+            <ul class="footer-social">
+                <li>
+                    <a href="https://www.facebook.com/translationwindows/">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/translationwindows/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="contact-address d-none">
+                <li>
+                    <p>Our Location</p>
+                    <h4>175 10h Street, Office 375 Berlin, Devolina 21562</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-2 col-md-6 footer-item">
+        <div class="f-item link">
+            <h4 class="widget-title">Quick Links</h4>
+            <ul>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li style="display: none"><a href="services.php">Services</a></li>
+                <li><a href="{{ url('how-it-works') }}">How It Works</a></li>
+                <li><a href="{{ url('faqs') }}">FAQs</a></li>
+                <li><a href="{{ url('contact-us') }}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 footer-item">
+        <div class="f-item link">
+            <h4 class="widget-title">Our Services</h4>
+            <ul>
+                <li><a href="{{ url('av-transcription') }}">Audio/Video Transcription</a></li>
+                <li><a href="{{ url('av-translation') }}">Audio/Video Translation</a></li>
+                <li><a href="{{ url('doc-translation') }}">Document Translation</a></li>
+                <li><a href="{{ url('subtitling') }}">Subtitling</a></li>
+                <li><a href="{{ url('prf-copyedit') }}">Proofreading & Copy-Editing</a></li>
+                <li><a href="{{ url('prftrans-ai') }}">Proofreading & Translation Of AI Content</a></li>
+                <li><a href="{{ url('ind-specservices') }}">Industry-Specific Services</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-2 col-md-6 footer-item">
+        <div class="f-item newsletter">
+            <h4 class="widget-title"> News & Media </h4>
+            <div class="f-item link">
+                <ul>
+                    <li><a href="{{ url('career') }}">Career</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <p>&copy; Copyright 2025. All Rights Reserved by <a href="https://translationwindows.com">Translationwindows</a></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="http://www.dmca.com/Protection/Status.aspx?ID=d8b9c6e6-a313-4c64-bc57-de07e82e7319" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=d8b9c6e6-a313-4c64-bc57-de07e82e7319"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+                        <img src="{{ asset ('/assets/img/tp-logo.webp') }}" alt="" class="tp-logo mx-3">
+                    </div>
+                    <div class="col-lg-3 text-end">
+                        <ul class="link-list">
+                            <li>
+                                <a href="{{ url('privacy') }}">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Bottom -->
+    </footer>
+
+<!--========== END FOOTER ==========-->
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script defer src="assets/js/jquery-3.6.0.min.js"></script>
+    <script defer src="assets/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/jquery.appear.js"></script>
+    <script defer src="assets/js/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/progress-bar.min.js"></script>
+    <script defer src="assets/js/isotope.pkgd.min.js"></script>
+    <script defer src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script defer src="assets/js/magnific-popup.min.js"></script>
+    <script defer src="assets/js/count-to.js"></script>
+    <script defer src="assets/js/jquery.nice-select.min.js"></script>
+    <script defer src="assets/js/validnavs.js"></script>
+    <script defer src="assets/js/gsap.js"></script>
+    <script defer src="assets/js/ScrollTrigger.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfaFIMqAAAAAOshYFGRpsZ8uLa0aPh6hZTRu7v-"></script>
+    <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.ready(function() {
+            grecaptcha.execute('6LfaFIMqAAAAAOshYFGRpsZ8uLa0aPh6hZTRu7v-', {action: 'submit'}).then(function(token) {
+                // Add your logic to submit to your backend server here.
+            });
+          });
+        }
+    </script>
+</body>
+</html>
