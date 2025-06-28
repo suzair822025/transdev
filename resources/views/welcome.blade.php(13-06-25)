@@ -1354,13 +1354,11 @@ paypal.Buttons({
                     success: function(resp) {
                        if(resp.request_submission > 0)
                        {
-                       /* Swal.fire({
+                        Swal.fire({
   title: "Thank You!",
   text: "Your quotation request has been successfully received! Thank you for reaching out to us. Our team will get back to you shortly with the details.",
   icon: "success"
-}); */
-        // Redirect to thank you page
-                    window.location.href = "https://translationwindows.com/thank-you";
+});
 $("#QuoteForm")[0].reset();
 
 setTimeout(function(){

@@ -15,7 +15,7 @@ if (isset($_POST['submitHeroReg'])) {
     $message = $_POST['message'];
 
     $allowedFileTypes = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'];
-    $maxFileSize = 5 * 1024 * 1024; // 5MB in bytes
+    $maxFileSize = 50 * 1024 * 1024; // 50MB in bytes
     $uploadOk = false;
     $uploadedFilePath = '';
     $fileError = '';
@@ -30,7 +30,7 @@ if (isset($_POST['submitHeroReg'])) {
         $fileExtension = strtolower(end($fileNameCmps));
 
         if ($fileSize > $maxFileSize) {
-            $fileError = 'File size exceeds the maximum allowed size of 2MB.';
+            $fileError = 'File size exceeds the maximum allowed size of 50MB.';
         } elseif (!in_array($fileExtension, $allowedFileTypes)) {
             $fileError = 'Invalid file type. Allowed types: pdf, doc, docx, jpg, jpeg, png.';
         } else {

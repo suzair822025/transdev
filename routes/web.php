@@ -8,7 +8,9 @@ use App\Http\Controllers\QuoteController;
 
 use App\Http\Controllers\SpanishcommonController;
 
-use App\Http\Controllers\SignupController;
+use App\Http\Controllers\LandingSignupController;
+
+use App\Http\Controllers\InquirySignupController;
 
 
 use DB;
@@ -82,5 +84,10 @@ Route::controller(QuoteController::class)->group(function () {
     Route::post('/svcontact', 'ContactUsActionS')->name('svcontact');
     Route::get('/test', 'EmailTest')->name('test');
 });
-Route::get('/landing', [SignupController::class, 'showForm'])->name('signup.form');
-Route::post('/signup', [SignupController::class, 'submitForm'])->name('signup.submit');
+Route::get('/landing', [LandingSignupController::class, 'showForm'])->name('landingsignup.form');
+Route::post('/signup', [LandingSignupController::class, 'submitForm'])->name('landingsignup.submit');
+Route::get('/inquiry', [InquirySignupController::class, 'showForm'])->name('inquiry.form');
+Route::post('/inquiry', [InquirySignupController::class, 'submitForm'])->name('inquiry.submit');
+Route::get('/thank-you', function () {
+    return view('thankyou');
+})->name('thankyou.page');

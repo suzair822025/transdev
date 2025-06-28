@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SignupFormMail extends Mailable
+class InquirySignupFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -21,8 +21,9 @@ class SignupFormMail extends Mailable
 
     public function build()
     {
-        $email = $this->view('emails.signup')
-                      ->subject('New Signup Form Submission');
+        $email = $this->subject('New Inquiry Signup')
+                      ->view('emails.inquirysignup')
+                      ->with(['data' => $this->data]);
 
         if ($this->file) {
             $email->attach($this->file->getRealPath(), [

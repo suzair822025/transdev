@@ -151,6 +151,7 @@
                 {{ session('lang') === 'es' ? 'No solo traducimos palabras, entregamos lo que quieres decir.' : 'We Don’t Just Translate Words — We Deliver What You Mean.' }}
             </p>
             <ul>
+                <li><i class="far fa-map fa-1x mr-5"></i>19255 Park Row #205, Houston, TX 77084</li>
                 <li><i class="far fa-envelope fa-1x mr-5"></i><a href="mailto:sales@translationwindows.com" class="d-inline-block">sales@translationwindows.com</a></li>
                 <li><i class="far fa-phone fa-1x mr-5"></i><span class="d-inline-block"><a href="tel:(281) 205-3932">(281) 205-3932</a></span></li>
             </ul>

@@ -11776,6 +11776,7 @@ nav.navbar.validnavs .navbar-collapse.collapse img.flags{display: flex; margin-b
  @media only screen and (max-width: 767px) {
 	
 	.hero-cont{margin-top: 0;}
+	.mobile-phone-wrapper{width: 100%;  margin-top: 10px; text-align: center ;}
 
 }
 
@@ -11899,6 +11900,8 @@ nav.navbar.validnavs .navbar-collapse.collapse img.flags{display: flex; margin-b
 	animation: shake 0.5s ease-in-out;
   }
 .phone-header{font-size: 1.3rem; color: #007bff;}
+.getquote-btn{padding:5px 15px;}
+
   @keyframes shake {
 	0% { transform: rotate(0); }
 	25% { transform: rotate(-10deg); }
