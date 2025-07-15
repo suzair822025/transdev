@@ -147,7 +147,6 @@
     <div class="col-lg-4 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
         <div class="f-item address">
             <img src="{{ asset ('/assets/img/logo.png') }}" alt="Image Not Found">
-            <span style="display: block; margin-top:-2rem; font-size:0.9rem">A product of Transinformatic LLC</span>
             <p>
                 {{ session('lang') === 'es' ? 'No solo traducimos palabras, entregamos lo que quieres decir.' : 'We Don’t Just Translate Words — We Deliver What You Mean.' }}
             </p>
@@ -287,11 +286,8 @@
     <script defer src="{{ asset ('assets/js/count-to.js') }}"></script>
     <script defer src="{{ asset ('assets/js/jquery.nice-select.min.js') }}"></script>
     <script defer src="{{ asset ('assets/js/validnavs.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-<!-- Load ScrollTrigger plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
+    <script defer src="{{ asset ('assets/js/gsap.js') }}"></script>
+    <script defer src="{{ asset ('assets/js/ScrollTrigger.min.js') }}"></script>
     <script defer src="{{ asset ('assets/js/main.js') }}"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-893KJ2R715"></script>

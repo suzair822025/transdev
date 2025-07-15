@@ -1,4 +1,4 @@
-@extends('layouts.landing-layout')
+@extends('layouts.app')
 @section('content')
 
     <!-- Start Banner Area 
@@ -695,8 +695,4 @@
             </div>
         </div>
     </div>
-    <!-- WhatsApp Button -->
-<a href="https://wa.me/12812053932?text=How%20can%20we%20help%20you!" class="whatsapp-float" target="_blank" rel="noopener">
-  <i class="fab fa-whatsapp"></i>
-</a>
 @endsection
