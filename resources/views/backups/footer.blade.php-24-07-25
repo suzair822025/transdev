@@ -271,9 +271,6 @@
   <i id="contactIcon" class="fa fa-envelope"></i>
   <span id="contactText">Contact Us</span>
 </button>
-<a href="https://wa.me/18328375503" class="whatsapp-float" target="_blank" rel="noopener">
-  <i class="fab fa-whatsapp"></i>
-</a>
 <!--========== END FOOTER ==========-->
 
 

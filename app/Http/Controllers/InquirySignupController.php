@@ -37,7 +37,7 @@ class InquirySignupController extends Controller
 
         Mail::to('sales@translationwindows.com')->send(new InquirySignupFormMail($validated, $file));
 
-        return redirect()->route('thankyou.page')->with('message', 'Thank you for your inquiry. We will get back to you shortly.');
+        return redirect()->route('thankyou.quote')->with('message', 'Thank you for your quote inquiry. We will get back to you shortly.');
 
     }
 }

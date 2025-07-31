@@ -14,6 +14,7 @@
                         <img src="{{ asset('/assets/img/logo-light.png') }}" class="logo logo-display" alt="TranslationWindows Logo">
                         <img src="{{ asset('assets/img/logo.png') }}" class="logo logo-scrolled" alt="TranslationWindows Logo">
                     </a>
+                    <span style="display: block;margin-top: 0;font-size:0.9rem">A product of Transinformatic LLC</span>
                 </div>
                 <!-- End Header Navigation -->
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -111,7 +112,7 @@
                     </div>
                 </div>
                 <div class="d-inline-block justify-content-end ms-lg-3 mt-lg-0 mt-sm-3 mobile-phone-wrapper">
-                    <a href="tel:(281) 205-3932"><span class="phone-header">(281) 205-3932</span></a>
+                    <a href="tel:(281) 205-3932"><span class="phone-header btn circle btn-gradient my-2">(281) 205-3932</span></a>
                 </div>
                 <!-- /.navbar-collapse -->
 

@@ -11935,7 +11935,7 @@ nav.navbar.validnavs .navbar-collapse.collapse img.flags{display: flex; margin-b
 .whatsapp-float i {
   margin-top: 2px;
 }
-
+.btn.phone-header{font-size: 1.0rem; padding:13px 20px;}
 
   @keyframes shake {
 	0% { transform: rotate(0); }
