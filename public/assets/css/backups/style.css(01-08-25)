@@ -10088,7 +10088,6 @@ ul.link-list li a {
 	.bg-gray .f-item.address::before {
 		display: none;
 	}
-	.hero-cont{background-image: url(../img/hero_bg_1280.avif); }
 }
 
 
@@ -11697,7 +11696,6 @@ button.rbutton {
 .homeslider-bg{background-image: url(../img/banner/translation-banner.avif); background-repeat: no-repeat; background-position: center;}
 @media only screen and (max-width: 767px) {
 	.homeslider-bg{background-image: none; background: var(--color-primary);}	
-	.hero-cont{background-image: url(../img/hero_bg_640.avif); }
 }
 .banner-area h2.slider-title1{opacity:1; visibility: visible; margin-top:15%; margin-bottom: 0;}
 .flag-cont {position: relative;	width: 100%; display: flex;  align-items: center; justify-content: center;}
@@ -11707,7 +11705,7 @@ button.rbutton {
 .cust-radios{max-width: 1.0rem; min-height: auto;}
 .homebann-subtitle{margin-top: -0.5rem; display: block;}
 .swiper-slide .mt-n4{margin-top: -2.5rem; display: block;}
-.hero-cont{background-image: url(../img/hero_bg_1920.avif); background-repeat: no-repeat; background-position: center; background-size: cover; margin-top: 87px; }
+.hero-cont{background-image: url(../img/hero_bg.avif); background-repeat: no-repeat; background-position: center; background-size: cover; margin-top: 87px; }
 .btn i.hero-ordr-btn{transform: none;}
 .popup-contactBtn {
 	position: fixed;
@@ -11778,7 +11776,7 @@ nav.navbar.validnavs .navbar-collapse.collapse img.flags{display: flex; margin-b
  @media only screen and (max-width: 767px) {
 	
 	.hero-cont{margin-top: 0;}
-	.mobile-phone-wrapper{width: 100%;  margin-bottom: 10px; text-align: center ;}
+	.mobile-phone-wrapper{width: 100%;  margin-top: 10px; text-align: center ;}
 
 }
 
@@ -11938,8 +11936,6 @@ nav.navbar.validnavs .navbar-collapse.collapse img.flags{display: flex; margin-b
   margin-top: 2px;
 }
 .btn.phone-header{font-size: 1.0rem; padding:13px 20px;}
-.slogan{  display: inline-block; font-size: 0.9rem;  margin-left: -1.5rem;}
-.navbar-header{display: flex; flex-direction: row; flex: 1 0;}
 
   @keyframes shake {
 	0% { transform: rotate(0); }

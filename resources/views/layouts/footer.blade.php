@@ -295,7 +295,14 @@
 <!-- Load ScrollTrigger plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script defer src="{{ asset ('assets/js/main.js') }}"></script>
+    <!-- <script defer src="{{ asset ('assets/js/main.js') }}"></script> -->
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var script = document.createElement('script');
+    script.src = "{{ asset('assets/js/main.min.js') }}";
+    document.body.appendChild(script);
+});
+</script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-893KJ2R715"></script>
     <!--Start of Tawk.to Script-->

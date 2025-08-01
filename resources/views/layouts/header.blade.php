@@ -36,6 +36,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NSBGK49H');</script>
     <!-- End Google Tag Manager -->
+     <link rel="preload" href="{{ asset('img/hero_bg_1280.avif') }}" as="image">
 </head>
 <!-- END HEAD -->
 
