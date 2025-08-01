@@ -145,18 +145,7 @@
 	 
 })(jQuery); // End jQuery
 
-// document.addEventListener("DOMContentLoaded", function() {
-// 	var myModal = new bootstrap.Modal(document.getElementById('langModal'));
-// 	//myModal.show();
-// });
-// function setLanguage(lang, url) {
-// 	//alert("Language selected: " + lang);
-// 	localStorage.setItem("selectedLanguage", lang); // Store language preference
-// 	localStorage.setItem("visitedUrl", url); // Store clicked url
-// 	var languageModal = bootstrap.Modal.getInstance(document.getElementById('langModal'));
-// 	languageModal.hide();
-// 	window.location.href = url;
-// }
+
 function smoothScroll(event, targetId) {
     event.preventDefault();
     document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
@@ -168,18 +157,7 @@ function smoothScroll(event, targetId) {
   const contactText = document.getElementById('contactText');
   const contactIcon = document.getElementById('contactIcon');
 
-  /* contactBtn.addEventListener('click', () => {
-    const isVisible = contactForm.classList.toggle('show');
 
-    // Toggle text and icon
-    if (isVisible) {
-      contactText.textContent = '';
-      contactIcon.className = 'fa fa-times';
-    } else {
-      contactText.textContent = 'Contact Us';
-      contactIcon.className = 'fa fa-envelope';
-    }
-  }); */  /// script for contact form in a popup ends here
 
 
  ////	langauge selector TopBar Starts	////
@@ -256,25 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-	// document.addEventListener('DOMContentLoaded', function () {
-    //     const serviceSelect = document.querySelector('select[name="service_type"]');
-    //     const extraInputs = document.querySelectorAll('.extra-inputs');
 
-    //     const triggerOptions = [
-    //         "Audio/Video Transcription",
-    //         "Audio/Video Translation",
-    //         "Document Translation"
-    //     ];
-
-    //     serviceSelect.addEventListener('change', function () {
-    //         const selected = this.value;
-    //         if (triggerOptions.includes(selected)) {
-    //             extraInputs.forEach(el => el.classList.remove('d-none'));
-    //         } else {
-    //             extraInputs.forEach(el => el.classList.add('d-none'));
-    //         }
-    //     });
-    // });
 
 	
 ////	Enable Translation Language Fields For Signup Form Ends	////
