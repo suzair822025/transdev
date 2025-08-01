@@ -88,9 +88,3 @@ Route::get('/landing', [LandingSignupController::class, 'showForm'])->name('land
 Route::post('/signup', [LandingSignupController::class, 'submitForm'])->name('landingsignup.submit');
 Route::get('/inquiry', [InquirySignupController::class, 'showForm'])->name('inquiry.form');
 Route::post('/inquiry', [InquirySignupController::class, 'submitForm'])->name('inquiry.submit');
-Route::get('/thank-you', function () {
-    return view('thankyou');
-})->name('thankyou.page');
-Route::get('/thank-you-quote', function () {
-    return view('thankyou-quote');
-})->name('thankyou.quote');

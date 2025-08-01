@@ -17,7 +17,7 @@
 
                 <div class="contact-style-one-info">
                     <h4 class="sub-title">Have Questions?</h4>
-                    <h2>Contact Information</h2>
+                    <h1>Contact Information</h1>
                     <p>
                         Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing.
                     </p>
@@ -28,7 +28,7 @@
                             </div>
                             <div class="content">
                                 <h5 class="title">Hotline</h5>
-                                <a href="">(254) 271-4094</a>
+                                <a href="">(281) 205-3932</a>
                             </div>
                         </li>
 
@@ -98,7 +98,7 @@
 <!-- Start Map 
 ============================================= -->
 <div class="maps-area bg-gray overflow-hidden">
-    <img src="{{ asset('assets/img/gmap.avif') }}" alt="" class="img-fluid">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.5604076675436!2d-95.70707042610658!3d29.790350130567962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d8ec33aa5237%3A0x4fded2f6beed9cb7!2s19255%20Park%20Row%20Blvd%20%23205%2C%20Houston%2C%20TX%2077084%2C%20USA!5e0!3m2!1sen!2s!4v1748540355686!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 <!-- End Map -->
 

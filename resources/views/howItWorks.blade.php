@@ -10,7 +10,7 @@
             <div class="col-lg-10 offset-lg-1">
                 <div class="site-heading text-center">
                     <h4 class="sub-title">How It Works</h4>
-                    <h2 class="title">Translation and Transcription Services</h2>
+                    <h1 class="title">Translation and Transcription Services</h1>
                 </div>
             </div>
         </div>

@@ -14,7 +14,6 @@
                         <img src="{{ asset('/assets/img/logo-light.png') }}" class="logo logo-display" alt="TranslationWindows Logo">
                         <img src="{{ asset('assets/img/logo.png') }}" class="logo logo-scrolled" alt="TranslationWindows Logo">
                     </a>
-                    <span style="display: block;margin-top: 0;font-size:0.9rem">A product of Transinformatic LLC</span>
                 </div>
                 <!-- End Header Navigation -->
                 <!-- Collect the nav links, forms, and other content for toggling -->

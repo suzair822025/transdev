@@ -29,12 +29,22 @@
     <!-- ========== End Stylesheet ========== -->
 
     @yield('style')
-    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NSBGK49H');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <!-- END HEAD -->
 
 <!-- BODY -->
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSBGK49H"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 <?php // include_once("analyticstracking.php") ?>
 @if (session()->has('registration'))
     <div class="alert alert-success alert-dismissable" style="position:fixed; z-index: 9999; left: 50%; -webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);" role="alert">

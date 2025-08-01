@@ -43,94 +43,94 @@
                 </div>
             @endif
         @endif
-		
-        <form action="{{ url('careers_add') }}" method="POST" id="careersForm" enctype="multipart/form-data">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="YourName">Name</label>
-                        <input type="text" class="form-control" id="Name" name="name" placeholder="Enter Full Name">
-                        <p class="text-danger">{{ $errors->first('name') }}</p>
+	    <div class="contact-form-style-one career-form">
+            <form action="{{ url('careers_add') }}" method="POST" id="careersForm" enctype="multipart/form-data">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="YourName">Name</label>
+                            <input type="text" class="form-control" id="Name" name="name" placeholder="">
+                            <p class="text-danger">{{ $errors->first('name') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="YourEmail">Email</label>
+                            <input type="email" class="form-control" id="Email" name="email" placeholder="">
+                            <p class="text-danger">{{ $errors->first('email') }}</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="YourEmail">Email</label>
-                        <input type="email" class="form-control" id="Email" name="email" placeholder="Enter Email Address">
-                        <p class="text-danger">{{ $errors->first('email') }}</p>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="YourEmail">Phone</label>
+                            <input type="tell" class="form-control" id="phone" name="phone" placeholder="" onkeypress="javascript:return isNumber(event)">
+                            <p class="text-danger">{{ $errors->first('phone') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="YourLanguage">Native Language</label>
+                            <input type="text" class="form-control" id="native-language" name="native_language" placeholder="">
+                            <p class="text-danger">{{ $errors->first('native_language') }}</p>
+                        </div>
                     </div>
                 </div>
-        	</div>
 
-        	<div class="row">
-        		<div class="col-md-4">
-        			<div class="form-group">
-                        <label for="YourEmail">Phone</label>
-                        <input type="tell" class="form-control" id="phone" name="phone" placeholder="Enter Phone" onkeypress="javascript:return isNumber(event)">
-                        <p class="text-danger">{{ $errors->first('phone') }}</p>
-                	</div>
-        		</div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="YourLanguage">Native Language</label>
-                        <input type="text" class="form-control" id="native-language" name="native_language" placeholder="Enter Native Language">
-                        <p class="text-danger">{{ $errors->first('native_language') }}</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="YourEmail" class="mb-4">Skills</label>
+                        <div class="clearfix"></div>
+                        <div class="checkbox-inline">
+                            <label class="font-lightweight">
+                                <input type="checkbox" name="skills[]" value="Audio/Video Translation"> Audio/Video Translation
+                            </label>
+                        </div>
+                        <div class="checkbox-inline">
+                            <label class="font-lightweight">
+                                <input type="checkbox" name="skills[]" value="Document Translation"> Document Translation
+                            </label>
+                        </div>
+                        <div class="checkbox-inline pl-3">
+                            <label class="font-lightweight">
+                                <input type="checkbox" name="skills[]" value="Transcription"> Transcription
+                            </label>
+                        </div>
                     </div>
                 </div>
-        	</div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="YourEmail" class="mb-4">Skills</label>
-                    <div class="clearfix"></div>
-                    <div class="checkbox-inline">
-                        <label class="font-lightweight">
-                            <input type="checkbox" name="skills[]" value="Audio/Video Translation"> Audio/Video Translation
-                        </label>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="file" id="docUpload" name="careerFile" style="visibility: hidden; position: absolute;" />
+                            <button class="btn-theme btn-theme-sm text-uppercase" id="OpendocUpload">Upload Resume</button>
+                            <br>
+                            <span id="fileName"></span>
+                            <p class="text-danger">{{ $errors->first('careerFile') }}</p>
+                        </div>
                     </div>
-                    <div class="checkbox-inline">
-                        <label class="font-lightweight">
-                            <input type="checkbox" name="skills[]" value="Document Translation"> Document Translation
-                        </label>
-                    </div>
-                    <div class="checkbox-inline pl-3">
-                        <label class="font-lightweight">
-                            <input type="checkbox" name="skills[]" value="Transcription"> Transcription
-                        </label>
+                    <div class="col-md-4">
+                        <div clsss="row">
+                            <button type="submit" id="careersForm_submit" class="btn-theme btn-theme-sm text-uppercase submit pull-right" id=""><i class="fa fa-paper-plane" aria-hidden="true" style="color: #fff"></i>Submit</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-        	<div class="row">
-        		<div class="col-md-4">
-	        		<div class="form-group">
-	            		<input type="file" id="docUpload" name="careerFile" style="visibility: hidden; position: absolute;" />
-                        <button class="btn-theme btn-theme-sm text-uppercase" id="OpendocUpload">Upload Resume</button>
-                        <br>
-                        <span id="fileName"></span>
-                        <p class="text-danger">{{ $errors->first('careerFile') }}</p>
-	            	</div>
-            	</div>
-            	<div class="col-md-4">
-        			<div clsss="row">
-
-                        <button type="submit" id="careersForm_submit" class="btn-theme btn-theme-sm text-uppercase submit pull-right" id=""><i class="fa fa-paper-plane" aria-hidden="true" style="color: #fff"></i>Submit</button>
-                    </div>
-            	</div>
-        	</div>
-
-        </form>
+            </form>
+        </div><!-- ..contact-form-style-one ends -->
     </div>
+    <!-- ..content-lg container space20p  ends -->
 </div>
 
 <!--========== END PAGE LAYOUT ==========-->
 @endsection
 
 @section('scripts')
-<script src="{{ asset('/assets/js/bootstrap-formavalidation.js') }}"></script>
-<script src="{{ asset('/assets/js/validation-forms.js') }}"></script>
-<!-- <script src="{{ asset('/assets/js/dropzone.js') }}" type="text/javascript"></script> -->
+<script src="{{ asset('/assets/js/bootstrap-formavalidation.js') }}" defer></script>
+<script src="{{ asset('/assets/js/validation-forms.js') }}" defer></script>
+<script src="{{ asset('/assets/js/dropzone.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/assets/js/scripts.js') }}"></script>
 
 <script>

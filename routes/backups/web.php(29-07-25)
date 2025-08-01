@@ -91,6 +91,3 @@ Route::post('/inquiry', [InquirySignupController::class, 'submitForm'])->name('i
 Route::get('/thank-you', function () {
     return view('thankyou');
 })->name('thankyou.page');
-Route::get('/thank-you-quote', function () {
-    return view('thankyou-quote');
-})->name('thankyou.quote');
