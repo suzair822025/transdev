@@ -147,7 +147,6 @@
     <div class="col-lg-4 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
         <div class="f-item address">
             <img src="{{ asset ('/assets/img/logo.png') }}" alt="Image Not Found">
-            <span style="display: block; margin-top:-2rem; font-size:0.9rem">A product of Transinformatic LLC</span>
             <p>
                 {{ session('lang') === 'es' ? 'No solo traducimos palabras, entregamos lo que quieres decir.' : 'We Don’t Just Translate Words — We Deliver What You Mean.' }}
             </p>
@@ -229,7 +228,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
-                        <p>&copy; Copyright 2025. All Rights Reserved by <a href="https://translationwindows.com">Translationwindows</a></p>
+                        <p>&copy; Copyright 2024. All Rights Reserved by <a href="https://translationwindows.com">Translationwindows</a></p>
                     </div>
                     <div class="col-lg-4">
                         <a href="http://www.dmca.com/Protection/Status.aspx?ID=d8b9c6e6-a313-4c64-bc57-de07e82e7319" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=d8b9c6e6-a313-4c64-bc57-de07e82e7319"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
@@ -271,9 +270,6 @@
   <i id="contactIcon" class="fa fa-envelope"></i>
   <span id="contactText">Contact Us</span>
 </button>
-<a href="https://wa.me/18328375503" class="whatsapp-float" target="_blank" rel="noopener">
-  <i class="fab fa-whatsapp"></i>
-</a>
 <!--========== END FOOTER ==========-->
 
 
@@ -290,11 +286,8 @@
     <script defer src="{{ asset ('assets/js/count-to.js') }}"></script>
     <script defer src="{{ asset ('assets/js/jquery.nice-select.min.js') }}"></script>
     <script defer src="{{ asset ('assets/js/validnavs.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-<!-- Load ScrollTrigger plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
+    <script defer src="{{ asset ('assets/js/gsap.js') }}"></script>
+    <script defer src="{{ asset ('assets/js/ScrollTrigger.min.js') }}"></script>
     <script defer src="{{ asset ('assets/js/main.js') }}"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-893KJ2R715"></script>
