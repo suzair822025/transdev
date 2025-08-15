@@ -23,7 +23,7 @@
                                     sizes="(max-width: 600px) 159px, (max-width: 1024px) 320px, 480px"
                                 />
                                 <img
-                                    src="{{ asset('assets/img/logo-sm-159w.webp') }}"
+                                    src="{{ asset('assets/img/logo-sm-159w.png') }}"
                                     alt="Translationwindows Logo"
                                     width="159"
                                     height="50"
@@ -38,7 +38,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <div class="collapse-header">
-                        <img src="{{ asset('assets/img/logo-sm-159w.webp') }}" alt="TranslationWindows Logo">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="TranslationWindows Logo">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-times"></i>
                         </button>

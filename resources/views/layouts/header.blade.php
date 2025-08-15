@@ -17,16 +17,26 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
      <!-- ========== Start Stylesheet ========== -->
-    <link href="{{ asset ('/assets/css/bootstrap.min.css') }}" rel="stylesheet" defer>
-    <link href="{{ asset ('/assets/css/font-awesome.min.css') }}" rel="stylesheet" defer>
-    <link href="{{ asset ('/assets/css/magnific-popup.css') }}" rel="stylesheet" defer>
-    <link href="{{ asset ('/assets/css/swiper-bundle.min.css') }}" rel="stylesheet" defer>
-    <link href="{{ asset ('/assets/css/animate.min.css') }}" rel="stylesheet" defer>
-    <link href="{{ asset ('/assets/css/validnavs.css') }}" rel="stylesheet" defer>
-    <link href="{{ asset ('/assets/css/helper.css') }}" rel="stylesheet" defer>
-    <link href="{{ asset ('/assets/css/unit-test.css') }}" rel="stylesheet" defer>
-    <link href="{{ asset ('/assets/css/style.css') }}" rel="stylesheet" defer>
-    <!-- ========== End Stylesheet ========== -->
+    <link rel="preload" href="{{ asset('/assets/css/bootstrap.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.min.css') }}"></noscript>
+     <link rel="preload" href="{{ asset('/assets/css/style.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}"></noscript>
+    @if (!request()->is('/'))
+    <link rel="preload" href="{{ asset('/assets/css/font-awesome.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ asset('/assets/css/font-awesome.min.css') }}"></noscript>
+    @endif
+    <!-- <link href="{{ asset ('/assets/css/magnific-popup.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('/assets/css/swiper-bundle.min.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="{{ asset('/assets/css/swiper-bundle.min.css') }}" rel="stylesheet"></noscript>
+    <link href="{{ asset('/assets/css/animate.min.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="{{ asset('/assets/css/animate.min.css') }}" rel="stylesheet"></noscript>
+    <link rel="preload" href="{{ asset('/assets/css/validnavs.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ asset('/assets/css/validnavs.css') }}"></noscript>
+    <link href="{{ asset('/assets/css/helper.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="{{ asset('/assets/css/helper.css') }}" rel="stylesheet"></noscript>
+    <link rel="preload" href="{{ asset('/assets/css/unit-test.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ asset('/assets/css/unit-test.css') }}"></noscript>
+    <!-- ========== End Stylesheet ========== --> 
 
     @yield('style')
     <!-- Google Tag Manager -->
@@ -36,7 +46,22 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NSBGK49H');</script>
     <!-- End Google Tag Manager -->
-     <link rel="preload" href="{{ asset('img/hero_bg_1280.avif') }}" as="image">
+    <link rel="preload" href="{{ asset('assets/img/hero_bg_1920.avif') }}" as="image" media="(min-width: 769px)" fetchpriority="high">
+    <link rel="preload" href="{{ asset('assets/img/hero_bg_640.avif') }}" as="image" media="(max-width: 768px)"  fetchpriority="high">
+    <link rel="preload" href="{{ asset('assets/img/hro_img.avif') }}" as="image" type="image/avif">
+    <style>
+        .lead { font-size: 1.25rem; font-weight: 300; }
+        .hero-cont {
+            background-image: url('{{ asset('assets/img/hero_bg_1920.avif') }}');
+            background-size: cover;
+            background-position: center;
+        }
+        @media (max-width: 768px) {
+            .hero-cont {
+                background-image: url('{{ asset('assets/img/hero_bg_640.avif') }}');
+            }
+        }
+    </style>     
 </head>
 <!-- END HEAD -->
 

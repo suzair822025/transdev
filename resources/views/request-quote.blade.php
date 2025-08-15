@@ -1,0 +1,1534 @@
+@extends('layouts.app')
+@section('content')
+<style>
+        #card-button-container{
+            margin-top: 12px;
+            display:none;
+        }
+        .service-container {
+  font-family: Arial, sans-serif;
+  width: 550px;
+  /* margin: 20px; */
+  margin-bottom:5px;
+}
+
+.question {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.service-options {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+.option {
+  flex: 1;
+  padding: 15px 20px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.option:last-child {
+  border-right: none;
+}
+
+.option h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #888;
+}
+
+.option p {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.option.selected {
+  background-color: #0a58ca;
+  color: white;
+}
+
+.option.selected h3 {
+  color: white;
+}
+
+.option.selected p {
+  color: #cde8f2;
+}
+.document-option-selection{
+    background-color:#ddd;
+    font-size:12px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+
+.professional-translation-document-option-selection{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+
+.special-price{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+.audiovideo-option-selection{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+.transcription-audiovideo-option-selection{
+    background-color:#ddd;
+    font-size:13px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+
+.estimated-delivery-info{
+    background-color:#ddd;
+    font-size:11px;
+    padding:2px;
+    color:black;
+    display:none;
+}
+.file-type-container{
+    display:none;
+}
+.container-pages{
+    display:none;
+}
+.container-words{
+    display:none;
+}
+.container-minutes{
+    display:none;
+}
+.translation-type-container{
+    display:none;
+}
+.order-summary{
+    display:none;
+}
+.dollar-one{
+    display:none;
+}
+.dollar-two{
+    display:none;
+}
+.row-text-estimated-delivery{
+    display:none;
+}
+.key-class{
+    font-size:14px;
+}
+.value-class{
+    font-weight:bold;
+    font-size:14px;
+}
+.row-text-total-count{
+    display:none;
+}
+</style>
+
+
+<div class="container" id="getquoteForm">
+    <div class="d-flex flex-column align-items-center justify-content-center">
+        <h4 class="sub-title mb-1">Simple Procedure for Online Orders</h4>
+    </div>
+    <div class="about-style-one-items" style="margin-top:5rem;">
+        <div class="row">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7">
+                    <!-- <h2>Get a Quote & Place Your Order</h2> -->
+                    <form id="QuoteForm">
+                        <input type="hidden" name="lang_type" class="lang-type-class" value="{{ session('lang') === 'es' ? 'es' : 'en' }}" />
+
+
+                        <input type="hidden" name="service_type_amount" class="service-type-amount" value="0" />
+                        <input type="hidden" name="number_of_pages_anount" class="number-of-pages-amount" value="0" />
+                        <input type="hidden" name="estimated_delivery_amount" class="estimated-delivery-amount" value="0" />
+                        <input type="hidden" name="sum_of_all_amount" class="sum-of-all-amount" value="0" />
+                        <input type="hidden" name="main_service_type" class="main-service-type" value="1" />
+                    
+                        <input type="hidden" name="request_reference" value="{{$randomString}}" />
+
+                        <input type="hidden" name="number_of_word_anount" class="number-of-word-amount" value="0" />
+
+                        <input type="hidden" name="number_of_minute_anount" class="number-of-minute-amount" value="0" />
+
+                        <!-- <div class="row">
+
+                        <div class="col-md-12">
+
+                        <div class="service-container">
+                            <p class="question">What type of service do you need?</p>
+                            <div class="service-options">
+                                <div class="opt-cls option selected" data-id="1">
+                                <h3>Certified Translation</h3>
+                                <p>Certified, sworn, notarised and legalised translations, acceptable globally.</p>
+                                </div>
+                                <div class="opt-cls option" data-id="2">
+                                <h3>Professional Translation</h3>
+                                <p>Standard, regular translation for individual and business use.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        </div>
+
+                        </div>
+                        -->
+                        <div class="col-md-6" style="display:none;">
+                                <label>Who You Are: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline"><input type="radio" name="who_name" value="1" checked /> Individual</label>
+                                <label class="radio-inline"><input type="radio" name="who_name" value="2" /> Business Customer</label>
+                                <label class="radio-inline"><input type="radio" name="who_name" value="3" /> Translator</label>
+                            </div>
+                        <div class="row">
+                            
+
+
+                            <div class="col-md-6">
+                                <label class="w-100">Service Type: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="1" required> <span class="">Translate  <span class="starting-from"></span> </span></label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="service-type-cls w-100 align-middle cust-radios" name="service_type" value="2" required> <span class="">Transcribe <span class="starting-from"></span> </span></label>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-md-12 translation-type-container">
+                                    <label class="w-100">Translation Type: <span style="color:red;">*</span></label><br>
+                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="1" required> <span class="">Certified <span class="starting-from"></span> </span></label>
+                                    <label class="radio-inline d-md-inline d-block"><input type="radio" class="translation-type-cls w-100 align-middle cust-radios" name="translation_type" value="2" required> <span class="">Professional <span class="starting-from"></span> </span></label>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                                
+                                <div class="col-md-12 file-type-container">
+                                    <label class="w-100">File Type: <span style="color:red;">*</span></label><br>
+                                    <span class="doptintranscribe">
+                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="1" required> <span class="">Document   <span class="starting-from"></span> </span></label>
+                                    </span>
+                                    <span class="audioandvideocontainer">
+                                        <label class="radio-inline d-md-inline d-block"><input type="radio" class="file-type-cls w-100 align-middle cust-radios" name="file_type" value="2" required> <span class="">Audio / Video <span class="starting-from"></span> </span></label>
+                                    </span>       
+                                    
+
+                                    <div class="professional-translation-document-option-selection bg-warning p-2">Your translation is completed on our letterhead, and accompanied by a Statement of Accuracy, our stamp, signature and contact details. This is the most popular option for all certified translations.<br><br>Please enter the number of words below you need to translate. Price Starting at <strong>$0.05</strong> per word. </div>
+                                    <div class="document-option-selection bg-warning p-2"><strong>Standard Certified Translation:</strong><br>Your translation is completed on our letterhead, and accompanied by a Statement of Accuracy, our stamp, signature and contact details. This is the most popular option for all certified translations.<br><br>Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at <strong>$20</strong>.<br><br><strong>Supported file types:</strong> docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff & gif.</div>
+                                    <div class="audiovideo-option-selection bg-warning p-2"><strong>Bring Your Voice to the World</strong><br>Whether it’s a podcast, interview, or video presentation, we translate your audio and video content so it connects with audiences everywhere. Our team blends accuracy with cultural insight to make sure your message feels just right—no matter the language.<br><br><strong>Supported Audio/Video Formats</strong><br>Audio: MP3, WAV, M4A, AAC, OGG<br>Video: MP4, MOV, AVI, WMV, MKV, FLV<br><br>Audio and video translations starting at just <strong>$2</strong> per minute.</div>
+                                    <div class="transcription-audiovideo-option-selection bg-warning px-3d p-2"><strong>Reliable Transcriptions You Can Trust</strong><br>We turn your audio and video into clear, accurate text—fast and handled by real people who care about getting every word right.<br><br>Audio and video transcription starting at just <strong>$1</strong> per minute.</div>
+                                </div>
+                        </div>
+                        
+
+                        <div class="row mt-2">
+                            <div class="col-md-6 translate-from-container">
+                                <label>Translate From: <span style="color:red;">*</span></label>
+                                <select name="translate_from" class="translate-from-select-class form-control form-select" required disabled>
+                                    <option value="" selected>Select Language</option>
+                                    @forelse($languages as $l)
+                                    <option value="{{$l->id}}">{{$l->name}}</option>
+                                    @empty
+                                    @endforelse
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Translate To: <span style="color:red;">*</span></label>
+                                <select name="translate_to" class="translate-to-select-class form-control form-select" required disabled>
+                                <option value="" selected>Select Language</option>
+                                    @forelse($languages as $l)
+                                    <option value="{{$l->id}}">{{$l->name}}</option>
+                                    @empty
+                                    @endforelse
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6 container-pages">
+                                <label>Number of Pages: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Please enter the number of pages below you need to translate. Each page contains approximately 250 words, and pricing starts at $20."><i class="fa fa-info-circle"></i></span></label>
+                                <div class="input-group">
+                                <input type="number" name="page_number" class="page-number-clse form-control" placeholder="Enter number of pages" required disabled>
+                                <span class="input-group-text">Pages</span>
+                                </div>
+                                <span>1 page = 250 words max</span>
+                                <div class="special-price">You're eligible for our special pricing! Simply request a quote, and our team will reach out to discuss the details with you.</div>
+
+                            </div>
+
+                            <div class="col-md-6 container-words">
+                                <label>Number of Words: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Starting at $0.05 per word."><i class="fa fa-info-circle"></i></span></label>
+                                <div class="input-group">
+                                <input type="number" name="number_of_words" class="words-number-clse form-control" placeholder="Enter number of words" required disabled>
+                                <span class="input-group-text">Words</span>
+                                </div>
+                                <span>Starting at $0.05 per word.</span>
+                            </div>
+
+                            <div class="col-md-6 container-minutes">
+                                <label>Number of Minutes: <span style="color:red;">*</span> 
+                                <span data-toggle="tooltip" class="dollar-one" data-placement="top" title="Audio and video transcription starting at just $1 per minute."><i class="fa fa-info-circle"></i></span>
+                                <span data-toggle="tooltip" class="dollar-two" data-placement="top" title="Audio and video translation starting at just $2 per minute."><i class="fa fa-info-circle"></i></span>
+                            
+                            </label>
+                                <div class="input-group">
+                                <input type="number" name="number_of_minutes" class="minutes-number-clse form-control" placeholder="Enter number of minutes" required disabled>
+                                <span class="input-group-text">Minutes</span>
+                                </div>
+                                <span class="dollar-one">Starting at $1 per minute.</span>
+                                <span class="dollar-two">Starting at $2 per minute.</span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Upload File: <span style="color:red;">*</span> <span data-toggle="tooltip" data-placement="top" title="Our word count tool checks supported file types and estimates the number of words or pages. One page is about 250 words. Please review the word count before placing your order. If our project managers find major differences in the count, they may contact you to update your quote. Supported file types: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff."><i class="fa fa-info-circle"></i></span></label>
+                                <input type="file" name="file_name" class="file-upload-cls form-control"  required disabled>
+                                <div id="uploadStatus" class="mt-3"></div>
+                                <!-- <span>File Upload info </span> -->
+                                <div class="download-container"></div>
+                                <input type="hidden" name="file_id" class="record-file-id" value="0" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="w-100">Estimated Delivery: <span style="color:red;">*</span></label><br>
+                                <label class="radio-inline d-md-inline d-blockw-25"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="1" required disabled> Standard</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="2" required disabled> Priority</label>
+                                <label class="radio-inline d-md-inline d-block"><input type="radio" class="delivery-type-cls w-100 align-middle cust-radios" name="delivery_type" value="3" required disabled> Urgent</label>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>&nbsp;</label>
+                                    <div class="estimated-delivery-info bg-warning px-3 fw-bold"></div>
+
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label>Name: <span style="color:red;">*</span></label>
+                                <input type="text" class="form-control customer-name-class" name="customer_name" placeholder="Enter your name" required disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label>Email: <span style="color:red;">*</span></label>
+                                <input type="email" class="form-control email-address-class" name="email" placeholder="Enter your email" required disabled>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Phone: <span style="color:red;">*</span></label>
+                                <input type="text" class="form-control phone-number-class" name="phone"  pattern="^\(\d{3}\) \d{3}-\d{4}$" placeholder="(123) 456-7890"  required disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label>Comments:</label>
+                                <textarea class="form-control comments-class" name="comments" rows="3" placeholder="Enter your comments" disabled></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col mt-3">
+                            <div class="order-summary p-3 bg-light">
+                                <h4>Quote Summary</h4>
+                                <div class="form-invoice">
+                                    
+                                <div class="row"><div class="col-md-6 key-class fw-bold text-primary">Service Type: </div><div class="value-class col-md-6 main-service-text-class"></div></div>
+
+                                <div class="row row-text-translation-type"><div class="col-md-6 key-class fw-bold text-primary">Translation Type: </div><div class="value-class col-md-6 service-type-text-class"></div></div>
+
+                                <div class="row row-text-page-count"><div class="col-md-6 key-class fw-bold text-primary">Page Count: </div><div class="value-class col-md-6 page-count-text-class"></div></div>
+
+                                <div class="row row-text-word-count"><div class="col-md-6 key-class fw-bold text-primary">Word Count: </div><div class="value-class col-md-6 word-count-text-class"></div></div>
+
+                                <div class="row row-text-minutes-count"><div class="col-md-6 key-class fw-bold text-primary">Minutes Count: </div><div class="value-class col-md-6 minutes-count-text-class"></div></div>
+
+                                <div class="row row-text-estimated-delivery">
+                                    <div class="col-md-6 key-class fw-bold text-primary">Estimated Delivery: </div>
+                                    <div class="col-md-6 value-class estimated-delivery-text-class"></div>
+                                </div>
+                                
+                                <div class="row row-text-total-count border-bottom border-1 border-dark my-4"><div class="col-md-6 key-class fw-bold text-dark">Total Amount: </div><div class="value-class col-md-6 total-count-text-class">$0</div></div>
+
+                                <!-- <span class="service-type"><strong>Service Type:</strong> <span class="service-type-container" style="color:#246bfd;"></span></span><br />
+                                <span class="inv-translation-type-text-container" style="display:none;"><strong>Translation Type:</strong> <span class="inv-translation-type" style="color:#246bfd;"></span></span><br />
+                                <span><strong>Pages Count : </strong> <span class="pages-count">$0.00</span></span><br />
+                                <span><strong>Word Count : </strong> <span class="word-count">$0.00</span></span><br />
+                                <span><strong>Minutes Count : </strong> <span class="minutes-count">$0.00</span></span> -->
+
+                                </div>
+                                <hr />
+                                <!-- <button type="button" class="btn-form-submit btn btn-primary w-100" style="" disabled>Place Order</button> -->
+                                
+                                <!-- <p><strong>Download Link:</strong> <a href="javascript:;" class="uploaded-file-url" style="display:none;" target="_blank">Download File</a></p>
+                                <p><strong>Estimated Delivery:</strong> <span class="delivery-time">$0.00</span></p>
+                                <p><strong>Total Amount:</strong> <span class="total-amount">$0.00</span></p>        -->
+                                
+                                <!-- <div id="paypal-button-container" data-id="0"></div> -->
+                                <!-- <div id="card-button-container"  data-id="0"></div>
+                                <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.</div> -->
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <button type="button" class="btn-form-submit btn btn-primary w-100" style="" disabled>Place Order</button>
+                            
+                                <div id="card-button-container"  data-id="0"></div>
+                                <div class="alert alert-success success-msg" style="display:none;font-size: 20px;font-family: ui-serif;"><h3 style="font-family: ui-serif;text-align:center;color:#3c763d;">Thank You</h3>Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.</div>
+                            
+                            </div>
+                        </div>
+
+                        <input type="submit" id="HiddenSubmit" style="display:none;" /> 
+                        <div class="text-center mt-4">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 d-none">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- <script src="https://sandbox.paypal.com/sdk/js?client-id=AcHr6j-cjCKAsuABcrFWm1i1HGstx6cKl_GfNie-Peskv3QVzmxAEjqr1g6rvgoj6LI-RaH5Hmmvc8A5&currency=USD"></script> -->
+<script src="https://www.paypal.com/sdk/js?client-id=AQxI5F0BCYKClrnjgsOWSaeTq2PKCxsf8YtwWrYgSrE9MB2eeVJR1lY1EanXfK06LmO9qhAZI5gB6qNj&currency=USD"></script>
+@section('scripts')
+<script defer>
+document.addEventListener("DOMContentLoaded", function() {
+    $(function() {
+        console.log("jQuery is ready in Request Quote page");
+        // Your page-specific JS here
+    });
+
+
+   
+//$('[data-toggle="tooltip"]').tooltip(); 
+
+paypal.Buttons({
+    fundingSource: paypal.FUNDING.CARD, // Card payment button
+    style: {
+        layout: 'vertical',
+        color: 'black', // Allowed values: 'black' or 'white'
+        shape: 'rect',
+        label: 'pay'
+    },
+    createOrder: function(data, actions) {
+        return actions.order.create({
+            purchase_units: [{
+                amount: {
+                    value: parseFloat($(".sum-of-all-amount").val())  // Payment amount in USD
+                }
+            }],
+            application_context: {
+                shipping_preference: "NO_SHIPPING" // Explicitly disable shipping
+            }
+        });
+    },
+    onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+
+            Swal.fire({
+  title: "Thank You!",
+  text: "Your order has been successfully placed! Thank you for choosing us. Our translation agent will reach out to you shortly.",
+  icon: "success"
+});
+
+            let payerName = details.payer.name.given_name + " " + details.payer.name.surname;
+            let payerEmail = details.payer.email_address;
+            let payerID = details.payer.payer_id;
+            let transactionID = details.id;
+            let status = details.status;
+            let purchaseAmount = details.purchase_units[0].amount.value;
+            let currencyCode = details.purchase_units[0].amount.currency_code;
+            let createTime = details.create_time;
+            let updateTime = details.update_time;
+            let RequestID = $("#card-button-container").attr("data-id");
+
+            $.ajax({
+                type:'POST',
+                url:"{{route('savepaymentinfo')}}",
+                data:{
+                    payerName:payerName,
+                    payerEmail:payerEmail,
+                    payerID:payerID,
+                    transactionID:transactionID,
+                    status:status,
+                    purchaseAmount:purchaseAmount,
+                    currencyCode:currencyCode,
+                    createTime:createTime,
+                    updateTime:updateTime,
+                    RequestID:RequestID
+                }
+            }).done(function(resp){
+                    // console.log(resp);
+
+                    
+
+                    $("#card-button-container").hide();
+
+                    $(".success-msg").show();
+
+                    $("#QuoteForm")[0].reset();
+
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
+
+                    setTimeout(function(){
+
+                        location.reload();
+
+                    },3000);
+
+                    // $("#QuoteForm input[type='file']").val('');
+                    // $("#uploadStatus").hide();
+                    // $(".file-upload-cls").removeAttr("disabled");
+                    // $(".service-type-container").text('');
+                    // $(".pages-count").text('');
+                    // $(".uploaded-file-url").attr("javascript:;");
+                    // $(".uploaded-file-url").hide();
+                    // $(".delivery-time").text('');
+                    // $(".total-amount").text('');
+                    
+
+
+            }).fail(function(resp){
+                console.log(resp);
+            });
+            
+            console.log("Request Id:", RequestID);
+            console.log("Payer Name:", payerName);
+            console.log("Payer Email:", payerEmail);
+            console.log("Payer ID:", payerID);
+            console.log("Transaction ID:", transactionID);
+            console.log("Status:", status);
+            console.log("Purchase Amount:", purchaseAmount);
+            console.log("Currency Code:", currencyCode);
+            console.log("Create Time:", createTime);
+            console.log("Update Time:", updateTime);
+        });
+    },
+    onError: function(err) {
+        console.error('Error during transaction:', err);
+    }
+}).render('#card-button-container');
+
+
+/*paypal.Buttons({
+            
+            style: {
+                layout: 'vertical',
+                color: 'blue',
+                shape: 'rect',
+                label: 'pay'
+            },
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: parseFloat($(".sum-of-all-amount").val()) // Set the payment amount
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    //alert('Transaction completed by ' + details.payer.name.given_name);
+                    // console.log(details); // Log transaction details
+            let payerName = details.payer.name.given_name + " " + details.payer.name.surname;
+            let payerEmail = details.payer.email_address;
+            let payerID = details.payer.payer_id;
+            let transactionID = details.id;
+            let status = details.status;
+            let purchaseAmount = details.purchase_units[0].amount.value;
+            let currencyCode = details.purchase_units[0].amount.currency_code;
+            let createTime = details.create_time;
+            let updateTime = details.update_time;
+            let RequestID = $("#paypal-button-container").attr("data-id");
+
+            $.ajax({
+                type:'POST',
+                url:"{{route('savepaymentinfo')}}",
+                data:{
+                    payerName:payerName,
+                    payerEmail:payerEmail,
+                    payerID:payerID,
+                    transactionID:transactionID,
+                    status:status,
+                    purchaseAmount:purchaseAmount,
+                    currencyCode:currencyCode,
+                    createTime:createTime,
+                    updateTime:updateTime,
+                    RequestID:RequestID
+                }
+            }).done(function(resp){
+                    console.log(resp);
+            }).fail(function(resp){
+                console.log(resp);
+            });
+            
+            console.log("Request Id:", RequestID);
+            console.log("Payer Name:", payerName);
+            console.log("Payer Email:", payerEmail);
+            console.log("Payer ID:", payerID);
+            console.log("Transaction ID:", transactionID);
+            console.log("Status:", status);
+            console.log("Purchase Amount:", purchaseAmount);
+            console.log("Currency Code:", currencyCode);
+            console.log("Create Time:", createTime);
+            console.log("Update Time:", updateTime);
+                });
+            },
+            onError: function(err) {
+                console.error('Error processing payment', err);
+            }
+        }).render('#paypal-button-container');
+*/
+   $(document).ready(function(){
+
+
+    function EstimatedDeliveryInitital()
+    {
+
+    }
+
+    function TranslationTypeInitial()
+    {
+        /** Page **/
+        $(".container-pages").hide();
+
+        $(".page-number-clse").removeAttr("required");
+
+        $(".page-number-clse").val('');
+
+        $(".row-text-page-count").hide();
+
+        /** Words **/
+        $(".container-words").hide();
+
+        $(".words-number-clse").removeAttr("required");
+
+        $(".words-number-clse").val('');
+
+        $(".row-text-word-count").hide();
+
+        /** Minutes **/
+        $(".container-minutes").hide();
+
+        $(".minutes-number-clse").removeAttr("required");
+
+        $(".minutes-number-clse").val('');
+
+        $(".row-text-minutes-count").hide();
+
+        $(".dollar-one").hide();
+
+        $(".dollar-two").hide();
+
+
+        $(".translate-from-select-class").attr("disabled",true);
+
+        $(".translate-to-select-class").attr("disabled",true);
+
+        $(".translate-from-container").show();
+
+        
+    }
+
+    function ServiceTypeInitial()
+    {
+        $(".translation-type-cls").prop("checked", false);
+
+        $(".row-text-translation-type").hide();
+
+        $(".translation-type-cls").attr("required",true);
+
+        $(".translate-from-container").show();
+
+        $(".translate-from-select-class").attr("required",true);
+
+        
+
+        TranslationTypeInitial();
+    }
+
+    
+
+    function AppendContent(Element,Content)
+    {
+        $(Element).text(Content);
+        // $(document).find(Element).remove();
+        // var html = $(".form-invoice").html();
+        // html += Content;
+        // $(".form-invoice").html(html);
+    }
+
+
+
+    $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+        function Total()
+        {
+            var servicetype = parseInt($(".service-type-amount").val());
+            var pagecount = parseInt($(".number-of-pages-amount").val());
+            var wordcount = parseInt($(".number-of-word-amount").val());
+            var minutecount = parseInt($(".number-of-minute-amount").val());
+
+            var estimateddelivery = parseInt($(".estimated-delivery-amount").val());
+
+            var sum = servicetype + pagecount + wordcount + minutecount;
+
+            $(".sum-of-all-amount").val(sum);
+
+            $(".total-count-text-class").text("$"+sum.toFixed(2));
+            
+        }
+    
+        $(document).on('click','.btn-form-submit',function(){
+
+            if ($("#QuoteForm")[0].checkValidity()) {
+            
+                $(".btn-form-submit").text("Processing...");
+
+                
+                $.ajax({
+                    url: "{{ route('saverequest') }}", // Laravel route
+                    type: "POST",
+                    data: $("#QuoteForm").serialize(),
+                    // processData: false,
+                    // contentType: false,
+                    // beforeSend: function() {
+                    //     $("#uploadStatus").html("<p class='text-info'>Uploading...</p>");
+                    // },
+                    success: function(resp) {
+                       if(resp.request_submission > 0)
+                       {
+                       /* Swal.fire({
+  title: "Thank You!",
+  text: "Your quotation request has been successfully received! Thank you for reaching out to us. Our team will get back to you shortly with the details.",
+  icon: "success"
+}); */
+        // Redirect to thank you page
+                    window.location.href = "https://translationwindows.com/thank-you";
+$("#QuoteForm")[0].reset();
+
+setTimeout(function(){
+
+location.reload();
+
+},3000);
+
+                       }
+                       else{
+                       $("#card-button-container").attr("data-id",resp.request_id);
+                       $("#card-button-container").show();
+                       }
+                       $(".btn-form-submit").hide();
+                       $(".btn-form-submit").text("Place Order");
+                    },
+                    error: function(xhr) {
+                        $(".btn-form-submit").text("Place Order");
+                        if($(".translation-type-cls:checked").val() == 2 || $(".page-number-clse").val() > 10){$(".btn-form-submit").text("Request a Quote");}
+                        //$("#uploadStatus").html("<p class='text-danger'>Error: " + xhr.responseText + "</p>");
+                    }
+                });
+
+
+                } else {
+
+                    $(".btn-form-submit").text("Place Order");
+                    if($(".translation-type-cls:checked").val() == 2 || $(".page-number-clse").val() > 10){$(".btn-form-submit").text("Request a Quote");}
+                    $("#HiddenSubmit").trigger("click");
+                }
+
+        });
+
+        $(".file-upload-cls").change(function() {
+            $(".uploaded-file-url").hide();
+                var formData = new FormData();
+                var fileInput = this.files[0]; // Get the selected file
+
+                if (!fileInput) {
+                    $("#uploadStatus").html("<p class='text-danger'>Please select a file.</p>");
+                    return;
+                }
+                var ReqRef = $("input[name=request_reference]").val();
+                formData.append("request_reference", ReqRef);
+                formData.append("file_name", fileInput);
+               // formData.append("_token", "{{ csrf_token() }}"); // Laravel CSRF Token
+
+                $.ajax({
+                    url: "{{ route('uploadfile') }}", // Laravel route
+                    type: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function() {
+                        $("#uploadStatus").html("<p class='text-info'>Uploading...</p>");
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            // $(".uploaded-file-url").attr("href",response.file_path);
+                            // $(".uploaded-file-url").show();
+                            $(".record-file-id").val(response.file_id);
+                            var html =`<p><a href="${response.file_path}" class="attached-file-${response.file_id} upl-filename" target="_blank">${response.displayname}</a>&nbsp;&nbsp;<a href="javascript:;" data-id="${response.file_id}" class="remove-attached-file" style="color:red;font-weight:bolder;"><i class="far fa-trash"></i></a></p>`;
+                            $(".download-container").append(html);
+                            if(response.file_id > 0)
+                        {
+                            $(".file-upload-cls").removeAttr("required");
+                            // $(".file-upload-cls").attr("disabled",true);
+                            $(".file-upload-cls").val('');
+                            $(".delivery-type-cls").removeAttr("disabled");
+                        }
+                            $("#uploadStatus").html("<p class='text-success mb-1'>" + response.message + "</p>");
+                        } else {
+                            $("#uploadStatus").html("<p class='text-danger'>" + response.message + "</p>");
+                        }
+                    },
+                    error: function(xhr) {
+                        //$("#uploadStatus").html("<p class='text-danger'>Error: " + xhr.responseText + "</p>");
+                        $("#uploadStatus").html("<p class='text-danger'>The uploaded file type is not supported. Supported file types are: docx, doc, xlsx, pptx, txt, xliff, csv, xml, html, pdf, json, bmp, pnm, png, jfif, jpeg, tiff.</p>");
+                    }
+                });
+            });
+
+        $(".translation-type-cls").click(function(){
+
+            TranslationTypeInitial();
+
+            $(".row-text-translation-type").show();
+
+            // $(".container-pages").show();
+            $(".audioandvideocontainer").show();
+            $(".document-option-selection").hide();
+            $(".audiovideo-option-selection").hide();
+            $('.file-type-cls[value="1"]').prop('checked', false);
+            $(".professional-translation-document-option-selection").hide();
+            //$(".container-minutes").hide();
+
+            $(".file-type-container").show();
+            //file type hide 1
+
+
+            var id = $(this).val();
+
+            if(id == 1)
+        {
+
+            $(".container-pages").show();
+
+            $(".page-number-clse").attr("required",true);
+
+            
+
+            $(".audioandvideocontainer").hide();
+
+            $('.file-type-cls[value="1"]').prop('checked', true);
+
+            $(".document-option-selection").show();
+
+            AppendContent(".service-type-text-class","Certified");
+
+            $(".btn-form-submit").text("Place Order");
+            if($(".translation-type-cls:checked").val() == 2 || $(".page-number-clse").val() > 10){$(".btn-form-submit").text("Request a Quote");}
+
+            $(".translate-from-select-class").removeAttr("disabled");
+
+            // $(".translate-to-select-class").removeAttr("disabled");
+
+
+        }
+
+            if(id == 2)
+            {
+                //$(".container-words").show();
+                // $(".container-pages").hide();
+               AppendContent(".service-type-text-class","Professional");
+
+               $(".btn-form-submit").text("Request a Quote");
+
+               
+            }
+
+
+            
+
+        });  
+
+        $(".service-type-cls").click(function(){
+
+            ServiceTypeInitial();
+
+            $(".order-summary").show();
+
+            /* initialize */
+            
+            
+
+            $(".document-option-selection").hide();
+
+            $(".audiovideo-option-selection").hide();
+
+            $(".transcription-audiovideo-option-selection").hide();
+
+            $(".professional-translation-document-option-selection").hide();
+
+            $(".file-type-cls").prop("checked", false);
+
+            
+
+            $(document).find(".translation-type-container").hide();
+
+            // $(".container-pages").show();
+
+            
+
+             /* initialize */
+
+            var serviceAmount = 0;
+            var serviceType = $(this).val();
+            var text = "";
+            if(serviceType == 1)
+            {
+                text = "Translate";
+                serviceAmount = 0;
+                $(document).find(".doptintranscribe").show();
+                $(document).find(".translation-type-container").show();
+                $(".file-type-container").hide();
+                //file type hide 3
+                
+            }
+            if(serviceType == 2)
+            {
+                text = "Transcribe";
+                serviceAmount = 0;
+                $(document).find(".doptintranscribe").hide();
+                $('.file-type-cls[value="2"]').prop('checked', true);
+                $(".transcription-audiovideo-option-selection").show();
+                //$(".container-minutes").show();
+                // $(".container-pages").hide();
+                $(".audioandvideocontainer").show();
+
+                $(".container-minutes").show();
+
+                $(".minutes-number-clse").attr("required",true);
+
+                $(".dollar-one").show();
+
+                $(".file-type-container").show();
+                //file type hide 2
+
+                $(".translation-type-cls").removeAttr("required");
+
+                $(".translate-from-container").hide();
+
+                $(document).find(".translate-from-select-class").removeAttr("required");
+
+                $(".translate-to-select-class").removeAttr("disabled");
+
+            }
+
+            $(".service-type-amount").val(serviceAmount);
+
+            AppendContent(".main-service-text-class",text);
+
+            Total();
+
+        });
+
+       
+
+        $(".delivery-type-cls").click(function(){
+
+            EstimatedDeliveryInitital();
+
+            $(".estimated-delivery-info").hide();
+
+            var ServiceType = $(".service-type-cls:checked").val();
+
+            var TranslationType = $(".translation-type-cls:checked").val();
+
+            var FilesType = $(".file-type-cls:checked").val();
+
+            var TranslationFrom = $(".translate-from-select-class option:selected").val();
+
+            var type = $(this).val();
+
+            var txt ="";
+            var txtx ="";
+
+            var amount = 0;
+
+            if(type == 1)
+            {
+                if(ServiceType == 1)
+                {
+                    amount = 20;
+                }
+
+                if(ServiceType == 2)
+                {
+                    amount = 1;
+                }
+
+                if(ServiceType == 1 && TranslationType==2 && FilesType==1)
+                {
+                    amount = 0.05;
+                }
+
+                if(ServiceType == 1 && TranslationType==1 && FilesType==1 && TranslationFrom!=1)
+                {
+                    amount = 30;
+                }
+
+                txt ="Standard (4-6 Days)";
+
+                txtx ="We know your time is valuable, so we work fast—most translations are ready within 48 hours for documents up to 8 pages. Got more pages? No problem! Just add a day for every additional 8 pages, and we’ll take care of the rest. \nEstimated Delivery : Standard (+$"+amount+"), 4 to 6 Days";
+                
+                
+            }
+            if(type == 2)
+            {
+                if(ServiceType == 1)
+                {
+                    amount = 25;
+                }
+
+                if(ServiceType == 2)
+                {
+                    amount = 2;
+                }
+
+                if(ServiceType == 1 && TranslationType==2 && FilesType==1)
+                {
+                    amount = 0.08;
+                }
+
+                if(ServiceType == 1 && TranslationType==1 && FilesType==1 && TranslationFrom!=1)
+                {
+                    amount = 35;
+                }
+
+                txt ="Priority (2-4 Days)";
+                txtx ="We know your time is valuable, so we work fast—most translations are ready within 48 hours for documents up to 8 pages. Got more pages? No problem! Just add a day for every additional 8 pages, and we’ll take care of the rest. \nEstimated Delivery : Priority ($"+amount+"), 2 to 4 Days";
+                
+            }
+            if(type == 3)
+            {
+                if(ServiceType == 1)
+                {
+                    amount = 35;
+                }
+
+                if(ServiceType == 2)
+                {
+                    amount = 3;
+                }
+                if(ServiceType == 1 && TranslationType==2 && FilesType==1)
+                {
+                    amount = 0.12;
+                }
+
+                if(ServiceType == 1 && TranslationType==1 && FilesType==1 && TranslationFrom!=1)
+                {
+                    amount = 40;
+                }
+
+
+                txt ="Urgent (24-48 Hours)";
+                txtx ="We know your time is valuable, so we work fast—most translations are ready within 48 hours for documents up to 8 pages. Got more pages? No problem! Just add a day for every additional 8 pages, and we’ll take care of the rest. \nEstimated Delivery : Urgent ($"+amount+"), 24 to 48 Hours";
+                
+            }
+
+            if(parseInt($(".page-number-clse").val()) > 0)
+            {
+                var page = parseInt($(".page-number-clse").val());
+                var cls= page * amount;
+                $(".number-of-pages-amount").val(cls);
+                AppendContent(".page-count-text-class",page+" ($"+cls.toFixed(2)+")");
+            }
+
+            if(parseInt($(".minutes-number-clse").val()) > 0)
+            {
+                var minute = parseInt($(".minutes-number-clse").val());
+                var clsx= minute * amount;
+                $(".number-of-minute-amount").val(clsx);
+                AppendContent(".minutes-count-text-class",minute+" ($"+clsx.toFixed(2)+")");
+            }
+
+            if(parseInt($(".words-number-clse").val()) > 0)
+            {
+                var words = parseInt($(".words-number-clse").val());
+                var clsxy= words * amount;
+                $(".number-of-word-amount").val(clsxy);
+                AppendContent(".word-count-text-class",words+" ($"+clsxy.toFixed(2)+")");
+            }
+            
+
+            $(".estimated-delivery-text-class").text(txt);
+
+            $(".row-text-estimated-delivery").css("display","flex");
+
+            $(".estimated-delivery-info").text(txtx);
+
+            $(".estimated-delivery-info").show();
+
+            $(".estimated-delivery-amount").val(amount);
+
+            $(".delivery-time").text(txt);
+
+            Total();
+
+            $("input[name=customer_name]").removeAttr("disabled");
+
+            $(".row-text-total-count").show();
+
+        });
+
+
+        $(document).on('click','.opt-cls',function(){
+
+            // $(".container-pages").show();
+
+            var id = $(this).attr("data-id");
+
+            $(".option").removeClass("selected");
+
+            $(this).addClass("selected");
+
+            $(".main-service-type").val(id);
+
+            if(id == 2)
+            {
+                // $(".container-pages").hide();
+
+                //$(".container-words").show();
+            }
+        });
+
+        $(document).on('click','.file-type-cls',function(){
+
+            TranslationTypeInitial();
+
+            var fileType = $(this).val();
+
+            var ServiceType = $(".service-type-cls:checked").val();
+
+            var TranslationType = $(".translation-type-cls:checked").val();
+
+            $(".professional-translation-document-option-selection").hide();
+
+
+            //$(".document-option-selection").hide();
+
+            $(".audiovideo-option-selection").hide();
+
+           
+
+            if(TranslationType==2 && fileType==1)
+            {
+                $(".professional-translation-document-option-selection").show();
+
+                $(".document-option-selection").hide();
+
+                $(".container-words").show();
+
+                $(".words-number-clse").attr("required",true);
+
+                //$(".container-minutes").hide();
+
+                $(".translate-from-select-class").removeAttr("disabled");
+
+                //$(".translate-to-select-class").removeAttr("disabled");
+
+            }
+            
+            if(TranslationType==2 && fileType==2)
+            {
+                $(".audiovideo-option-selection").show();
+
+                //$(".container-words").hide();
+
+                $(".container-minutes").show();
+
+                $(".minutes-number-clse").attr("required",true);
+
+                $(".dollar-two").show();
+
+                $(".translate-from-container").hide();
+
+                $(".translate-to-select-class").removeAttr("disabled");
+            }
+
+           
+
+
+        });
+
+
+
+        $(document).on('input','.page-number-clse',function(){
+
+/* change event fields mistake */
+
+$(".btn-form-submit").text("Place Order");
+
+    $(".words-number-clse").val('');
+
+    $(".number-of-word-amount").val('0');
+
+    $(".minutes-number-clse").val('');
+
+    $(".number-of-minute-amount").val('0');
+
+/* change event fields */
+
+var NewServiceType = $(".service-type-cls:checked").val();
+
+var NewTranslationType = $(".translation-type-cls:checked").val();
+
+var NewFilesType = $(".file-type-cls:checked").val();
+
+var NewTranslationFrom = $(".translate-from-select-class option:selected").val();
+
+
+var page = parseInt($(this).val());
+
+var amount = 20;
+
+if(NewServiceType == 1 && NewTranslationType==1 && NewFilesType==1 && NewTranslationFrom!=1)
+{
+    amount = 30;
+}
+
+
+
+$(".pages-count").text("");
+$(".number-of-pages-amount").val('0');
+if(page > 0)
+{
+    /*page counter here*/
+
+    var cls= page * amount;
+    $(".number-of-pages-amount").val(cls);
+
+    //$(".pages-count").text(page + " ( $"+cls+" )");
+
+    AppendContent(".page-count-text-class",page+" ($"+cls.toFixed(2)+")");
+
+    $(".row-text-page-count").show();
+}
+
+if(page > 10)
+{
+    $(".special-price").show();
+
+    $(".btn-form-submit").text("Request a Quote");
+}
+else{
+    $(".special-price").hide();
+}
+
+Total();
+
+$(".file-upload-cls").removeAttr("disabled");
+
+});
+
+
+        $(document).on('input','.words-number-clse',function(){
+
+
+            /* change event fields */
+
+            // $(".words-number-clse").val('');
+
+            // $(".number-of-word-amount").val('');
+
+            $(".page-number-clse").val('');
+
+            $(".number-of-pages-amount").val('0');
+
+            $(".minutes-number-clse").val('');
+
+            $(".number-of-minute-amount").val('0');
+
+            /* change event fields */
+           
+           var page = parseInt($(this).val());
+           var amount = 0.05;
+           $(".word-count").text("");
+           $(".number-of-word-amount").val('0');
+           if(page > 0)
+           {
+               var cls= page * amount;
+               $(".number-of-word-amount").val(cls);
+               //$(".word-count").text(page + " ( $"+cls+" )");
+
+               AppendContent(".word-count-text-class",page+" ($"+cls.toFixed(2)+")");
+
+               $(".row-text-word-count").show();
+              
+           }
+
+           if(page > 10)
+           {
+               $(".special-price").show();
+           }
+           else{
+               $(".special-price").hide();
+           }
+
+           Total();
+
+           $(".file-upload-cls").removeAttr("disabled");
+
+       });
+
+
+
+       $(document).on('input','.minutes-number-clse',function(){
+
+        /* change event fields */
+
+            $(".words-number-clse").val('');
+
+            $(".number-of-word-amount").val('0');
+
+            $(".page-number-clse").val('');
+
+            $(".number-of-pages-amount").val('0');
+
+            // $(".minutes-number-clse").val('');
+
+            // $(".number-of-word-amount").val('0');
+
+            /* change event fields */
+           
+           var page = parseInt($(this).val());
+           var amount = 2;
+           if($(".service-type-cls:checked").val() == 2)
+           {
+            amount = 1;
+           }
+           $(".minutes-count").text("");
+           $(".number-of-minute-amount").val('0');
+           if(page > 0)
+           {
+               var cls= page * amount;
+               $(".number-of-minute-amount").val(cls);
+               //$(".minutes-count").text(page + " ( $"+cls+" )");
+
+                AppendContent(".minutes-count-text-class",page+" ($"+cls.toFixed(2)+")");
+
+                $(".row-text-minutes-count").show();
+           }
+
+           if(page > 10)
+           {
+               $(".special-price").show();
+           }
+           else{
+               $(".special-price").hide();
+           }
+
+           Total();
+
+           $(".file-upload-cls").removeAttr("disabled");
+
+       });
+
+
+/******************************************/
+
+if (!getCookie("cookieConsent")) {
+        $('#cookieBanner').removeClass('d-none');
+      }
+
+      $('#acceptBtn').click(function () {
+        setCookie("cookieConsent", "accepted", 30);
+        $('#cookieBanner').addClass('d-none');
+      });
+
+      $('#rejectBtn').click(function () {
+        setCookie("cookieConsent", "rejected", 30);
+        $('#cookieBanner').addClass('d-none');
+        // Optionally disable tracking, analytics, etc.
+      });
+
+      function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days*24*60*60*1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+      }
+
+      function getCookie(name) {
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        name = name + "=";
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i].trim();
+          if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+        }
+        return "";
+      }
+
+
+
+
+/*******************************************/
+
+$(document).on('click','.langdropdown-option',function(){
+
+    var lang = $(this).attr("data-lang");
+
+    window.location.href="{{url('langchange')}}/"+lang;
+
+});
+
+/******************************************* */
+
+$(document).on('change','.translate-from-select-class',function(){
+
+    $(".translate-to-select-class").removeAttr("disabled");
+
+    $(".page-number-clse").val('');
+
+    $(".number-of-pages-amount").val('0');
+
+    var pageN = 0;
+
+    var clsN = 0;
+
+    AppendContent(".page-count-text-class",pageN+" ($"+clsN.toFixed(2)+")");
+
+    $(".estimated-delivery-amount").val('0');
+
+    $(".delivery-type-cls").prop("checked", false);
+
+    Total();
+
+    // var pageValue = $(".page-number-clse").val();
+
+    // $(".page-number-clse").val(pageValue).change();
+
+    //$(".page-number-clse").trigger("input");
+
+});
+
+$(document).on('change','.translate-to-select-class',function(){
+
+    if($(".translation-type-cls:checked").val() == 1 && $(".file-type-cls:checked").val()==1)
+{
+    $(".page-number-clse").removeAttr("disabled");
+}
+
+if($(".translation-type-cls:checked").val() == 2 && $(".file-type-cls:checked").val()==1)
+{
+    $(".words-number-clse").removeAttr("disabled");
+}
+
+if($(".translation-type-cls:checked").val() == 2 && $(".file-type-cls:checked").val()==2)
+{
+    $(".minutes-number-clse").removeAttr("disabled");
+}
+
+if($(".service-type-cls:checked").val() == 2 && $(".file-type-cls:checked").val()==2)
+{
+    $(".minutes-number-clse").removeAttr("disabled");
+}
+
+
+});
+
+
+$(document).on('input','.customer-name-class',function(){
+
+    $(".email-address-class").removeAttr("disabled");
+
+});
+
+$(document).on('input','.email-address-class',function(){
+
+    $(".phone-number-class").removeAttr("disabled");
+
+});
+
+$(document).on('input', '.phone-number-class', function () {
+    let input = $(this);
+    let raw = input.val();
+    let numbers = raw.replace(/\D/g, ''); // Strip non-digits
+
+    // Prevent any non-numeric character from being displayed
+    if (raw !== numbers) {
+        input.val(numbers); // Optional: to prevent flicker before formatting
+    }
+
+    // Format the number
+    let formatted = '';
+    if (numbers.length > 0) {
+        if (numbers.length <= 3) {
+            formatted = `(${numbers}`;
+        } else if (numbers.length <= 6) {
+            formatted = `(${numbers.slice(0, 3)}) ${numbers.slice(3)}`;
+        } else {
+            formatted = `(${numbers.slice(0, 3)}) ${numbers.slice(3, 6)}-${numbers.slice(6, 10)}`;
+        }
+    }
+
+    input.val(formatted);
+
+    // Enable comments field
+    $(".comments-class").removeAttr("disabled");
+});
+
+
+$(document).on('input','.comments-class',function(){
+
+    $(".btn-form-submit").removeAttr("disabled");
+
+});
+
+$(document).on('click','.remove-attached-file',function(){
+
+    var id = $(this).attr("data-id");
+
+
+    $(".attached-file-"+id).remove();
+
+    $(this).remove();
+
+});
+
+        
+   });
+});
+</script>
+@stop
+@endsection

@@ -14,11 +14,8 @@ use App\Mail\CustomMailer;
 
 use Illuminate\Support\Facades\Session;
 
-use \Str;
-
 class QuoteController extends Controller
 {
-    
 
     public function AdminEmail($translationId,$paymentId)
     {
@@ -611,7 +608,7 @@ class QuoteController extends Controller
     public function EmailTest()
     {
 
-        $this->CustomerQuoteRequest("sales@translationwindows.com","Translation Windows Sales");
+        $this->CustomerQuoteRequest("sales@translationwindows.com","AR.Siddiqui");
         
         // $this->CustomerEmail(10,9);
     //     // $data = [
@@ -624,13 +621,6 @@ class QuoteController extends Controller
     //     // Mail::to('sales@translationwindows.com')->send(new CustomMailer($data, $attachmentPath));
 
     //    return "Email with attachment sent successfully!";
-    }
-    public function showQuoteForm()
-    {
-        $languages = DB::table('languages')->get();
-        $randomString = Str::random(32);
-        return view('request-quote',compact('languages','randomString'));
-        
     }
     
 }

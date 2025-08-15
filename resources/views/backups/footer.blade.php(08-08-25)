@@ -146,7 +146,7 @@
                 <div class="row">
     <div class="col-lg-4 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
         <div class="f-item address">
-            <img src="{{ asset ('/assets/img/logo-sm.png') }}" alt="Image Not Found">
+            <img src="{{ asset ('/assets/img/logo.png') }}" alt="Image Not Found">
             <span style="display: block; margin-top:-2rem; font-size:0.9rem">A product of Transinformatic LLC</span>
             <p>
                 {{ session('lang') === 'es' ? 'No solo traducimos palabras, entregamos lo que quieres decir.' : 'We Don’t Just Translate Words — We Deliver What You Mean.' }}

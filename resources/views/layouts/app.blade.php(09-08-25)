@@ -12,24 +12,7 @@
                     </button>
                     <div class="navbar-brand">
                         <a href="{{ url('/') }}">
-                            <picture>
-                                <source
-                                    type="image/webp"
-                                    srcset="
-                                    {{ asset('assets/img/logo-sm-159w.webp') }} 159w,
-                                    {{ asset('assets/img/logo-sm-320w.webp') }} 320w,
-                                    {{ asset('assets/img/logo-sm-480w.webp') }} 480w
-                                    "
-                                    sizes="(max-width: 600px) 159px, (max-width: 1024px) 320px, 480px"
-                                />
-                                <img
-                                    src="{{ asset('assets/img/logo-sm-159w.webp') }}"
-                                    alt="Translationwindows Logo"
-                                    width="159"
-                                    height="50"
-                                    class="logo logo-scrolled"
-                                />
-                            </picture>
+                            <img src="{{ asset('assets/img/logo-sm.png') }}" class="logo logo-scrolled" alt="TranslationWindows Logo">
                             <span class="slogan">A product of Transinformatic LLC</span>
                         </a>
                     </div>
@@ -38,7 +21,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <div class="collapse-header">
-                        <img src="{{ asset('assets/img/logo-sm-159w.webp') }}" alt="TranslationWindows Logo">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="TranslationWindows Logo">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-times"></i>
                         </button>
@@ -111,7 +94,7 @@
 
 
                     <div class="d-inline-block justify-content-end ms-lg-5 mt-lg-0 mt-sm-3">
-                        <a class="btn circle btn-gradient animation getquote-btn" href="{{route('request.quote.form')}}">Get A Quote</a>
+                        <a class="btn circle btn-gradient animation getquote-btn" href="{{ route('inquiry.form') }}">Get A Quote</a>
                         <div class="langdropdown-container">
                             <div class="langdropdown-selected" id="langdropdown-selected">
                                 <img id="selected-flag" src="https://flagcdn.com/us.svg" alt="US Flag" class="flags">

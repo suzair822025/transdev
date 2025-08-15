@@ -78,7 +78,6 @@ Route::controller(SpanishcommonController::class)->group(function () {
 });
 
 Route::controller(QuoteController::class)->group(function () {
-    
     Route::post('/upload-file', 'UploadRequestFile')->name('uploadfile');
     Route::post('/save-request', 'SaveRequest')->name('saverequest');
     Route::post('/save-payment-info', 'SavePaymentInfo')->name('savepaymentinfo');
@@ -95,7 +94,3 @@ Route::get('/thank-you', function () {
 Route::get('/thank-you-quote', function () {
     return view('thankyou-quote');
 })->name('thankyou.quote');
-
-Route::get('/request-quote', [QuoteController::class, 'showQuoteForm'])->name('request.quote.form');
-Route::post('/request-quote', [QuoteController::class, 'submitQuoteForm'])->name('request.quote.submit');
-
